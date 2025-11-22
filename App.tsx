@@ -61,7 +61,7 @@ function App() {
                 <h1 className="sr-only">Robin Bailey</h1>
                 
                 <div className="flex flex-col">
-                  <span className="font-sans font-bold text-5xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
+                  <span className="font-sans font-semibold text-5xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
                     Product Manager
                   </span>
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-5xl md:text-7xl text-stone-600 leading-none mt-2">
@@ -101,7 +101,7 @@ function App() {
                   <div className="relative group">
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Digital Education Product Manager</h4>
-                    <p className="font-sans text-sm font-bold uppercase tracking-widest text-stone-400 mb-2">Academic Development, Plymouth University / 2019 — Present</p>
+                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
                     </p>
@@ -110,7 +110,7 @@ function App() {
                   <div className="relative group">
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-blue-700 transition-colors">Product Architect; Senior UX Designer</h4>
-                    <p className="font-sans text-sm font-bold uppercase tracking-widest text-stone-400 mb-2">iotec Global / 2016 — 2018</p>
+                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">iotec Global / 2016 — 2018</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
                     </p>
@@ -119,7 +119,7 @@ function App() {
                   <div className="relative group">
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-orange-700 transition-colors">Freelance Product Design</h4>
-                    <p className="font-sans text-sm font-bold uppercase tracking-widest text-stone-400 mb-2">Multiple Clients / 2010 — Present</p>
+                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Working with diverse clients like Wild Planet Trust building educational iOS applications and digital solutions.
                     </p>
@@ -239,7 +239,7 @@ function App() {
           <section id="work" className="mb-32">
             <div className="flex items-end justify-between mb-8 md:mb-12">
                <h3 className="font-display text-3xl md:text-4xl italic text-stone-400">Selected Works</h3>
-               <span className="font-sans text-xs font-bold uppercase tracking-widest text-orange-600/80 hidden md:block bg-orange-50 px-3 py-1 rounded-full">Recent & Featured</span>
+               <span className="font-lato text-xs font-bold uppercase tracking-widest text-orange-600/80 hidden md:block bg-orange-50 px-3 py-1 rounded-full">Recent & Featured</span>
             </div>
             
             <div className="flex flex-col">
@@ -264,7 +264,7 @@ function App() {
                  <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center not-italic">
                     <Globe size={16} />
                  </div>
-                 Volunteering
+                 Volunteering & Advisory
                </h3>
                <div className="space-y-10">
                   <div className="group border-b border-stone-100 pb-8 cursor-default">

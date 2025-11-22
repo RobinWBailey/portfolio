@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       {/* Top Row: ID & Category */}
-      <div className="flex justify-between items-start text-xs font-sans uppercase tracking-widest text-stone-400 group-hover:text-stone-900 transition-colors">
+      <div className="flex justify-between items-start text-xs font-lato uppercase tracking-widest text-stone-400 group-hover:text-stone-900 transition-colors">
         <span className={`transition-colors duration-300 ${accentClass.split(' ')[1]}`}>{project.category}</span>
         <span>/{project.year}</span>
       </div>
