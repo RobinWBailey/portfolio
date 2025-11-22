@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { Menu, ArrowDown, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink } from 'lucide-react';
+import { Menu, ArrowDown, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -39,7 +39,7 @@ function App() {
 
       {/* Mobile Header (Visible only on small screens) */}
       <header className="md:hidden fixed top-0 left-0 w-full bg-[#fcfcfc]/90 backdrop-blur-md z-50 border-b border-stone-200 p-4 flex justify-between items-center">
-        <h1 className="font-display font-medium italic text-3xl tracking-wide text-stone-900">Robin</h1>
+        <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin</h1>
         <button className="p-2 text-stone-900">
           <Menu size={24} />
         </button>
@@ -48,34 +48,36 @@ function App() {
       {/* Main Content Area */}
       <main className="relative z-10 md:pl-24 lg:pl-32 pt-20 md:pt-0 transition-all duration-300">
         
-        <div className="max-w-[1800px] mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-24">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-24">
           
           {/* Hero Section */}
           <section className="mb-24 md:mb-32 animate-fade-in-up">
             <div className="flex flex-col xl:flex-row xl:items-end gap-12 xl:gap-24 border-b border-stone-900/10 pb-12 relative">
               {/* Decorative Line Accent */}
-              <div className="absolute bottom-[-1px] left-0 w-24 h-[3px] bg-orange-600 z-10"></div>
+              <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-orange-600 z-10"></div>
               
-              <div className="flex flex-col gap-2 relative z-10">
+              <div className="flex flex-col gap-3 relative z-10">
                 {/* Hidden H1 for SEO/Accessiblity since visual title is in sidebar */}
                 <h1 className="sr-only">Robin Bailey</h1>
                 
-                <span className="font-sans font-bold text-5xl md:text-7xl tracking-tighter text-stone-900 leading-none uppercase lg:normal-case">
-                  Product Manager
-                </span>
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-4xl md:text-6xl text-stone-600 leading-none">
-                  <span className="font-display italic text-stone-800 font-medium">
-                    Designer
+                <div className="flex flex-col">
+                  <span className="font-sans font-bold text-5xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
+                    Product Manager
                   </span>
-                  <span className="font-display italic text-stone-300 font-light">&</span>
-                  <span className="font-mono text-2xl md:text-4xl text-orange-600 font-medium tracking-tight transform translate-y-[-2px]">
-                    Engineer
-                  </span>
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-5xl md:text-7xl text-stone-600 leading-none mt-2">
+                    <span className="font-serif italic text-stone-800 font-medium tracking-tight">
+                      Designer
+                    </span>
+                    <span className="font-serif italic text-stone-300 font-light text-4xl md:text-6xl">&</span>
+                    <span className="font-mono text-4xl md:text-6xl text-orange-600 font-medium tracking-tighter transform translate-y-[-2px]">
+                      Engineer
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div className="max-w-xl pb-2 xl:mb-1">
-                <p className="font-sans font-light text-stone-600 leading-relaxed text-base md:text-lg">
+              <div className="max-w-xl pb-2 xl:mb-2">
+                <p className="font-sans font-light text-stone-600 leading-relaxed text-lg md:text-xl">
                   I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real impact.
                 </p>
               </div>
@@ -88,7 +90,12 @@ function App() {
               
               {/* Experience */}
               <div>
-                <h3 className="font-display italic text-4xl mb-8 text-stone-900">Experience</h3>
+                <h3 className="font-display italic text-4xl mb-8 text-stone-900 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center not-italic">
+                     <Briefcase size={20} />
+                  </div>
+                  Experience
+                </h3>
                 <div className="space-y-12 border-l border-stone-200 ml-2 pl-8 relative">
                   
                   <div className="relative group">
@@ -123,7 +130,12 @@ function App() {
 
               {/* Education */}
               <div>
-                <h3 className="font-display italic text-4xl mb-8 text-stone-900">Education</h3>
+                <h3 className="font-display italic text-4xl mb-8 text-stone-900 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center not-italic">
+                     <GraduationCap size={20} />
+                  </div>
+                  Education
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    {/* Masters */}
                    <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
@@ -174,7 +186,12 @@ function App() {
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
                 
                 <div className="relative z-10">
-                  <h3 className="font-display text-3xl mb-8 italic text-orange-50">Expertise</h3>
+                  <h3 className="font-display text-3xl mb-8 italic text-orange-50 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-200 flex items-center justify-center not-italic">
+                       <Lightbulb size={20} />
+                    </div>
+                    Expertise
+                  </h3>
                   <div className="space-y-10">
                     <div>
                       <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
@@ -250,7 +267,7 @@ function App() {
                  Volunteering
                </h3>
                <div className="space-y-10">
-                  <div className="group border-b border-stone-100 pb-8 hover:pl-4 transition-all duration-300 cursor-default">
+                  <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
                     <p className="font-sans text-stone-500 text-sm mt-1">Medical Schools Council</p>
                     <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
@@ -258,7 +275,7 @@ function App() {
                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
                     </p>
                   </div>
-                  <div className="group border-b border-stone-100 pb-8 hover:pl-4 transition-all duration-300 cursor-default">
+                  <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
                     <p className="font-sans text-stone-500 text-sm mt-1">Wild Planet Trust</p>
                     <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
@@ -266,7 +283,7 @@ function App() {
                       Supporting the education department in delivering conservation education to public audiences and school groups.
                     </p>
                   </div>
-                  <div className="group hover:pl-4 transition-all duration-300 cursor-default">
+                  <div className="group cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
                     <p className="font-sans text-stone-500 text-sm mt-1">Town Council</p>
                     <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>

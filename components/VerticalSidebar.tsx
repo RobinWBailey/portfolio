@@ -6,9 +6,9 @@ const VerticalSidebar: React.FC = () => {
       {/* Top Marker Removed as requested */}
       
       {/* Rotated Name - Hung from top */}
-      <div className="flex items-center justify-center group cursor-default pt-12">
+      <div className="flex items-center justify-center group cursor-default pt-28">
         <h1 
-          className="font-plantin font-normal text-5xl lg:text-6xl tracking-widest text-stone-900 whitespace-nowrap origin-center transform rotate-90"
+          className="font-plantin font-normal text-5xl lg:text-6xl tracking-tight text-stone-900 whitespace-nowrap origin-center transform rotate-90"
         >
           Robin
         </h1>
