@@ -19,8 +19,7 @@ const VerticalSidebar: React.FC = () => {
 
       {/* Bottom Marker / Social Hint */}
       <div className="flex flex-col items-center gap-6">
-        <span className="text-xs font-lato text-orange-600/80 uppercase tracking-widest rotate-90 mb-4">Est. 2024</span>
-        <div className="w-[1px] h-16 bg-stone-900"></div>
+        <img src="/square_logo.png" alt="Logo" className="w-14 h-14 object-contain" />
       </div>
     </aside>
   );

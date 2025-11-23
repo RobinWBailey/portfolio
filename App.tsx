@@ -40,6 +40,7 @@ function App() {
       {/* Mobile Header (Visible only on small screens) */}
       <header className="md:hidden fixed top-0 left-0 w-full bg-[#fcfcfc]/90 backdrop-blur-md z-50 border-b border-stone-200 p-4 flex justify-between items-center">
         <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin</h1>
+        <img src="/square_logo.png" alt="Logo" className="w-8 h-8 object-contain" />
       </header>
 
       {/* Main Content Area */}
@@ -51,7 +52,7 @@ function App() {
           <section className="mb-24 md:mb-32 animate-fade-in-up">
             <div className="flex flex-col xl:flex-row xl:items-end gap-12 xl:gap-24 border-b border-stone-900/10 pb-12 relative">
               {/* Decorative Line Accent */}
-              <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-orange-600 z-10"></div>
+              <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-rust-600 z-10"></div>
               
               <div className="flex flex-col gap-3 relative z-10">
                 {/* Hidden H1 for SEO/Accessiblity since visual title is in sidebar */}
@@ -66,7 +67,7 @@ function App() {
                       Designer
                     </span>
                     <span className="font-serif italic text-stone-300 font-light text-4xl md:text-6xl">&</span>
-                    <span className="font-mono text-4xl md:text-6xl text-orange-600 font-medium tracking-tighter transform translate-y-[-2px]">
+                    <span className="font-mono text-4xl md:text-6xl text-rust-600 font-medium tracking-tighter transform translate-y-[-2px]">
                       Engineer
                     </span>
                   </div>
@@ -243,7 +244,7 @@ function App() {
           <section id="work" className="mb-32">
             <div className="flex items-end justify-between mb-8 md:mb-12">
                <h3 className="font-display text-3xl md:text-4xl italic text-stone-400">Selected Works</h3>
-               <span className="font-lato text-xs font-bold uppercase tracking-widest text-orange-600/80 hidden md:block bg-orange-50 px-3 py-1 rounded-full">Recent & Featured</span>
+               <span className="font-lato text-xs font-bold uppercase tracking-widest text-rust-600/80 hidden md:block bg-rust-50 px-3 py-1 rounded-full">Recent & Featured</span>
             </div>
             
             <div className="flex flex-col">
@@ -396,18 +397,18 @@ function App() {
                        className="border-b border-stone-200 group hover:bg-white cursor-pointer transition-colors"
                        onClick={() => handleProjectClick(project)}
                      >
-                       <td className="py-4 pr-4 font-serif text-stone-400 group-hover:text-orange-600 transition-colors">{project.year}</td>
+                       <td className="py-4 pr-4 font-serif text-stone-400 group-hover:text-rust-600 transition-colors">{project.year}</td>
                        <td className="py-4 pr-4">
                          <span className="font-serif text-lg text-stone-900 font-medium block group-hover:translate-x-2 transition-transform duration-300">{project.title}</span>
                          <span className="font-lato text-xs text-stone-500 md:hidden mt-1 block">{project.category}</span>
                        </td>
                        <td className="py-4 pr-4 font-lato text-sm text-stone-500 hidden md:table-cell">
-                          <span className="px-2 py-1 rounded-md bg-stone-100 group-hover:bg-orange-50 group-hover:text-orange-800 transition-colors">
+                          <span className="px-2 py-1 rounded-md bg-stone-100 group-hover:bg-rust-50 group-hover:text-rust-800 transition-colors">
                             {project.category}
                           </span>
                        </td>
                        <td className="py-4 font-lato text-sm text-stone-600 hidden lg:table-cell opacity-70 group-hover:opacity-100">{project.client || '-'}</td>
-                       <td className="py-4 text-stone-300 group-hover:text-orange-500">
+                       <td className="py-4 text-stone-300 group-hover:text-rust-500">
                          <ExternalLink size={16} />
                        </td>
                      </tr>
@@ -424,14 +425,14 @@ function App() {
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gradient-to-b from-transparent via-white/50 to-transparent -z-10 blur-xl"></div>
                
                <h2 className="font-display italic text-4xl md:text-5xl text-stone-900 mb-8">Let's build something meaningful.</h2>
-               <a href="mailto:robin.w.bailey@gmail.com" className="inline-block bg-stone-900 text-white font-lato font-bold tracking-wide px-10 py-5 hover:bg-orange-600 transition-colors shadow-xl hover:shadow-orange-500/20 transform hover:-translate-y-1 duration-300 rounded-sm">
+               <a href="mailto:robin.w.bailey@gmail.com" className="inline-block bg-stone-900 text-white font-lato font-bold tracking-wide px-10 py-5 hover:bg-rust-600 transition-colors shadow-xl hover:shadow-rust-500/20 transform hover:-translate-y-1 duration-300 rounded-sm">
                    Get in Touch
                </a>
                <div className="flex justify-center gap-8 mt-12">
                     <a href="https://twitter.com/RobinBailey" className="text-stone-400 hover:text-blue-400 hover:scale-110 transition-all"><Twitter size={24} /></a>
                     <a href="https://www.linkedin.com/in/robinwbailey/" className="text-stone-400 hover:text-blue-700 hover:scale-110 transition-all"><Linkedin size={24} /></a>
                     <a href="https://github.com/yourprofile" className="text-stone-400 hover:text-stone-900 hover:scale-110 transition-all"><Github size={24} /></a>
-                    <a href="mailto:robin.w.bailey@gmail.com" className="text-stone-400 hover:text-orange-500 hover:scale-110 transition-all"><Mail size={24} /></a>
+                    <a href="mailto:robin.w.bailey@gmail.com" className="text-stone-400 hover:text-rust-500 hover:scale-110 transition-all"><Mail size={24} /></a>
                </div>
              </div>
           </section>
@@ -441,7 +442,7 @@ function App() {
                <span className="font-display text-stone-500 italic text-lg block">Robin Bailey © 2025</span>
                <span className="font-lato text-xs text-stone-400">Made with care in Plymouth</span>
              </div>
-             <a href="#" className="group font-lato text-xs uppercase tracking-widest text-stone-900 font-bold hover:text-orange-600 flex items-center gap-2">
+             <a href="#" className="group font-lato text-xs uppercase tracking-widest text-stone-900 font-bold hover:text-rust-600 flex items-center gap-2">
                Back to Top <ArrowDown size={12} className="rotate-180 group-hover:-translate-y-1 transition-transform" />
              </a>
           </footer>

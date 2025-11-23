@@ -14,7 +14,7 @@ const getAccentColor = (category: string) => {
   if (normalized.includes('adtech') || normalized.includes('data')) return 'group-hover:border-blue-500 group-hover:text-blue-600';
   if (normalized.includes('mobile') || normalized.includes('ios')) return 'group-hover:border-rose-500 group-hover:text-rose-600';
   if (normalized.includes('concept') || normalized.includes('branding')) return 'group-hover:border-purple-500 group-hover:text-purple-600';
-  return 'group-hover:border-orange-500 group-hover:text-orange-600'; // Default
+  return 'group-hover:border-rust-500 group-hover:text-rust-600'; // Default
 };
 
 const getIconBg = (category: string) => {
@@ -23,7 +23,7 @@ const getIconBg = (category: string) => {
   if (normalized.includes('adtech') || normalized.includes('data')) return 'group-hover:bg-blue-600 group-hover:border-blue-600';
   if (normalized.includes('mobile') || normalized.includes('ios')) return 'group-hover:bg-rose-600 group-hover:border-rose-600';
   if (normalized.includes('concept') || normalized.includes('branding')) return 'group-hover:bg-purple-600 group-hover:border-purple-600';
-  return 'group-hover:bg-orange-600 group-hover:border-orange-600'; // Default
+  return 'group-hover:bg-rust-600 group-hover:border-rust-600'; // Default
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
