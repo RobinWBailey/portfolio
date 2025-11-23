@@ -315,12 +315,23 @@ function App() {
                        <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
                     </div>
                     <div>
-                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">EBMA Annual European Conference</h4>
-                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Symposium: Adaptive Testing</p>
-                       <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
-                         Presentation on the implementation and benefits of content-adaptive progress testing in medical education.
-                       </p>
-                    </div>
+                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Annual European Conference on Assessment in Medical Education | EBMA</h4>
+                       <p className="font-lato text-stone-500 text-sm mt-1 italic">The Future of Assessment in Medical Education: Opportunities and Threats</p>
+                       <div className="mt-3 space-y-2">
+                         <div className="flex gap-2 items-start">
+                           <span className="text-rose-400 mt-1.5 text-[10px]">●</span>
+                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                             <span className="font-medium text-stone-800">Symposium — Adaptive Testing:</span> Current and Future Perspectives.
+                           </p>
+                         </div>
+                         <div className="flex gap-2 items-start">
+                           <span className="text-rose-400 mt-1.5 text-[10px]">●</span>
+                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                             <span className="font-medium text-stone-800">Presentation:</span> Implementation of Content Adaptive Progress Tests at Peninsula Medical School in Plymouth.
+                           </p>
+                         </div>
+                       </div>
+                     </div>
                   </div>
                   <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
