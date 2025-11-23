@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { Menu, ArrowDown, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
+import { ArrowDown, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -40,9 +40,6 @@ function App() {
       {/* Mobile Header (Visible only on small screens) */}
       <header className="md:hidden fixed top-0 left-0 w-full bg-[#fcfcfc]/90 backdrop-blur-md z-50 border-b border-stone-200 p-4 flex justify-between items-center">
         <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin</h1>
-        <button className="p-2 text-stone-900">
-          <Menu size={24} />
-        </button>
       </header>
 
       {/* Main Content Area */}
@@ -61,10 +58,10 @@ function App() {
                 <h1 className="sr-only">Robin Bailey</h1>
                 
                 <div className="flex flex-col">
-                  <span className="font-sans font-semibold text-5xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
+                  <span className="font-sans font-semibold text-4xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
                     Product Manager
                   </span>
-                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-5xl md:text-7xl text-stone-600 leading-none mt-2">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-4xl md:text-7xl text-stone-600 leading-none mt-2">
                     <span className="font-serif italic text-stone-800 font-medium tracking-tight">
                       Designer
                     </span>
@@ -90,13 +87,13 @@ function App() {
               
               {/* Experience */}
               <div>
-                <h3 className="font-display italic text-4xl mb-8 text-stone-900 flex items-center gap-3">
+                <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center not-italic">
                      <Briefcase size={20} />
                   </div>
                   Experience
                 </h3>
-                <div className="space-y-12 border-l border-stone-200 ml-2 pl-8 relative">
+                <div className="space-y-12 border-l border-stone-200 ml-2 pl-5 md:pl-8 relative">
                   
                   <div className="relative group">
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
@@ -137,7 +134,7 @@ function App() {
 
               {/* Education */}
               <div>
-                <h3 className="font-display italic text-4xl mb-8 text-stone-900 flex items-center gap-3">
+                <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center not-italic">
                      <GraduationCap size={20} />
                   </div>
@@ -187,7 +184,7 @@ function App() {
 
             <div className="lg:col-span-5 space-y-16">
                {/* Expertise */}
-              <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-8 md:p-12 relative overflow-hidden rounded-sm shadow-2xl">
+              <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-6 md:p-12 relative overflow-hidden rounded-sm shadow-2xl">
                 {/* Abstract Shapes in Card */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
@@ -262,7 +259,7 @@ function App() {
           </section>
 
           {/* Volunteering & Speaking Section */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-32 border-t border-stone-200 pt-16 relative">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-32 border-t border-stone-200 pt-16 relative">
              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-stone-200 rounded-full hidden md:block"></div>
              
              {/* Volunteering */}
@@ -439,7 +436,7 @@ function App() {
              </div>
           </section>
           
-          <footer className="flex flex-col md:flex-row justify-between items-end pt-12 border-t border-stone-200/60">
+          <footer className="flex flex-col md:flex-row justify-between items-start md:items-end pt-12 border-t border-stone-200/60">
              <div className="mb-4 md:mb-0">
                <span className="font-display text-stone-500 italic text-lg block">Robin Bailey © 2025</span>
                <span className="font-lato text-xs text-stone-400">Made with care in Plymouth</span>

@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end mt-2">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-end mt-2">
         
         {/* Title - Big Serif */}
         <div className="md:col-span-5">
