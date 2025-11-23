@@ -120,9 +120,16 @@ function App() {
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-orange-700 transition-colors">Freelance Product Design</h4>
                     <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Working with diverse clients like Wild Planet Trust building educational iOS applications and digital solutions.
+                    <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
+                      Working with diverse clients to build educational iOS applications and digital solutions.
                     </p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health Innovations'].map(client => (
+                        <span key={client} className="font-lato text-xs font-medium text-stone-500 bg-stone-100 px-2 py-1 rounded-md border border-stone-200/50 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-200 transition-colors cursor-default">
+                          {client}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                 </div>
@@ -141,38 +148,38 @@ function App() {
                    <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
                       <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
-                      <p className="text-stone-500 font-sans text-sm mb-3">Business & Management</p>
+                      <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
                       
                       <div className="mb-3 flex-grow">
-                        <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
+                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
                         <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-sans text-xs text-stone-600">
+                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
                             <span className="text-purple-500">★</span>
                             <span>Dean's List Award for Academic Excellence</span>
                           </li>
                         </ul>
                       </div>
 
-                      <p className="font-sans text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-purple-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / Distinction</p>
+                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-purple-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / Distinction</p>
                    </div>
 
                    {/* Bachelors */}
                    <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
                       <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
-                      <p className="text-stone-500 font-sans text-sm mb-3">Computer Science</p>
+                      <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
                       
                        <div className="mb-3 flex-grow">
-                        <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
+                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
                         <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-sans text-xs text-stone-600">
+                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
                             <span className="text-blue-500">★</span>
                             <span>Dean's List Award (2010, 2011, 2012)</span>
                           </li>
                         </ul>
                       </div>
 
-                      <p className="font-sans text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-blue-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / First-Class Honours</p>
+                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-blue-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / First-Class Honours</p>
                    </div>
                 </div>
               </div>
@@ -194,19 +201,19 @@ function App() {
                   </h3>
                   <div className="space-y-10">
                     <div>
-                      <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
+                      <h4 className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
                         <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                         Skills
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {['Product & UX', 'Salesforce', 'Mobile Apps', 'AI & ML', 'Wireframing', 'Prototyping'].map(skill => (
-                          <span key={skill} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-sans font-light text-stone-300 transition-colors cursor-default">{skill}</span>
+                          <span key={skill} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-lato font-light text-stone-300 transition-colors cursor-default">{skill}</span>
                         ))}
                       </div>
                     </div>
                     
                     <div>
-                      <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
+                      <h4 className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
                         <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                         Sectors
                       </h4>
@@ -269,24 +276,24 @@ function App() {
                <div className="space-y-10">
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
-                    <p className="font-sans text-stone-500 text-sm mt-1">Medical Schools Council</p>
-                    <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
+                    <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council</p>
+                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
                     </p>
                   </div>
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
-                    <p className="font-sans text-stone-500 text-sm mt-1">Wild Planet Trust</p>
-                    <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
+                    <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
+                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                       Supporting the education department in delivering conservation education to public audiences and school groups.
                     </p>
                   </div>
                   <div className="group cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
-                    <p className="font-sans text-stone-500 text-sm mt-1">Town Council</p>
-                    <p className="font-sans text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>
+                    <p className="font-lato text-stone-500 text-sm mt-1">Town Council</p>
+                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                       Representing the views of young people in local government decision making processes and community initiatives.
                     </p>
@@ -305,11 +312,11 @@ function App() {
                <div className="space-y-8">
                   <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-sans font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
+                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
                     </div>
                     <div>
                        <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">EBMA Annual European Conference</h4>
-                       <p className="font-sans text-stone-500 text-sm mt-1 italic">Symposium: Adaptive Testing</p>
+                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Symposium: Adaptive Testing</p>
                        <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
                          Presentation on the implementation and benefits of content-adaptive progress testing in medical education.
                        </p>
@@ -317,11 +324,11 @@ function App() {
                   </div>
                   <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-sans font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
+                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
                     </div>
                     <div>
                        <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Salesforce UK/EMEA Education User Group</h4>
-                       <p className="font-sans text-stone-500 text-sm mt-1 italic">Student Success Platform for Medicine</p>
+                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Student Success Platform for Medicine</p>
                        <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
                          Showcasing how we utilised Salesforce to build a bespoke Student Success Platform for the Faculty of Medicine.
                        </p>
@@ -329,11 +336,11 @@ function App() {
                   </div>
                   <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-sans font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2022</span>
+                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2022</span>
                     </div>
                     <div>
                        <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Peninsula Medical School Conference</h4>
-                       <p className="font-sans text-stone-500 text-sm mt-1 italic">Visualising Adaptive Progress Testing</p>
+                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Visualising Adaptive Progress Testing</p>
                        <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
                          Discussing data visualisation techniques for complex longitudinal assessment data.
                        </p>
@@ -341,11 +348,11 @@ function App() {
                   </div>
                   <div className="group flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-sans font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2012</span>
+                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2012</span>
                     </div>
                     <div>
                        <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Learning Without Frontiers</h4>
-                       <p className="font-sans text-stone-500 text-sm mt-1 italic">London</p>
+                       <p className="font-lato text-stone-500 text-sm mt-1 italic">London</p>
                        <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
                          Discussing the future of mobile learning and digital engagement in education.
                        </p>
@@ -367,10 +374,10 @@ function App() {
                <table className="w-full text-left border-collapse">
                  <thead>
                    <tr className="border-b-2 border-stone-900">
-                     <th className="py-4 pr-4 font-sans text-xs uppercase tracking-widest font-bold text-stone-900 w-24">Year</th>
-                     <th className="py-4 pr-4 font-sans text-xs uppercase tracking-widest font-bold text-stone-900">Project</th>
-                     <th className="py-4 pr-4 font-sans text-xs uppercase tracking-widest font-bold text-stone-900 hidden md:table-cell">Category</th>
-                     <th className="py-4 font-sans text-xs uppercase tracking-widest font-bold text-stone-900 hidden lg:table-cell">Client</th>
+                     <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900 w-24">Year</th>
+                     <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900">Project</th>
+                     <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900 hidden md:table-cell">Category</th>
+                     <th className="py-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900 hidden lg:table-cell">Client</th>
                      <th className="py-4 w-10"></th>
                    </tr>
                  </thead>
@@ -384,14 +391,14 @@ function App() {
                        <td className="py-4 pr-4 font-serif text-stone-400 group-hover:text-orange-600 transition-colors">{project.year}</td>
                        <td className="py-4 pr-4">
                          <span className="font-serif text-lg text-stone-900 font-medium block group-hover:translate-x-2 transition-transform duration-300">{project.title}</span>
-                         <span className="font-sans text-xs text-stone-500 md:hidden mt-1 block">{project.category}</span>
+                         <span className="font-lato text-xs text-stone-500 md:hidden mt-1 block">{project.category}</span>
                        </td>
-                       <td className="py-4 pr-4 font-sans text-sm text-stone-500 hidden md:table-cell">
+                       <td className="py-4 pr-4 font-lato text-sm text-stone-500 hidden md:table-cell">
                           <span className="px-2 py-1 rounded-md bg-stone-100 group-hover:bg-orange-50 group-hover:text-orange-800 transition-colors">
                             {project.category}
                           </span>
                        </td>
-                       <td className="py-4 font-sans text-sm text-stone-600 hidden lg:table-cell opacity-70 group-hover:opacity-100">{project.client || '-'}</td>
+                       <td className="py-4 font-lato text-sm text-stone-600 hidden lg:table-cell opacity-70 group-hover:opacity-100">{project.client || '-'}</td>
                        <td className="py-4 text-stone-300 group-hover:text-orange-500">
                          <ExternalLink size={16} />
                        </td>
@@ -409,7 +416,7 @@ function App() {
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gradient-to-b from-transparent via-white/50 to-transparent -z-10 blur-xl"></div>
                
                <h2 className="font-display italic text-4xl md:text-5xl text-stone-900 mb-8">Let's build something meaningful.</h2>
-               <a href="mailto:robin.w.bailey@gmail.com" className="inline-block bg-stone-900 text-white font-sans font-bold tracking-wide px-10 py-5 hover:bg-orange-600 transition-colors shadow-xl hover:shadow-orange-500/20 transform hover:-translate-y-1 duration-300 rounded-sm">
+               <a href="mailto:robin.w.bailey@gmail.com" className="inline-block bg-stone-900 text-white font-lato font-bold tracking-wide px-10 py-5 hover:bg-orange-600 transition-colors shadow-xl hover:shadow-orange-500/20 transform hover:-translate-y-1 duration-300 rounded-sm">
                    Get in Touch
                </a>
                <div className="flex justify-center gap-8 mt-12">
@@ -424,9 +431,9 @@ function App() {
           <footer className="flex flex-col md:flex-row justify-between items-end pt-12 border-t border-stone-200/60">
              <div className="mb-4 md:mb-0">
                <span className="font-display text-stone-500 italic text-lg block">Robin Bailey © 2025</span>
-               <span className="font-sans text-xs text-stone-400">Made with care in Plymouth</span>
+               <span className="font-lato text-xs text-stone-400">Made with care in Plymouth</span>
              </div>
-             <a href="#" className="group font-sans text-xs uppercase tracking-widest text-stone-900 font-bold hover:text-orange-600 flex items-center gap-2">
+             <a href="#" className="group font-lato text-xs uppercase tracking-widest text-stone-900 font-bold hover:text-orange-600 flex items-center gap-2">
                Back to Top <ArrowDown size={12} className="rotate-180 group-hover:-translate-y-1 transition-transform" />
              </a>
           </footer>
