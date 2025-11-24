@@ -50,7 +50,7 @@ function App() {
           
           {/* Hero Section */}
           <section className="mb-24 md:mb-32 animate-fade-in-up">
-            <div className="flex flex-col xl:flex-row xl:items-end gap-12 xl:gap-24 border-b border-stone-900/10 pb-12 relative">
+            <div className="flex flex-col xl:flex-row xl:items-start gap-12 xl:gap-24 border-b border-stone-900/10 pb-12 relative">
               {/* Decorative Line Accent */}
               <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-rust-600 z-10"></div>
               
@@ -59,6 +59,7 @@ function App() {
                 <h1 className="sr-only">Robin Bailey</h1>
                 
                 <div className="flex flex-col">
+
                   <span className="font-sans font-semibold text-4xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
                     Product Manager
                   </span>
@@ -78,6 +79,16 @@ function App() {
                 <p className="font-sans font-light text-stone-600 leading-relaxed text-lg md:text-xl">
                   I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real impact.
                 </p>
+                
+                <div className="flex items-center gap-3 mt-6">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span className="font-lato text-xs font-bold uppercase tracking-widest text-emerald-700">
+                    Available for new opportunities
+                  </span>
+                </div>
               </div>
             </div>
           </section>
