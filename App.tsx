@@ -165,13 +165,40 @@ function App() {
                          </div>
                       </div>
 
-                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="flex gap-3 items-start pb-1">
+                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="flex gap-3 items-start pb-3">
+                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                           <div>
+                             <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
+                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                               Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking.
+                             </p>
+                           </div>
+                        </div>
+                        <div className="flex gap-3 items-start pb-3">
                            <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
                            <div>
                              <h5 className="font-serif text-stone-800 text-lg leading-tight">Academic Benchmarking</h5>
                              <p className="font-sans text-stone-600 font-light text-sm mt-1">
                                Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.
+                             </p>
+                           </div>
+                        </div>
+                        <div className="flex gap-3 items-start pb-3">
+                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                           <div>
+                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Wave Digital Assistant</h5>
+                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                               AI chatbot for staff digital education queries in Moodle & student careers advice in the university app.
+                             </p>
+                           </div>
+                        </div>
+                        <div className="flex gap-3 items-start pb-1">
+                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                           <div>
+                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Dynamic Clinical Assessments</h5>
+                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                               TBA
                              </p>
                            </div>
                         </div>
@@ -201,9 +228,18 @@ function App() {
                       <div className="flex gap-3 items-start">
                          <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
                          <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon</h5>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon Platform Interface</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
                              Designed self-service tools that reduced campaign setup time by 80% and enabled scaling to 200+ clients.
+                           </p>
+                         </div>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                         <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Platform RESTful API</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             TBA
                            </p>
                          </div>
                       </div>
@@ -410,7 +446,7 @@ function App() {
                <div className="space-y-10">
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council</p>
+                    <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
@@ -418,7 +454,7 @@ function App() {
                   </div>
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners</p>
+                    <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
                   </div>
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
