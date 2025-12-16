@@ -44,13 +44,19 @@
           },
           animation: {
             'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'fade-in': 'fadeIn 1.2s ease-out forwards',
             'slide-in': 'slideIn 0.5s ease-out forwards',
             'grain': 'grain 8s steps(10) infinite',
+            'draw': 'draw 1.5s ease-out forwards',
           },
           keyframes: {
             fadeInUp: {
               '0%': { opacity: '0', transform: 'translateY(20px)' },
               '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
             },
             slideIn: {
               '0%': { transform: 'translateX(100%)' },
@@ -67,7 +73,11 @@
               '70%': { transform: 'translate(0%, 15%)' },
               '80%': { transform: 'translate(3%, 35%)' },
               '90%': { transform: 'translate(-10%, 10%)' },
-            }
+            },
+            draw: {
+              '0%': { strokeDashoffset: '800' },
+              '100%': { strokeDashoffset: '0' },
+            },
           }
         }
       }

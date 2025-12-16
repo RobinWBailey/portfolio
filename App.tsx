@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc] relative overflow-hidden">
+    <div className="min-h-screen bg-[#fcfcfc] relative overflow-hidden animate-fade-in">
       
       {/* 1. Paper Texture Overlay (Noise) */}
       <div 
@@ -30,6 +30,13 @@ function App() {
           transform: 'translateZ(0)'
         }} 
       />
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes draw-stroke {
+          from { stroke-dashoffset: 800; }
+          to { stroke-dashoffset: 0; }
+        }
+      `}} />
 
       {/* 2. Atmosphere / Color Orbs */}
       <div className="fixed top-[-20%] right-[-10%] w-[800px] h-[800px] bg-orange-100/40 rounded-full blur-[120px] pointer-events-none z-0 mix-blend-multiply opacity-60 animate-pulse duration-[10000ms]" />
@@ -45,12 +52,12 @@ function App() {
       </header>
 
       {/* Main Content Area */}
-      <main className="relative z-10 md:pl-24 lg:pl-32 pt-20 md:pt-0 transition-all duration-300">
+      <main className="relative z-10 md:pl-24 lg:pl-32 pt-20 md:pt-0">
         
         <div className="max-w-screen-2xl mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-24">
           
           {/* Hero Section */}
-          <section className="mb-24 md:mb-32 animate-fade-in-up">
+          <section className="mb-24 md:mb-32">
             <div className="flex flex-col xl:flex-row xl:items-start gap-12 xl:gap-24 border-b border-stone-900/10 pb-12 relative">
               {/* Decorative Line Accent */}
               <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-rust-600 z-10"></div>
@@ -62,7 +69,27 @@ function App() {
                 <div className="flex flex-col">
 
                   <span className="font-sans font-semibold text-4xl md:text-7xl tracking-tighter text-stone-900 leading-[0.9] -ml-[2px]">
-                    Product Manager
+                    Product <span className="relative inline-block z-0">
+                      <span className="relative z-10">Leader</span>
+                      <svg className="absolute -z-10 w-[120%] h-[150%] top-[0%] -left-[10%] text-orange-500 opacity-90 rotate-[-1deg]" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M10 85 C 80 95 160 85 240 75" 
+                          stroke="currentColor" 
+                          strokeWidth="6" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeDasharray="800" 
+                          strokeDashoffset="800"
+                          style={{ animation: 'draw-stroke 0.5s ease-out forwards 1.3s' }} />
+                        <path d="M15 105 C 90 100 170 110 235 95" 
+                          stroke="currentColor" 
+                          strokeWidth="6" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeDasharray="800" 
+                          strokeDashoffset="800"
+                          style={{ animation: 'draw-stroke 0.5s ease-out forwards 1.7s' }} />
+                      </svg>
+                    </span>
                   </span>
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-4xl md:text-7xl text-stone-600 leading-none mt-2">
                     <span className="font-serif italic text-stone-800 font-medium tracking-tight">
@@ -78,7 +105,7 @@ function App() {
 
               <div className="max-w-xl pb-2 xl:mb-2">
                 <p className="font-sans font-light text-stone-600 leading-relaxed text-lg md:text-xl">
-                  I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real impact.
+                  I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real <span className="relative inline-block z-0"><span className="relative z-10">impact</span><svg className="absolute -z-10 w-[140%] h-[150%] -top-[25%] -left-[20%] text-orange-500 opacity-90 rotate-[-2deg]" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M40 40 C 40 20 90 10 130 15 C 190 20 230 50 220 80 C 210 110 140 115 80 110 C 30 105 10 70 25 50 C 35 35 90 25 140 30 C 180 35 210 60 200 85" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="800" strokeDashoffset="800" style={{ animation: 'draw-stroke 0.8s ease-out forwards 2.3s' }} /></svg></span>.
                 </p>
                 
                 <div className="flex items-center gap-3 mt-6">
@@ -388,7 +415,7 @@ function App() {
                 </h3>
                 <div className="grid grid-cols-1 gap-6">
                    {/* Masters */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
+                   <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition duration-300 rounded-sm group flex flex-col">
                       <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
                       <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
@@ -407,7 +434,7 @@ function App() {
                    </div>
 
                    {/* Bachelors */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
+                   <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition duration-300 rounded-sm group flex flex-col">
                       <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
                       <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
