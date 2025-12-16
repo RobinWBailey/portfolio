@@ -4,19 +4,20 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showFreelanceProjects, setShowFreelanceProjects] = useState(false);
+  const [showDigitalEdProjects, setShowDigitalEdProjects] = useState(false);
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
 
-  const featuredProjects = PROJECTS.filter(p => p.isSelected);
-  const archiveProjects = PROJECTS.filter(p => !p.isSelected);
+
 
   return (
     <div className="min-h-screen bg-[#fcfcfc] relative overflow-hidden">
@@ -109,11 +110,84 @@ function App() {
                   
                   <div className="relative group">
                     <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
+                    <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
+                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
+                    <p className="font-sans text-stone-600 font-light leading-relaxed">
+                      Leading the strategic development and technical implementation of data-informed student success initiatives and experience platforms.
+                    </p>
+                    <div className="mt-4 space-y-3">
+                      <div className="flex gap-3 items-start">
+                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Learning Analytics for Early Intervention</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call center to enable peer-led support and signposting.
+                           </p>
+                         </div>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Student Support Case Management</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Leading the design and implementation of a fully integrated student support case management system across the entire institution.
+                           </p>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative group">
+                    <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Digital Education Product Manager</h4>
-                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — Present</p>
+                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — 2025</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
                     </p>
+                    <div className="mt-4 space-y-3">
+                      <div className="flex gap-3 items-start">
+                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">PULSE Student Success Platform</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry.
+                           </p>
+                         </div>
+                      </div>
+
+                      <div className="flex gap-3 items-start">
+                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Content Adaptive Progress Testing</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Designed and implemtented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
+                           </p>
+                         </div>
+                      </div>
+
+                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="flex gap-3 items-start pb-1">
+                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                           <div>
+                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Academic Benchmarking</h5>
+                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                               Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.
+                             </p>
+                           </div>
+                        </div>
+                      </div>
+
+                      <button 
+                        onClick={() => setShowDigitalEdProjects(!showDigitalEdProjects)}
+                        className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-emerald-500 transition-colors mt-2 flex items-center gap-1 pl-5"
+                      >
+                        {showDigitalEdProjects ? (
+                          <>Show Less <ArrowUp size={12} /></>
+                        ) : (
+                          <>Show More <ArrowDown size={12} /></>
+                        )}
+                      </button>
+                    </div>
                   </div>
 
                   <div className="relative group">
@@ -123,6 +197,17 @@ function App() {
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
                     </p>
+                    <div className="mt-4 space-y-3">
+                      <div className="flex gap-3 items-start">
+                         <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Designed self-service tools that reduced campaign setup time by 80% and enabled scaling to 200+ clients.
+                           </p>
+                         </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="relative group">
@@ -132,66 +217,74 @@ function App() {
                     <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
                       Working with diverse clients to build educational iOS applications and digital solutions.
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health Innovations'].map(client => (
                         <span key={client} className="font-lato text-xs font-medium text-stone-500 bg-stone-100 px-2 py-1 rounded-md border border-stone-200/50 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-200 transition-colors cursor-default">
                           {client}
                         </span>
                       ))}
                     </div>
+                    <div className="mt-4 mb-4 space-y-3">
+                      <div className="flex gap-3 items-start">
+                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Local Government Digital Healthcare Initiative</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             More details coming soon.
+                           </p>
+                         </div>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Bento for iOS & Android</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             A "Do Less" to-do list application focused on mindful productivity. Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Prodictivity App in 30 different countries.
+                           </p>
+                         </div>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Investigate Invertebrates</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification.
+                           </p>
+                         </div>
+                      </div>
+                      
+                      </div>
+                      
+                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showFreelanceProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="flex gap-3 items-start pb-1">
+                           <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
+                           <div>
+                             <h5 className="font-serif text-stone-800 text-lg leading-tight">BearForms</h5>
+                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                               Designed and developed an offline-first data capture application for iOS and Android.
+                             </p>
+                           </div>
+                        </div>
+                      </div>
+
+                      <button 
+                        onClick={() => setShowFreelanceProjects(!showFreelanceProjects)}
+                        className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-orange-500 transition-colors mt-2 flex items-center gap-1 pl-5"
+                      >
+                        {showFreelanceProjects ? (
+                          <>Show Less <ArrowUp size={12} /></>
+                        ) : (
+                          <>Show More <ArrowDown size={12} /></>
+                        )}
+                      </button>
+
+
                   </div>
 
                 </div>
               </div>
 
-              {/* Education */}
-              <div>
-                <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center not-italic">
-                     <GraduationCap size={20} />
-                  </div>
-                  Education
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   {/* Masters */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
-                      <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
-                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
-                      <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
-                      
-                      <div className="mb-3 flex-grow">
-                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
-                        <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
-                            <span className="text-purple-500">★</span>
-                            <span>Dean's List Award for Academic Excellence</span>
-                          </li>
-                        </ul>
-                      </div>
 
-                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-purple-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / Distinction</p>
-                   </div>
-
-                   {/* Bachelors */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
-                      <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
-                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
-                      <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
-                      
-                       <div className="mb-3 flex-grow">
-                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
-                        <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
-                            <span className="text-blue-500">★</span>
-                            <span>Dean's List Award (2010, 2011, 2012)</span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-blue-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / First-Class Honours</p>
-                   </div>
-                </div>
-              </div>
             </div>
 
             <div className="lg:col-span-5 space-y-16">
@@ -248,27 +341,59 @@ function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Education */}
+              <div>
+                <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center not-italic">
+                     <GraduationCap size={20} />
+                  </div>
+                  Education
+                </h3>
+                <div className="grid grid-cols-1 gap-6">
+                   {/* Masters */}
+                   <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
+                      <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
+                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
+                      <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
+                      
+                      <div className="mb-3 flex-grow">
+                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
+                        <ul className="space-y-1">
+                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
+                            <span className="text-purple-500">★</span>
+                            <span>Dean's List Award for Academic Excellence</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-purple-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / Distinction</p>
+                   </div>
+
+                   {/* Bachelors */}
+                   <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 rounded-sm group flex flex-col">
+                      <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
+                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
+                      <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
+                      
+                       <div className="mb-3 flex-grow">
+                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
+                        <ul className="space-y-1">
+                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
+                            <span className="text-blue-500">★</span>
+                            <span>Dean's List Award (2010, 2011, 2012)</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-blue-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / First-Class Honours</p>
+                   </div>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Selected Work Grid */}
-          <section id="work" className="mb-32">
-            <div className="flex items-end justify-between mb-8 md:mb-12">
-               <h3 className="font-display text-3xl md:text-4xl italic text-stone-400">Selected Works</h3>
-               <span className="font-lato text-xs font-bold uppercase tracking-widest text-rust-600/80 hidden md:block bg-rust-50 px-3 py-1 rounded-full">Recent & Featured</span>
-            </div>
-            
-            <div className="flex flex-col">
-              {featuredProjects.map((project) => (
-                <ProjectCard 
-                  key={project.id} 
-                  project={project} 
-                  onClick={handleProjectClick} 
-                />
-              ))}
-            </div>
-             <div className="w-full h-[1px] bg-stone-200"></div>
-          </section>
+
 
           {/* Volunteering & Speaking Section */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-32 border-t border-stone-200 pt-16 relative">
@@ -290,6 +415,11 @@ function App() {
                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
                     </p>
+                  </div>
+                  <div className="group border-b border-stone-100 pb-8 cursor-default">
+                    <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
+                    <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners</p>
+                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
                   </div>
                   <div className="group border-b border-stone-100 pb-8 cursor-default">
                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
@@ -394,6 +524,7 @@ function App() {
                <table className="w-full text-left border-collapse">
                  <thead>
                    <tr className="border-b-2 border-stone-900">
+                     <th className="py-4 w-8 md:w-12"></th>
                      <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900 w-24">Year</th>
                      <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900">Project</th>
                      <th className="py-4 pr-4 font-lato text-xs uppercase tracking-widest font-bold text-stone-900 hidden md:table-cell">Category</th>
@@ -401,17 +532,21 @@ function App() {
                      <th className="py-4 w-10"></th>
                    </tr>
                  </thead>
-                 <tbody>
-                   {archiveProjects.map((project) => (
-                     <tr 
-                       key={project.id} 
-                       className="border-b border-stone-200 group hover:bg-white cursor-pointer transition-colors"
-                       onClick={() => handleProjectClick(project)}
-                     >
-                       <td className="py-4 pr-4 font-serif text-stone-400 group-hover:text-rust-600 transition-colors">{project.year}</td>
-                       <td className="py-4 pr-4">
-                         <span className="font-serif text-lg text-stone-900 font-medium block group-hover:translate-x-2 transition-transform duration-300">{project.title}</span>
-                         <span className="font-lato text-xs text-stone-500 md:hidden mt-1 block">{project.category}</span>
+                  <tbody>
+                    {PROJECTS.map((project) => (
+                      <tr 
+                        key={project.id} 
+                        className="border-b border-stone-200 group hover:bg-white cursor-default transition-colors"
+                      >
+                        <td className="py-4 pl-2 md:pl-4">
+                           {project.isSelected && (
+                             <Star size={16} className="text-rust-600 fill-current" />
+                           )}
+                        </td>
+                        <td className="py-4 pr-4 font-serif text-stone-400 group-hover:text-rust-600 transition-colors">{project.year}</td>
+                        <td className="py-4 pr-4">
+                          <span className="font-serif text-lg text-stone-900 font-medium block group-hover:translate-x-2 transition-transform duration-300">{project.title}</span>
+                          <span className="font-lato text-xs text-stone-500 md:hidden mt-1 block">{project.category}</span>
                        </td>
                        <td className="py-4 pr-4 font-lato text-sm text-stone-500 hidden md:table-cell">
                           <span className="px-2 py-1 rounded-md bg-stone-100 group-hover:bg-rust-50 group-hover:text-rust-800 transition-colors">
