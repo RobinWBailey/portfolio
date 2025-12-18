@@ -237,7 +237,7 @@ function App() {
 
                       <button 
                         onClick={() => setShowDigitalEdProjects(!showDigitalEdProjects)}
-                        className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-emerald-500 transition-colors mt-2 flex items-center gap-1 pl-5"
+                        className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-emerald-700 bg-white border border-stone-200 hover:border-emerald-300 hover:bg-emerald-50 px-5 py-2 rounded-full transition-all mt-6 shadow-sm"
                       >
                         {showDigitalEdProjects ? (
                           <>Show Less <ArrowUp size={12} /></>
@@ -339,7 +339,7 @@ function App() {
 
                       <button 
                         onClick={() => setShowFreelanceProjects(!showFreelanceProjects)}
-                        className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 hover:text-orange-500 transition-colors mt-2 flex items-center gap-1 pl-5"
+                        className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-orange-700 bg-white border border-stone-200 hover:border-orange-300 hover:bg-orange-50 px-5 py-2 rounded-full transition-all mt-6 shadow-sm"
                       >
                         {showFreelanceProjects ? (
                           <>Show Less <ArrowUp size={12} /></>
