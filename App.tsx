@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Brain, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -390,7 +390,7 @@ function App() {
                           { label: 'Product & UX', icon: <LayoutTemplate size={14} /> },
                           { label: 'Salesforce', icon: <Cloud size={14} /> },
                           { label: 'Mobile Apps', icon: <Smartphone size={14} /> },
-                          { label: 'AI & ML', icon: <Brain size={14} /> },
+                          { label: 'Data Modeling', icon: <Database size={14} /> },
                           { label: 'Wireframing', icon: <PenTool size={14} /> },
                           { label: 'Prototyping', icon: <Zap size={14} /> }
                         ].map(skill => (
