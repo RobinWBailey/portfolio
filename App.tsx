@@ -63,7 +63,7 @@ function App() {
               <div className="absolute bottom-[-1px] left-0 w-32 h-[2px] bg-rust-600 z-10"></div>
               
               <div className="flex flex-col gap-3 relative z-10">
-                {/* Hidden H1 for SEO/Accessiblity since visual title is in sidebar */}
+                {/* Hidden H1 for SEO/Accessibility since visual title is in sidebar */}
                 <h1 className="sr-only">Robin Bailey</h1>
                 
                 <div className="flex flex-col">
@@ -148,7 +148,7 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">Learning Analytics for Early Intervention</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call center to enable peer-led support and signposting.
+                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting.
                            </p>
                            <p className="font-lato text-xs text-emerald-600 font-medium mt-2 flex items-center gap-1.5">
                              <span className="text-lg leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
@@ -190,7 +190,7 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">Content Adaptive Progress Testing</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Designed and implemtented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
+                             Designed and implemented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
                            </p>
                          </div>
                       </div>

@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     year: '2025',
     isSelected: true,
     summary: 'Data Visualization for Educational Success.',
-    description: 'A strategic project to visualize student learning data to identify trends and support student success. I led the product strategy and data visualization design, creating dashboards that allow faculty to identify at-risk students early in the semester.',
+    description: 'A strategic project to visualise student learning data to identify trends and support student success. I led the product strategy and data visualisation design, creating dashboards that allow faculty to identify at-risk students early in the semester.',
     client: 'Plymouth University',
     role: 'Product & Technical Lead',
     images: [
