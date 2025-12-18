@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Brain, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -229,7 +229,7 @@ function App() {
                            <div>
                              <h5 className="font-serif text-stone-800 text-lg leading-tight">Dynamic Clinical Assessments</h5>
                              <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               TBA
+                               More details coming soon.
                              </p>
                            </div>
                         </div>
@@ -270,7 +270,7 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Platform RESTful API</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             TBA
+                             More details coming soon.
                            </p>
                          </div>
                       </div>
@@ -378,8 +378,18 @@ function App() {
                         Skills
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Product & UX', 'Salesforce', 'Mobile Apps', 'AI & ML', 'Wireframing', 'Prototyping'].map(skill => (
-                          <span key={skill} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-lato font-light text-stone-300 transition-colors cursor-default">{skill}</span>
+                        {[
+                          { label: 'Product & UX', icon: <LayoutTemplate size={14} /> },
+                          { label: 'Salesforce', icon: <Cloud size={14} /> },
+                          { label: 'Mobile Apps', icon: <Smartphone size={14} /> },
+                          { label: 'AI & ML', icon: <Brain size={14} /> },
+                          { label: 'Wireframing', icon: <PenTool size={14} /> },
+                          { label: 'Prototyping', icon: <Zap size={14} /> }
+                        ].map(skill => (
+                          <span key={skill.label} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-lato font-light text-stone-300 transition-colors cursor-default flex items-center gap-2">
+                             <span className="opacity-70">{skill.icon}</span>
+                             {skill.label}
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -390,21 +400,29 @@ function App() {
                         Sectors
                       </h4>
                       <ul className="font-serif text-xl space-y-3 text-stone-300">
-                        <li className="flex items-center gap-3 group cursor-default">
-                           <span className="h-[1px] w-4 bg-stone-600 group-hover:bg-orange-400 group-hover:w-6 transition-all"></span>
-                           <span className="group-hover:text-white transition-colors">Education & EdTech</span>
+                        <li className="group cursor-default">
+                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
+                             <BookOpen size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
+                             Education & EdTech
+                           </span>
                         </li>
-                        <li className="flex items-center gap-3 group cursor-default">
-                           <span className="h-[1px] w-4 bg-stone-600 group-hover:bg-orange-400 group-hover:w-6 transition-all"></span>
-                           <span className="group-hover:text-white transition-colors">Health & Medical</span>
+                        <li className="group cursor-default">
+                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
+                             <Stethoscope size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
+                             Health & Medical
+                           </span>
                         </li>
-                        <li className="flex items-center gap-3 group cursor-default">
-                           <span className="h-[1px] w-4 bg-stone-600 group-hover:bg-orange-400 group-hover:w-6 transition-all"></span>
-                           <span className="group-hover:text-white transition-colors">Government</span>
+                        <li className="group cursor-default">
+                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
+                             <Landmark size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
+                             Government
+                           </span>
                         </li>
-                        <li className="flex items-center gap-3 group cursor-default">
-                           <span className="h-[1px] w-4 bg-stone-600 group-hover:bg-orange-400 group-hover:w-6 transition-all"></span>
-                           <span className="group-hover:text-white transition-colors">AdTech</span>
+                        <li className="group cursor-default">
+                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
+                             <Megaphone size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
+                             AdTech
+                           </span>
                         </li>
                       </ul>
                     </div>
