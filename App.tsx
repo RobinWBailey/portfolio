@@ -133,12 +133,13 @@ function App() {
                   </div>
                   Experience
                 </h3>
-                <div className="space-y-12 border-l border-stone-200 ml-2 pl-5 md:pl-8 relative">
+                <div className="space-y-8 border-l border-stone-200 ml-2 pl-8 relative">
                   
                   <div className="relative group">
-                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
-                    <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
-                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
+                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm"></div>
+                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                      <h4 className="font-serif text-2xl text-stone-900">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
+                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Leading the strategic development and technical implementation of data-informed student success initiatives and experience platforms.
                     </p>
@@ -165,12 +166,14 @@ function App() {
                          </div>
                       </div>
                     </div>
+                    </div>
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
-                    <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Digital Education Product Manager</h4>
-                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — 2025</p>
+                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm"></div>
+                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                      <h4 className="font-serif text-2xl text-stone-900">Digital Education Product Manager</h4>
+                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — 2025</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
                     </p>
@@ -246,12 +249,14 @@ function App() {
                         )}
                       </button>
                     </div>
+                    </div>
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
-                    <h4 className="font-serif text-2xl text-stone-900 group-hover:text-blue-700 transition-colors">Product Architect; Senior UX Designer</h4>
-                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">iotec Global / 2016 — 2018</p>
+                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm"></div>
+                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                      <h4 className="font-serif text-2xl text-stone-900">Product Architect; Senior UX Designer</h4>
+                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">iotec Global / 2016 — 2018</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
                     </p>
@@ -275,12 +280,14 @@ function App() {
                          </div>
                       </div>
                     </div>
+                    </div>
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
-                    <h4 className="font-serif text-2xl text-stone-900 group-hover:text-orange-700 transition-colors">Freelance Product Design</h4>
-                    <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
+                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm"></div>
+                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                      <h4 className="font-serif text-2xl text-stone-900">Freelance Product Design</h4>
+                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
                       Working with diverse clients to build educational iOS applications and digital solutions.
                     </p>
@@ -350,6 +357,7 @@ function App() {
 
 
                   </div>
+                  </div>
 
                 </div>
               </div>
@@ -359,7 +367,7 @@ function App() {
 
             <div className="lg:col-span-5 space-y-16">
                {/* Expertise */}
-              <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-6 md:p-12 relative overflow-hidden rounded-sm shadow-2xl">
+              <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-6 md:p-12 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                 {/* Abstract Shapes in Card */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
@@ -440,7 +448,7 @@ function App() {
                 </h3>
                 <div className="grid grid-cols-1 gap-6">
                    {/* Masters */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-purple-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition duration-300 rounded-sm group flex flex-col">
+                   <div className="p-8 md:p-10 border border-stone-100 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-[2rem] group flex flex-col">
                       <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
                       <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
@@ -459,7 +467,7 @@ function App() {
                    </div>
 
                    {/* Bachelors */}
-                   <div className="p-6 border border-stone-200 bg-white hover:border-blue-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition duration-300 rounded-sm group flex flex-col">
+                   <div className="p-8 md:p-10 border border-stone-100 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-[2rem] group flex flex-col">
                       <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
                       <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
                       <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
@@ -495,37 +503,37 @@ function App() {
                  </div>
                  Volunteering & Advisory
                </h3>
-               <div className="space-y-10">
-                  <div className="group border-b border-stone-100 pb-8 cursor-default">
-                    <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
-                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                      Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
-                    </p>
-                  </div>
-                  <div className="group border-b border-stone-100 pb-8 cursor-default">
-                    <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
-                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
-                  </div>
-                  <div className="group border-b border-stone-100 pb-8 cursor-default">
-                    <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
-                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                      Supporting the education department in delivering conservation education to public audiences and school groups.
-                    </p>
-                  </div>
-                  <div className="group cursor-default">
-                    <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
-                    <p className="font-lato text-stone-500 text-sm mt-1">Town Council</p>
-                    <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                      Representing the views of young people in local government decision making processes and community initiatives.
-                    </p>
-                  </div>
-               </div>
+                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] space-y-10">
+                   <div className="group border-b border-stone-100 pb-8 cursor-default">
+                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
+                     <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
+                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
+                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
+                     </p>
+                   </div>
+                   <div className="group border-b border-stone-100 pb-8 cursor-default">
+                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
+                     <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
+                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
+                   </div>
+                   <div className="group border-b border-stone-100 pb-8 cursor-default">
+                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
+                     <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
+                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
+                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                       Supporting the education department in delivering conservation education to public audiences and school groups.
+                     </p>
+                   </div>
+                   <div className="group cursor-default">
+                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
+                     <p className="font-lato text-stone-500 text-sm mt-1">Town Council</p>
+                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>
+                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                       Representing the views of young people in local government decision making processes and community initiatives.
+                     </p>
+                   </div>
+                </div>
              </div>
 
              {/* Speaking */}
@@ -536,7 +544,7 @@ function App() {
                  </div>
                  Speaking
                </h3>
-               <div className="space-y-8">
+                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] space-y-8">
                   <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
                     <div className="flex-shrink-0 w-12 text-center pt-1">
                        <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
@@ -596,7 +604,7 @@ function App() {
                        </p>
                     </div>
                   </div>
-               </div>
+                </div>
              </div>
 
           </section>
