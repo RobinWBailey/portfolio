@@ -158,9 +158,9 @@ function App() {
                       <div className="flex gap-3 items-start">
                          <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
                          <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Student Support Case Management</h5>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Student Support Enquiry & Case Management</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Leading the design and implementation of a fully integrated student support case management system across the entire institution.
+                             Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution.
                            </p>
                          </div>
                       </div>
