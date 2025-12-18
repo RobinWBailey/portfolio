@@ -150,6 +150,9 @@ function App() {
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
                              Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call center to enable peer-led support and signposting.
                            </p>
+                           <p className="font-lato text-xs text-emerald-600 font-medium mt-2 flex items-center gap-1.5">
+                             <span className="text-lg leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
+                           </p>
                          </div>
                       </div>
                       <div className="flex gap-3 items-start">
@@ -302,7 +305,10 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">Bento for iOS & Android</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             A "Do Less" to-do list application focused on mindful productivity. Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Prodictivity App in 30 different countries.
+                             A "Do Less" to-do list application focused on mindful productivity.
+                           </p>
+                           <p className="font-lato text-xs text-orange-600 font-medium mt-2 flex items-center gap-1.5 align-top">
+                             <span className="text-lg leading-none mt-[-2px]">★</span> <span>Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Productivity App in 30 different countries</span>
                            </p>
                          </div>
                       </div>
