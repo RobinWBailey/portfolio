@@ -136,7 +136,7 @@ function App() {
                 <div className="space-y-12 border-l border-stone-200 ml-2 pl-5 md:pl-8 relative">
                   
                   <div className="relative group">
-                    <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
+                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
                     <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
@@ -168,7 +168,7 @@ function App() {
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
+                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-emerald-700 transition-colors">Digital Education Product Manager</h4>
                     <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — 2025</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
@@ -195,16 +195,17 @@ function App() {
                          </div>
                       </div>
 
+                      <div className="flex gap-3 items-start">
+                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
+                         <div>
+                           <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
+                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                             Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking.
+                           </p>
+                         </div>
+                      </div>
+
                       <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="flex gap-3 items-start pb-3">
-                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                           <div>
-                             <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
-                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking.
-                             </p>
-                           </div>
-                        </div>
                         <div className="flex gap-3 items-start pb-3">
                            <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
                            <div>
@@ -248,7 +249,7 @@ function App() {
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
+                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-blue-700 transition-colors">Product Architect; Senior UX Designer</h4>
                     <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">iotec Global / 2016 — 2018</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
@@ -277,7 +278,7 @@ function App() {
                   </div>
 
                   <div className="relative group">
-                    <div className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
+                    <div className="absolute -left-[30px] md:-left-[42px] top-2 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm transition-transform group-hover:scale-125"></div>
                     <h4 className="font-serif text-2xl text-stone-900 group-hover:text-orange-700 transition-colors">Freelance Product Design</h4>
                     <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
