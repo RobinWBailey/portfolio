@@ -141,15 +141,15 @@ function App() {
                       <h4 className="font-serif text-2xl text-stone-900">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
                       <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Leading the strategic product development and technical implementation of a wide programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency. 
+                      Leading the strategic product development and technical implementation of a wide £<span className="font-mono text-[10px] bg-stone-200 text-stone-500 px-1.5 py-0.5 rounded ml-0.5 mr-1.5 tracking-widest select-none cursor-help" title="Value redacted for confidentiality">REDACTED</span> programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency. 
                     </p>
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-4 space-y-5">
                       <div className="flex gap-3 items-start">
                          <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">Learning Analytics for Early Intervention</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting.
+                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span className="relative inline-block px-1 italic font-medium z-10">Insights<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-purple-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> service and design to enable proactive calls to action.
                            </p>
                            <p className="font-lato text-xs text-emerald-600 font-medium mt-2 flex items-center gap-1.5">
                              <span className="text-lg leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
@@ -177,7 +177,7 @@ function App() {
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
                     </p>
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-4 space-y-5">
                       <div className="flex gap-3 items-start">
                          <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
                          <div>
@@ -203,7 +203,7 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking.
+                             Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span className="relative inline-block px-1 italic font-medium z-10">TBA clinical sites<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span>across the south-west of England, enabling over <span className="relative inline-block px-1 italic font-medium z-10">TBA appointments<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> per year in collaboration with PDSE.
                            </p>
                          </div>
                       </div>
@@ -260,13 +260,13 @@ function App() {
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
                       Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
                     </p>
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-4 space-y-5">
                       <div className="flex gap-3 items-start">
                          <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon Platform Interface</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Designed self-service tools that reduced campaign setup time by 80% and enabled scaling to 200+ clients.
+                             Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts.
                            </p>
                          </div>
                       </div>
@@ -275,7 +275,7 @@ function App() {
                          <div>
                            <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Platform RESTful API</h5>
                            <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             More details coming soon.
+                             Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally. A key enabling strategic functionality for the self service Horizon platform interface.
                            </p>
                          </div>
                       </div>
@@ -289,7 +289,7 @@ function App() {
                       <h4 className="font-serif text-2xl text-stone-900">Freelance Product Design & Development</h4>
                       <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
-                      Working with diverse clients to build educational iOS applications and digital solutions.
+                      Designing, building, and implementing 0 → 1 products across multiple industries and diverse clients.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health Innovations'].map(client => (
@@ -298,7 +298,7 @@ function App() {
                         </span>
                       ))}
                     </div>
-                    <div className="mt-4 mb-4 space-y-3">
+                    <div className="mt-4 mb-4 space-y-5">
                       <div className="flex gap-3 items-start">
                          <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
                          <div>
