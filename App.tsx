@@ -141,7 +141,7 @@ function App() {
                       <h4 className="font-serif text-2xl text-stone-900">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
                       <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Leading the strategic development and technical implementation of data-informed student success initiatives and experience platforms.
+                      Leading the strategic product development and technical implementation of a wide programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency. 
                     </p>
                     <div className="mt-4 space-y-3">
                       <div className="flex gap-3 items-start">
@@ -286,7 +286,7 @@ function App() {
                   <div className="relative group">
                     <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm"></div>
                     <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                      <h4 className="font-serif text-2xl text-stone-900">Freelance Product Design</h4>
+                      <h4 className="font-serif text-2xl text-stone-900">Freelance Product Design & Development</h4>
                       <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
                     <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
                       Working with diverse clients to build educational iOS applications and digital solutions.
