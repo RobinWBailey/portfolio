@@ -552,76 +552,79 @@ function App() {
             </div>
 
             <div className="lg:col-span-5 space-y-16">
-               {/* Expertise */}
-              <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-6 md:p-12 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                {/* Abstract Shapes in Card */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
+              {/* Expertise */}
+              <div className="relative group">
+                 <h3 className="font-display text-3xl md:text-4xl mb-8 italic text-stone-900 flex items-center gap-3">
+                   <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center not-italic">
+                      <Lightbulb size={20} />
+                   </div>
+                   Expertise
+                 </h3>
                 
-                <div className="relative z-10">
-                  <h3 className="font-display text-3xl mb-8 italic text-orange-50 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-200 flex items-center justify-center not-italic">
-                       <Lightbulb size={20} />
-                    </div>
-                    Expertise
-                  </h3>
-                  <div className="space-y-10">
-                    <div>
-                      <h4 className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                        Skills
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {[
-                          { label: 'Product & UX', icon: <LayoutTemplate size={14} /> },
-                          { label: 'Salesforce', icon: <Cloud size={14} /> },
-                          { label: 'Mobile Apps', icon: <Smartphone size={14} /> },
-                          { label: 'Data Modeling', icon: <Database size={14} /> },
-                          { label: 'Wireframing', icon: <PenTool size={14} /> },
-                          { label: 'Prototyping', icon: <Zap size={14} /> }
-                        ].map(skill => (
-                          <span key={skill.label} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-lato font-light text-stone-300 transition-colors cursor-default flex items-center gap-2">
-                             <span className="opacity-70">{skill.icon}</span>
-                             {skill.label}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-lato text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        Sectors
-                      </h4>
-                      <ul className="font-serif text-xl space-y-3 text-stone-300">
-                        <li className="group cursor-default">
-                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
-                             <BookOpen size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
-                             Education & EdTech
-                           </span>
-                        </li>
-                        <li className="group cursor-default">
-                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
-                             <Stethoscope size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
-                             Health & Medical
-                           </span>
-                        </li>
-                        <li className="group cursor-default">
-                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
-                             <Landmark size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
-                             Government
-                           </span>
-                        </li>
-                        <li className="group cursor-default">
-                           <span className="group-hover:text-white transition-colors flex items-center gap-2">
-                             <Megaphone size={18} className="opacity-70 group-hover:text-orange-400 transition-colors" />
-                             AdTech
-                           </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                 <div className="bg-gradient-to-br from-stone-900 to-slate-800 text-stone-50 p-6 md:p-8 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                   {/* Abstract Shapes in Card - Boosted */}
+                   <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                   <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/25 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+                   
+                     <div className="relative z-10 h-full">
+                         <div className="space-y-10">
+                           <div>
+                             <h4 className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
+                               <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                               Skills
+                             </h4>
+                             <div className="flex flex-wrap gap-2">
+                               {[
+                                 { label: 'Product & UX', icon: <LayoutTemplate size={14} /> },
+                                 { label: 'Salesforce', icon: <Cloud size={14} /> },
+                                 { label: 'Mobile Apps', icon: <Smartphone size={14} /> },
+                                 { label: 'Data Modeling', icon: <Database size={14} /> },
+                                 { label: 'Wireframing', icon: <PenTool size={14} /> },
+                                 { label: 'Prototyping', icon: <Zap size={14} /> }
+                               ].map(skill => (
+                                 <span key={skill.label} className="px-3 py-1.5 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/50 rounded-md text-sm font-lato font-light text-stone-300 transition-colors cursor-default flex items-center gap-2">
+                                    <span className="opacity-70">{skill.icon}</span>
+                                    {skill.label}
+                                 </span>
+                               ))}
+                             </div>
+                           </div>
+                           
+                           <div>
+                             <h4 className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-4 flex items-center gap-2">
+                               <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                               Sectors
+                             </h4>
+                             <ul className="font-serif text-xl space-y-3 text-stone-300">
+                               <li className="cursor-default">
+                                   <span className="flex items-center gap-2">
+                                     <BookOpen size={18} className="opacity-70" />
+                                     Education & EdTech
+                                   </span>
+                               </li>
+                               <li className="cursor-default">
+                                   <span className="flex items-center gap-2">
+                                     <Stethoscope size={18} className="opacity-70" />
+                                     Health & Medical
+                                   </span>
+                               </li>
+                               <li className="cursor-default">
+                                   <span className="flex items-center gap-2">
+                                     <Landmark size={18} className="opacity-70" />
+                                     Government
+                                   </span>
+                               </li>
+                               <li className="cursor-default">
+                                   <span className="flex items-center gap-2">
+                                     <Megaphone size={18} className="opacity-70" />
+                                     AdTech
+                                   </span>
+                               </li>
+                             </ul>
+                           </div>
+                         </div>
+                   </div>
+                 </div>
               </div>
 
               {/* Education */}
