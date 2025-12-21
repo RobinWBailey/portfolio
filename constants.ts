@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     year: '2018',
     isSelected: true,
     summary: 'Campaign management and reporting for high-scale AdTech.',
-    description: 'A self-service campaign management and reporting tool for a cutting-edge AdTech platform, empowering clients to manage their own digital advertising campaigns. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. We achieved an 80% reduction in campaign setup time and enabled the business to scale to 200+ clients without increasing support staff.',
+    description: 'A self-service campaign management and reporting tool for a cutting-edge AdTech platform, empowering clients to manage their own digital advertising campaigns. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. The platform was fully internationalised for major European markets to enable strategic expansion, achieving an 80% reduction in campaign setup time and enabling the business to scale to 200+ clients.',
     client: 'iotec Global',
     role: 'Lead UX Designer & Product Architect',
     images: [

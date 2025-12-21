@@ -405,7 +405,7 @@ function App() {
                                   <div>
                                     <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon Platform Interface</h5>
                                     <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                                      Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts.
+                                      Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. The platform was fully internationalised for major European markets to enable strategic expansion.
                                     </p>
                                   </div>
                                </div>
@@ -783,7 +783,7 @@ function App() {
 
 
           {/* Volunteering & Speaking Section */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-32 border-t border-stone-200 pt-16 relative">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-16 mb-32 border-t border-stone-200 pt-16 relative">
              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-stone-200 rounded-full hidden md:block"></div>
              
              {/* Volunteering */}
@@ -810,26 +810,35 @@ function App() {
                        </div>
 
                        <div className="p-6 md:p-8 relative z-10 space-y-10">
-                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
-                           <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
-                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                             Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
-                           </p>
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default flex justify-between items-start gap-4">
+                           <div>
+                             <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
+                             <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
+                             <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
+                             <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                               Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
+                             </p>
+                           </div>
+                           <img src="/msc_logo.png" alt="Medical Schools Council" className="w-16 h-16 object-contain opacity-90 mix-blend-multiply" />
                          </div>
-                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
-                           <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default flex justify-between items-start gap-4">
+                           <div>
+                             <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
+                             <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
+                             <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
+                           </div>
+                           <img src="/hespa_logo.png" alt="HESPA" className="w-16 h-16 object-contain opacity-90 mix-blend-multiply" />
                          </div>
-                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
-                           <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2004 — 2023</p>
-                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                             Supporting the education department in delivering conservation education to public audiences and school groups.
-                           </p>
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default flex justify-between items-start gap-4">
+                           <div>
+                             <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
+                             <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
+                             <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2004 — 2023</p>
+                             <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                               Supporting the education department in delivering conservation education to public audiences and school groups.
+                             </p>
+                           </div>
+                           <img src="/wildplanettrust_logo.png" alt="Wild Planet Trust" className="w-16 h-16 object-contain opacity-90 mix-blend-multiply" />
                          </div>
                          <div className="group cursor-default">
                            <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
@@ -847,7 +856,7 @@ function App() {
 
              {/* Speaking */}
              <div>
-               <h3 className="font-display italic text-3xl mb-8 text-stone-900 flex items-center gap-3">
+               <h3 className="font-display italic text-3xl mb-8 text-stone-900 flex items-center gap-3 relative z-30">
                  <div className="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center not-italic">
                     <Mic size={16} />
                  </div>
