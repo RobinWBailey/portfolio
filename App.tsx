@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -137,227 +137,413 @@ function App() {
                   
                   <div className="relative group">
                     <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm"></div>
-                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                      <h4 className="font-serif text-2xl text-stone-900">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
-                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Plymouth University / 2025 — Present</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Leading the strategic product development and technical implementation of a wide £<span className="font-mono text-[10px] bg-stone-200 text-stone-500 px-1.5 py-0.5 rounded ml-0.5 mr-1.5 tracking-widest select-none cursor-help" title="Value redacted for confidentiality">REDACTED</span> programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency. 
-                    </p>
-                    <div className="mt-4 space-y-5">
-                      <div className="flex gap-3 items-start">
-                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Learning Analytics for Early Intervention</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span className="relative inline-block px-1 italic font-medium z-10">Insights<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-purple-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> service and design to enable proactive calls to action.
-                           </p>
-                           <p className="font-lato text-xs text-emerald-600 font-medium mt-2 flex items-center gap-1.5">
-                             <span className="text-lg leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
-                           </p>
-                         </div>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Student Support Enquiry & Case Management</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution.
-                           </p>
-                         </div>
-                      </div>
-                    </div>
-                    </div>
-                  </div>
+                    <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                       {/* Background Pattern */}
+                       <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                       <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                            <BookOpen size={48} />
+                            <Database size={48} />
+                            <GraduationCap size={48} />
+                            <Activity size={48} />
+                            <BarChart3 size={48} />
+                            <Users size={48} />
+                       </div>
 
-                  <div className="relative group">
-                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#fcfcfc] shadow-sm"></div>
-                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                      <h4 className="font-serif text-2xl text-stone-900">Digital Education Product Manager</h4>
-                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Academic Development, Plymouth University / 2019 — 2025</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
-                    </p>
-                    <div className="mt-4 space-y-5">
-                      <div className="flex gap-3 items-start">
-                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">PULSE Student Success Platform</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry.
-                           </p>
-                         </div>
-                      </div>
+                       <div className="p-8 md:p-10 relative z-10">
+                          {/* Header Content */}
+                          <div className="mb-8">
+                             <h4 className="font-serif text-2xl text-white leading-tight">Product & Technical Lead: Learning Analytics & Student Support Experience</h4>
+                             <p className="font-lato text-sm font-bold uppercase tracking-widest text-emerald-100/90 mt-2">Plymouth University / 2025 — Present</p>
+                          </div>
 
-                      <div className="flex gap-3 items-start">
-                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Content Adaptive Progress Testing</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Designed and implemented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
-                           </p>
-                         </div>
-                      </div>
-
-                      <div className="flex gap-3 items-start">
-                         <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span className="relative inline-block px-1 italic font-medium z-10">TBA clinical sites<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span>across the south-west of England, enabling over <span className="relative inline-block px-1 italic font-medium z-10">TBA appointments<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> per year in collaboration with PDSE and the #1 ranked dental school in the UK.
-                           </p>
-                         </div>
-                      </div>
-
-                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="flex gap-3 items-start pb-3">
-                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                           <div>
-                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Academic Benchmarking</h5>
-                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.
+                          {/* Content Sub-Card */}
+                          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm">
+                             <p className="font-sans text-stone-600 font-light leading-relaxed">
+                               Leading the strategic product development and technical implementation of a wide £<span className="font-mono text-[10px] bg-stone-200 text-stone-500 px-1.5 py-0.5 rounded ml-0.5 mr-1.5 tracking-widest select-none cursor-help" title="Value redacted for confidentiality">REDACTED</span> programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency. 
                              </p>
-                           </div>
-                        </div>
-                        <div className="flex gap-3 items-start pb-3">
-                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                           <div>
-                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Wave Digital Assistant</h5>
-                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               AI chatbot for staff digital education queries in Moodle & student careers advice in the university app.
-                             </p>
-                           </div>
-                        </div>
-                        <div className="flex gap-3 items-start pb-1">
-                           <span className="text-emerald-400 mt-1.5 text-[10px]">●</span>
-                           <div>
-                             <h5 className="font-serif text-stone-800 text-lg leading-tight">Dynamic Clinical Assessments</h5>
-                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               More details coming soon.
-                             </p>
-                           </div>
-                        </div>
-                      </div>
-
-                      <button 
-                        onClick={() => setShowDigitalEdProjects(!showDigitalEdProjects)}
-                        className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-emerald-700 bg-white border border-stone-200 hover:border-emerald-300 hover:bg-emerald-50 px-5 py-2 rounded-full transition-all mt-6 shadow-sm"
-                      >
-                        {showDigitalEdProjects ? (
-                          <>Show Less <ArrowUp size={12} /></>
-                        ) : (
-                          <>Show More <ArrowDown size={12} /></>
-                        )}
-                      </button>
+                             <div className="mt-8 space-y-5">
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-emerald-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Learning Analytics for Early Intervention</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span className="relative inline-block px-1 italic font-medium z-10">Insights<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-purple-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> service and design to enable proactive calls to action.
+                                    </p>
+                                    <p className="font-lato text-xs text-emerald-600 font-medium mt-2 flex items-center gap-1.5">
+                                      <span className="text-lg leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
+                                    </p>
+                                  </div>
+                               </div>
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-emerald-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Student Support Enquiry & Case Management</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution.
+                                    </p>
+                                  </div>
+                               </div>
+                             </div>
+                          </div>
+                       </div>
                     </div>
-                    </div>
-                  </div>
+                   </div>
 
                   <div className="relative group">
                     <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-blue-500 border-4 border-[#fcfcfc] shadow-sm"></div>
-                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                      <h4 className="font-serif text-2xl text-stone-900">Product Architect; Senior UX Designer</h4>
-                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">iotec Global / 2016 — 2018</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed">
-                      Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
-                    </p>
-                    <div className="mt-4 space-y-5">
-                      <div className="flex gap-3 items-start">
-                         <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon Platform Interface</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts.
-                           </p>
-                         </div>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                         <span className="text-blue-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Platform RESTful API</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally. A key enabling strategic functionality for the self service Horizon platform interface.
-                           </p>
-                         </div>
-                      </div>
+                    <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                       {/* Background Pattern */}
+                       <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                       <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                            <Stethoscope size={48} />
+                            <BookOpen size={48} />
+                            <Activity size={48} />
+                            <GraduationCap size={48} />
+                            <Users size={48} />
+                       </div>
+
+                       <div className="p-8 md:p-10 relative z-10">
+                          {/* Header Content */}
+                          <div className="mb-8">
+                            <h4 className="font-serif text-2xl text-white leading-tight">Digital Education Product Manager</h4>
+                            <p className="font-lato text-sm font-bold uppercase tracking-widest text-blue-100/90 mt-2">Academic Development, Plymouth University / 2019 — 2025</p>
+                          </div>
+
+                          {/* Content Sub-Card */}
+                          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm">
+                             <p className="font-sans text-stone-600 font-light leading-relaxed">
+                               Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.
+                             </p>
+                             <div className="mt-8 space-y-5">
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">PULSE Student Success Platform</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry.
+                                    </p>
+                                  </div>
+                               </div>
+
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Content Adaptive Progress Testing</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Designed and implemented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
+                                    </p>
+                                  </div>
+                               </div>
+
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">On-Clinic Dental Experience Assessment</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span className="relative inline-block px-1 italic font-medium z-10">TBA clinical sites<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span>across the south-west of England, enabling over <span className="relative inline-block px-1 italic font-medium z-10">TBA appointments<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> per year in collaboration with PDSE and the #1 ranked dental school in the UK.
+                                    </p>
+                                  </div>
+                               </div>
+
+                               <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                 <div className="flex gap-3 items-start pb-3">
+                                    <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                    <div>
+                                      <h5 className="font-serif text-stone-800 text-lg leading-tight">Academic Benchmarking</h5>
+                                      <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                        Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.
+                                      </p>
+                                    </div>
+                                 </div>
+                                 <div className="flex gap-3 items-start pb-3">
+                                    <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                    <div>
+                                      <h5 className="font-serif text-stone-800 text-lg leading-tight">Wave Digital Assistant</h5>
+                                      <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                        AI chatbot for staff digital education queries in Moodle & student careers advice in the university app.
+                                      </p>
+                                    </div>
+                                 </div>
+                                 <div className="flex gap-3 items-start pb-1">
+                                    <span className="text-blue-500 mt-1.5 text-[10px]">●</span>
+                                    <div>
+                                      <h5 className="font-serif text-stone-800 text-lg leading-tight">Dynamic Clinical Assessments</h5>
+                                      <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                        More details coming soon.
+                                      </p>
+                                    </div>
+                                 </div>
+                               </div>
+                               
+                               <div className="flex justify-center pt-2">
+                                <button 
+                                  onClick={() => setShowDigitalEdProjects(!showDigitalEdProjects)}
+                                  className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-blue-700 bg-blue-50/50 border border-stone-200 hover:border-blue-300 hover:bg-blue-50 px-5 py-2 rounded-full transition-all"
+                                >
+                                  {showDigitalEdProjects ? (
+                                    <>Show Less <ArrowUp size={12} /></>
+                                  ) : (
+                                    <>Show More <ArrowDown size={12} /></>
+                                  )}
+                                </button>
+                               </div>
+
+                             </div>
+                          </div>
+                       </div>
                     </div>
+                   </div>
+
+                  <div className="relative group">
+                    <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-violet-500 border-4 border-[#fcfcfc] shadow-sm"></div>
+                    <div className="bg-gradient-to-br from-violet-600 to-purple-700 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                       {/* Background Pattern */}
+                       <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                       <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                            <Globe size={48} />
+                            <Cloud size={48} />
+                            <BarChart3 size={48} />
+                            <Layers size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Globe size={48} />
+                            <Cloud size={48} />
+                            <BarChart3 size={48} />
+                            <Layers size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Globe size={48} />
+                            <Cloud size={48} />
+                            <BarChart3 size={48} />
+                            <Layers size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Globe size={48} />
+                            <Cloud size={48} />
+                            <BarChart3 size={48} />
+                            <Layers size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Globe size={48} />
+                            <Cloud size={48} />
+                            <BarChart3 size={48} />
+                            <Layers size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                       </div>
+
+                       <div className="p-8 md:p-10 relative z-10">
+                          {/* Header Content */}
+                          <div className="mb-8">
+                             <h4 className="font-serif text-2xl text-white leading-tight">Product Architect; Senior UX Designer</h4>
+                             <p className="font-lato text-sm font-bold uppercase tracking-widest text-violet-100/90 mt-2">iotec Global / 2016 — 2018</p>
+                          </div>
+
+                          {/* Content Sub-Card */}
+                          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm">
+                             <p className="font-sans text-stone-600 font-light leading-relaxed">
+                               Leading UX and product design, building campaign management and reporting tools for a cutting edge AdTech platform.
+                             </p>
+                             <div className="mt-8 space-y-5">
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-violet-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Horizon Platform Interface</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts.
+                                    </p>
+                                  </div>
+                               </div>
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-violet-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">iotec Platform RESTful API</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally. A key enabling strategic functionality for the self service Horizon platform interface.
+                                    </p>
+                                  </div>
+                               </div>
+                             </div>
+                          </div>
+                       </div>
                     </div>
-                  </div>
+                   </div>
 
                   <div className="relative group">
                     <div className="absolute -left-[42px] top-10 w-5 h-5 rounded-full bg-orange-500 border-4 border-[#fcfcfc] shadow-sm"></div>
-                    <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                      <h4 className="font-serif text-2xl text-stone-900">Freelance Product Design & Development</h4>
-                      <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 mt-1">Multiple Clients / 2010 — Present</p>
-                    <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
-                      Designing, building, and implementing 0 → 1 products across multiple industries and diverse clients.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health Innovations'].map(client => (
-                        <span key={client} className="font-lato text-xs font-medium text-stone-500 bg-stone-100 px-2 py-1 rounded-md border border-stone-200/50 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-200 transition-colors cursor-default">
-                          {client}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-4 mb-4 space-y-5">
-                      <div className="flex gap-3 items-start">
-                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Local Government Digital Healthcare Initiative</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             More details coming soon.
-                           </p>
-                         </div>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Bento for iOS & Android</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             A "Do Less" to-do list application focused on mindful productivity.
-                           </p>
-                           <p className="font-lato text-xs text-orange-600 font-medium mt-2 flex items-center gap-1.5 align-top">
-                             <span className="text-lg leading-none mt-[-2px]">★</span> <span>Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Productivity App in 30 different countries</span>
-                           </p>
-                         </div>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                         <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
-                         <div>
-                           <h5 className="font-serif text-stone-800 text-lg leading-tight">Investigate Invertebrates</h5>
-                           <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                             Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification.
-                           </p>
-                         </div>
-                      </div>
-                      
-                      </div>
-                      
-                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showFreelanceProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="flex gap-3 items-start pb-1">
-                           <span className="text-orange-400 mt-1.5 text-[10px]">●</span>
-                           <div>
-                             <h5 className="font-serif text-stone-800 text-lg leading-tight">BearForms</h5>
-                             <p className="font-sans text-stone-600 font-light text-sm mt-1">
-                               Designed and developed an offline-first data capture application for iOS and Android.
+                    <div className="bg-gradient-to-br from-orange-500 to-amber-600 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                       {/* Background Pattern */}
+                       <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                       <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                            <Smartphone size={48} />
+                            <PenTool size={48} />
+                            <LayoutTemplate size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Lightbulb size={48} />
+                            <Smartphone size={48} />
+                            <PenTool size={48} />
+                            <LayoutTemplate size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Lightbulb size={48} />
+                            <Smartphone size={48} />
+                            <PenTool size={48} />
+                            <LayoutTemplate size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Lightbulb size={48} />
+                            <Smartphone size={48} />
+                            <PenTool size={48} />
+                            <LayoutTemplate size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Lightbulb size={48} />
+                            <Smartphone size={48} />
+                            <PenTool size={48} />
+                            <LayoutTemplate size={48} />
+                            <Zap size={48} />
+                            <Code size={48} />
+                            <Lightbulb size={48} />
+                       </div>
+
+                       <div className="p-8 md:p-10 relative z-10">
+                          {/* Header Content */}
+                          <div className="mb-8">
+                             <h4 className="font-serif text-2xl text-white leading-tight">Freelance Product Design & Development</h4>
+                             <p className="font-lato text-sm font-bold uppercase tracking-widest text-orange-100/90 mt-2">Multiple Clients / 2010 — Present</p>
+                          </div>
+
+                          {/* Content Sub-Card */}
+                          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm">
+                             <p className="font-sans text-stone-600 font-light leading-relaxed mb-3">
+                               Designing, building, and implementing 0 → 1 products across multiple industries and diverse clients.
                              </p>
-                           </div>
-                        </div>
-                      </div>
+                             <div className="flex flex-wrap gap-2 mb-8">
+                               {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health Innovations'].map(client => (
+                                 <span key={client} className="font-lato text-xs font-medium text-stone-500 bg-stone-100 px-2 py-1 rounded-md border border-stone-200/50 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-200 transition-colors cursor-default">
+                                   {client}
+                                 </span>
+                               ))}
+                             </div>
 
-                      <button 
-                        onClick={() => setShowFreelanceProjects(!showFreelanceProjects)}
-                        className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-orange-700 bg-white border border-stone-200 hover:border-orange-300 hover:bg-orange-50 px-5 py-2 rounded-full transition-all mt-6 shadow-sm"
-                      >
-                        {showFreelanceProjects ? (
-                          <>Show Less <ArrowUp size={12} /></>
-                        ) : (
-                          <>Show More <ArrowDown size={12} /></>
-                        )}
-                      </button>
+                             <div className="space-y-5">
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-orange-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Local Government Digital Healthcare Initiative</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      More details coming soon.
+                                    </p>
+                                  </div>
+                               </div>
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-orange-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Bento for iOS & Android</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      A "Do Less" to-do list application focused on mindful productivity.
+                                    </p>
+                                    <p className="font-lato text-xs text-orange-600 font-medium mt-2 flex items-center gap-1.5 align-top">
+                                      <span className="text-lg leading-none mt-[-2px]">★</span> <span>Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Productivity App in 30 different countries</span>
+                                    </p>
+                                  </div>
+                               </div>
+                               <div className="flex gap-3 items-start">
+                                  <span className="text-orange-500 mt-1.5 text-[10px]">●</span>
+                                  <div>
+                                    <h5 className="font-serif text-stone-800 text-lg leading-tight">Investigate Invertebrates</h5>
+                                    <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                      Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification.
+                                    </p>
+                                  </div>
+                               </div>
+                               
+                               <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showFreelanceProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                 <div className="flex gap-3 items-start pb-1">
+                                    <span className="text-orange-500 mt-1.5 text-[10px]">●</span>
+                                    <div>
+                                      <h5 className="font-serif text-stone-800 text-lg leading-tight">BearForms</h5>
+                                      <p className="font-sans text-stone-600 font-light text-sm mt-1">
+                                        Designed and developed an offline-first data capture application for iOS and Android.
+                                      </p>
+                                    </div>
+                                 </div>
+                               </div>
 
+                               <div className="flex justify-center pt-2">
+                                <button 
+                                  onClick={() => setShowFreelanceProjects(!showFreelanceProjects)}
+                                  className="inline-flex items-center gap-2 font-lato text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-orange-700 bg-orange-50/50 border border-stone-200 hover:border-orange-300 hover:bg-orange-50 px-5 py-2 rounded-full transition-all"
+                                >
+                                  {showFreelanceProjects ? (
+                                    <>Show Less <ArrowUp size={12} /></>
+                                  ) : (
+                                    <>Show More <ArrowDown size={12} /></>
+                                  )}
+                                </button>
+                               </div>
 
-                  </div>
-                  </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                   </div>
 
                 </div>
               </div>
