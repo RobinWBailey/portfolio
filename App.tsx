@@ -794,36 +794,46 @@ function App() {
                  </div>
                  Volunteering & Advisory
                </h3>
-                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] space-y-10">
-                   <div className="group border-b border-stone-100 pb-8 cursor-default">
-                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
-                     <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
-                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
-                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                       Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
-                     </p>
-                   </div>
-                   <div className="group border-b border-stone-100 pb-8 cursor-default">
-                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
-                     <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
-                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2025 — Present</p>
-                   </div>
-                   <div className="group border-b border-stone-100 pb-8 cursor-default">
-                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
-                     <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
-                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2004 — 2023</p>
-                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                       Supporting the education department in delivering conservation education to public audiences and school groups.
-                     </p>
-                   </div>
-                   <div className="group cursor-default">
-                     <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
-                     <p className="font-lato text-stone-500 text-sm mt-1">Town Council</p>
-                     <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-500">2006 — 2009</p>
-                     <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                       Representing the views of young people in local government decision making processes and community initiatives.
-                     </p>
-                   </div>
+                <div className="bg-gradient-to-br from-stone-800 to-stone-900 text-stone-50 p-6 md:p-8 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)] h-full">
+                   {/* Abstract Shapes */}
+                   <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 mix-blend-overlay"></div>
+                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2 mix-blend-overlay"></div>
+
+                   <div className="relative z-10 h-full">
+                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-white/5 h-full">
+                       <div className="space-y-10">
+                         <div className="group border-b border-white/10 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Assessment Alliance Security Group</h4>
+                           <p className="font-lato text-stone-400 text-sm mt-1">Medical Schools Council UK</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2025 — Present</p>
+                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                             Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
+                           </p>
+                         </div>
+                         <div className="group border-b border-white/10 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Learning Analytics Steering Group</h4>
+                           <p className="font-lato text-stone-400 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2025 — Present</p>
+                         </div>
+                         <div className="group border-b border-white/10 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Education</h4>
+                           <p className="font-lato text-stone-400 text-sm mt-1">Wild Planet Trust</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2004 — 2023</p>
+                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                             Supporting the education department in delivering conservation education to public audiences and school groups.
+                           </p>
+                         </div>
+                         <div className="group cursor-default">
+                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Mayor's Youth Council Representative</h4>
+                           <p className="font-lato text-stone-400 text-sm mt-1">Town Council</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2006 — 2009</p>
+                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                             Representing the views of young people in local government decision making processes and community initiatives.
+                           </p>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
                 </div>
              </div>
 
@@ -835,64 +845,85 @@ function App() {
                  </div>
                  Speaking
                </h3>
-                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-stone-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] space-y-8">
-                  <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
-                    <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
-                    </div>
-                    <div>
-                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Annual European Conference on Assessment in Medical Education | EBMA</h4>
-                       <p className="font-lato text-stone-500 text-sm mt-1 italic">The Future of Assessment in Medical Education: Opportunities and Threats</p>
-                       <div className="mt-3 space-y-2">
-                         <div className="flex gap-2 items-start">
-                           <span className="text-rose-400 mt-1.5 text-[10px]">●</span>
-                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                             <span className="font-medium text-stone-800">Symposium — Adaptive Testing:</span> Current and Future Perspectives.
-                           </p>
+                <div className="bg-gradient-to-br from-rose-500 to-red-600 text-stone-50 p-6 md:p-8 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)] h-full">
+                   {/* Abstract Shapes */}
+                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 mix-blend-overlay"></div>
+                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2 mix-blend-overlay"></div>
+
+                   <div className="relative z-10 h-full p-2">
+                     {/* Stacked Paper Effect */}
+                     <div className="absolute inset-x-4 top-4 bottom-0 bg-white/90 rounded-2xl rotate-1 translate-y-2 translate-x-1 shadow-sm -z-10"></div>
+                     <div className="absolute inset-x-4 top-4 bottom-0 bg-white/80 rounded-2xl -rotate-1 translate-y-3 -translate-x-1 shadow-sm -z-20"></div>
+
+                     <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border border-stone-100 h-full relative">
+                        {/* Spiral/Perforation Top */}
+                        <div className="absolute top-0 left-0 right-0 h-4 flex justify-evenly items-center -mt-2">
+                           {[...Array(6)].map((_, i) => (
+                              <div key={i} className="w-3 h-8 rounded-full bg-stone-200 border border-stone-300 shadow-inner"></div>
+                           ))}
+                        </div>
+                        
+                       <div className="space-y-8 mt-4">
+                         <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
+                           <div className="flex-shrink-0 w-12 text-center pt-1">
+                              <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
+                           </div>
+                           <div>
+                              <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-600 transition-colors">Annual European Conference on Assessment in Medical Education | EBMA</h4>
+                              <p className="font-lato text-stone-500 text-sm mt-1 italic">The Future of Assessment in Medical Education: Opportunities and Threats</p>
+                              <div className="mt-3 space-y-2">
+                                <div className="flex gap-2 items-start">
+                                  <span className="text-rose-500 mt-1.5 text-[10px]">●</span>
+                                  <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                                    <span className="font-medium text-stone-800">Symposium — Adaptive Testing:</span> Current and Future Perspectives.
+                                  </p>
+                                </div>
+                                <div className="flex gap-2 items-start">
+                                  <span className="text-rose-500 mt-1.5 text-[10px]">●</span>
+                                  <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
+                                    <span className="font-medium text-stone-800">Presentation:</span> Implementation of Content Adaptive Progress Tests at Peninsula Medical School in Plymouth.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
                          </div>
-                         <div className="flex gap-2 items-start">
-                           <span className="text-rose-400 mt-1.5 text-[10px]">●</span>
-                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
-                             <span className="font-medium text-stone-800">Presentation:</span> Implementation of Content Adaptive Progress Tests at Peninsula Medical School in Plymouth.
-                           </p>
+                         <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
+                           <div className="flex-shrink-0 w-12 text-center pt-1">
+                              <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
+                           </div>
+                           <div>
+                              <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-600 transition-colors">Salesforce UK/EMEA Education User Group</h4>
+                              <p className="font-lato text-stone-500 text-sm mt-1 italic">Student Success Platform for Medicine</p>
+                              <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
+                                Showcasing how we utilised Salesforce to build a bespoke Student Success Platform for the Faculty of Medicine.
+                              </p>
+                           </div>
+                         </div>
+                         <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
+                           <div className="flex-shrink-0 w-12 text-center pt-1">
+                              <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2022</span>
+                           </div>
+                           <div>
+                              <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-600 transition-colors">Peninsula Medical School Conference</h4>
+                              <p className="font-lato text-stone-500 text-sm mt-1 italic">Visualising Adaptive Progress Testing</p>
+                              <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
+                                Discussing data visualisation techniques for complex longitudinal assessment data.
+                              </p>
+                           </div>
+                         </div>
+                         <div className="group flex gap-4 cursor-default">
+                           <div className="flex-shrink-0 w-12 text-center pt-1">
+                              <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2012</span>
+                           </div>
+                           <div>
+                              <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-600 transition-colors">Learning Without Frontiers</h4>
+                              <p className="font-lato text-stone-500 text-sm mt-1 italic">London</p>
+                              <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
+                                Discussing the future of mobile learning and digital engagement in education.
+                              </p>
+                           </div>
                          </div>
                        </div>
-                     </div>
-                  </div>
-                  <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
-                    <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2024</span>
-                    </div>
-                    <div>
-                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Salesforce UK/EMEA Education User Group</h4>
-                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Student Success Platform for Medicine</p>
-                       <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
-                         Showcasing how we utilised Salesforce to build a bespoke Student Success Platform for the Faculty of Medicine.
-                       </p>
-                    </div>
-                  </div>
-                  <div className="group border-b border-stone-100 pb-6 flex gap-4 cursor-default">
-                    <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2022</span>
-                    </div>
-                    <div>
-                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Peninsula Medical School Conference</h4>
-                       <p className="font-lato text-stone-500 text-sm mt-1 italic">Visualising Adaptive Progress Testing</p>
-                       <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
-                         Discussing data visualisation techniques for complex longitudinal assessment data.
-                       </p>
-                    </div>
-                  </div>
-                  <div className="group flex gap-4 cursor-default">
-                    <div className="flex-shrink-0 w-12 text-center pt-1">
-                       <span className="block font-lato font-bold text-lg text-stone-300 group-hover:text-rose-500 transition-colors">2012</span>
-                    </div>
-                    <div>
-                       <h4 className="font-serif text-xl text-stone-900 leading-tight group-hover:text-rose-700 transition-colors">Learning Without Frontiers</h4>
-                       <p className="font-lato text-stone-500 text-sm mt-1 italic">London</p>
-                       <p className="font-sans text-stone-600 font-light leading-relaxed text-sm mt-2">
-                         Discussing the future of mobile learning and digital engagement in education.
-                       </p>
                     </div>
                   </div>
                 </div>
