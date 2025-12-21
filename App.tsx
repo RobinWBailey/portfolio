@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users, Award } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users, Award, Shield } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -794,48 +794,56 @@ function App() {
                  </div>
                  Volunteering & Advisory
                </h3>
-                <div className="bg-gradient-to-br from-stone-800 to-stone-900 text-stone-50 p-6 md:p-8 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)] h-full">
+                <div className="bg-gradient-to-br from-emerald-900 to-stone-900 text-stone-50 p-6 md:p-8 relative overflow-hidden rounded-[2rem] shadow-[0_2px_8px_rgba(0,0,0,0.04)] h-full">
                    {/* Abstract Shapes */}
                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 mix-blend-overlay"></div>
                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2 mix-blend-overlay"></div>
 
                    <div className="relative z-10 h-full">
-                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-white/5 h-full">
-                       <div className="space-y-10">
-                         <div className="group border-b border-white/10 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Assessment Alliance Security Group</h4>
-                           <p className="font-lato text-stone-400 text-sm mt-1">Medical Schools Council UK</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2025 — Present</p>
-                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                     <div className="bg-[#fafaf9] rounded-2xl shadow-lg h-full overflow-hidden relative">
+                       {/* Gold Foil Header */}
+                       <div className="h-1.5 w-full bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-200 shadow-sm"></div>
+                       
+                       {/* Watermark */}
+                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none text-stone-900 rotate-12">
+                          <Shield size={300} strokeWidth={1} />
+                       </div>
+
+                       <div className="p-6 md:p-8 relative z-10 space-y-10">
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Assessment Alliance Security Group</h4>
+                           <p className="font-lato text-stone-500 text-sm mt-1">Medical Schools Council UK</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
+                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                              Advising the Medical Schools Council on best practices for digital assessment security and integrity across UK medical schools.
                            </p>
                          </div>
-                         <div className="group border-b border-white/10 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Learning Analytics Steering Group</h4>
-                           <p className="font-lato text-stone-400 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2025 — Present</p>
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Learning Analytics Steering Group</h4>
+                           <p className="font-lato text-stone-500 text-sm mt-1">HESPA: The Higher Education Strategic Planners Association</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2025 — Present</p>
                          </div>
-                         <div className="group border-b border-white/10 pb-8 cursor-default">
-                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Education</h4>
-                           <p className="font-lato text-stone-400 text-sm mt-1">Wild Planet Trust</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2004 — 2023</p>
-                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                         <div className="group border-b border-stone-200/60 pb-8 cursor-default">
+                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Education</h4>
+                           <p className="font-lato text-stone-500 text-sm mt-1">Wild Planet Trust</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2004 — 2023</p>
+                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                              Supporting the education department in delivering conservation education to public audiences and school groups.
                            </p>
                          </div>
                          <div className="group cursor-default">
-                           <h4 className="font-serif text-xl text-white group-hover:text-emerald-400 transition-colors">Mayor's Youth Council Representative</h4>
-                           <p className="font-lato text-stone-400 text-sm mt-1">Town Council</p>
-                           <p className="font-lato text-xs uppercase tracking-widest text-stone-500 mt-2 mb-3 group-hover:text-emerald-400">2006 — 2009</p>
-                           <p className="font-sans text-stone-300 font-light leading-relaxed text-sm">
+                           <h4 className="font-serif text-xl text-stone-900 group-hover:text-emerald-700 transition-colors">Mayor's Youth Council Representative</h4>
+                           <p className="font-lato text-stone-500 text-sm mt-1">Town Council</p>
+                           <p className="font-lato text-xs uppercase tracking-widest text-stone-400 mt-2 mb-3 group-hover:text-emerald-600">2006 — 2009</p>
+                           <p className="font-sans text-stone-600 font-light leading-relaxed text-sm">
                              Representing the views of young people in local government decision making processes and community initiatives.
                            </p>
                          </div>
                        </div>
-                    </div>
                   </div>
                 </div>
              </div>
+           </div>
 
              {/* Speaking */}
              <div>
