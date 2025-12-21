@@ -4,7 +4,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
 import { Project } from './types';
-import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users } from 'lucide-react';
+import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users, Award } from 'lucide-react';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -634,41 +634,143 @@ function App() {
                 </h3>
                 <div className="grid grid-cols-1 gap-6">
                    {/* Masters */}
-                   <div className="p-8 md:p-10 border border-stone-100 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-[2rem] group flex flex-col">
-                      <div className="w-6 h-1 bg-purple-500 mb-3 group-hover:w-10 transition-all"></div>
-                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Master of Science</h4>
-                      <p className="text-stone-500 font-lato text-sm mb-3">Business & Management</p>
-                      
-                      <div className="mb-3 flex-grow">
-                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
-                        <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
-                            <span className="text-purple-500">★</span>
-                            <span>Dean's List Award for Academic Excellence</span>
-                          </li>
-                        </ul>
-                      </div>
+                   {/* Masters */}
+                   <div className="relative group">
+                     {/* Side Dot */}
 
-                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-purple-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / Distinction</p>
+                     
+                     {/* Card Container */}
+                     <div className="bg-gradient-to-br from-stone-800 to-stone-900 rounded-[2rem] border border-stone-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                        <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                        </div>
+
+                        <div className="p-8 md:p-10 relative z-10">
+                           {/* Header Content */}
+                           {/* Unified Content Card */}
+                           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-white/5 h-full flex flex-col justify-between">
+                              <div>
+                                 <h4 className="font-serif text-2xl text-white leading-tight">Master of Science</h4>
+                                 <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mt-2 mb-6">Business & Management</p>
+                                 
+                                 <div className="mb-6">
+                                    <ul className="space-y-3">
+                                      <li className="flex items-baseline gap-3 font-lato text-sm text-stone-200 leading-relaxed">
+                                        <span className="text-yellow-500 text-sm">★</span>
+                                        <span>Dean's List Award for Academic Excellence</span>
+                                      </li>
+                                    </ul>
+                                 </div>
+                              </div>
+
+                              <div className="pt-6 border-t border-white/10 flex items-center justify-between text-stone-400 font-lato text-xs font-bold uppercase tracking-widest">
+                                 <span>Plymouth University</span>
+                                 <span className="text-white">Distinction</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                    </div>
 
                    {/* Bachelors */}
-                   <div className="p-8 md:p-10 border border-stone-100 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-[2rem] group flex flex-col">
-                      <div className="w-6 h-1 bg-blue-500 mb-3 group-hover:w-10 transition-all"></div>
-                      <h4 className="font-serif text-2xl text-stone-900 leading-none mb-1">Bachelor of Science</h4>
-                      <p className="text-stone-500 font-lato text-sm mb-3">Computer Science</p>
-                      
-                       <div className="mb-3 flex-grow">
-                        <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Awards</p>
-                        <ul className="space-y-1">
-                          <li className="flex items-start gap-2 font-lato text-xs text-stone-600">
-                            <span className="text-blue-500">★</span>
-                            <span>Dean's List Award (2010, 2011, 2012)</span>
-                          </li>
-                        </ul>
-                      </div>
+                   {/* Bachelors */}
+                   <div className="relative group">
+                     {/* Side Dot */}
 
-                      <p className="font-lato text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-blue-600 transition-colors mt-auto pt-3 border-t border-stone-100">Plymouth University / First-Class Honours</p>
+                     
+                     {/* Card Container */}
+                     <div className="bg-gradient-to-br from-stone-800 to-stone-900 rounded-[2rem] border border-stone-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden relative">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-[0.05] pattern-grid-lg pointer-events-none"></div>
+                        <div className="absolute -inset-24 grid grid-cols-6 gap-8 place-items-center opacity-10 rotate-12 scale-125 transform origin-center select-none pointer-events-none text-white">
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                             <GraduationCap size={48} />
+                             <Award size={48} />
+                             <BookOpen size={48} />
+                        </div>
+
+                        <div className="p-8 md:p-10 relative z-10">
+                           {/* Header Content */}
+                           {/* Unified Content Card */}
+                           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-white/5 h-full flex flex-col justify-between">
+                              <div>
+                                 <h4 className="font-serif text-2xl text-white leading-tight">Bachelor of Science</h4>
+                                 <p className="font-lato text-sm font-bold uppercase tracking-widest text-stone-400 mt-2 mb-6">Computer Science</p>
+                                 
+                                 <div className="mb-6">
+                                    <ul className="space-y-3">
+                                      <li className="flex items-baseline gap-3 font-lato text-sm text-stone-200 leading-relaxed">
+                                        <span className="text-yellow-500 text-sm">★</span>
+                                        <span>Dean's List Award (2010, 2011, 2012)</span>
+                                      </li>
+                                    </ul>
+                                 </div>
+                              </div>
+
+                              <div className="pt-6 border-t border-white/10 flex items-center justify-between text-stone-400 font-lato text-xs font-bold uppercase tracking-widest">
+                                 <span>Plymouth University</span>
+                                 <span className="text-white">First-Class Honours</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                    </div>
                 </div>
               </div>
