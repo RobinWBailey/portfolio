@@ -6,11 +6,11 @@ const VerticalSidebar: React.FC = () => {
       {/* Top Marker Removed as requested */}
       
       {/* Rotated Name - Hung from top */}
-      <div className="flex items-center justify-center group cursor-default pt-28">
+      <div className="flex items-center justify-center group cursor-default pt-20">
         <h1 
-          className="font-plantin font-normal text-5xl lg:text-6xl tracking-tight text-stone-900 whitespace-nowrap origin-center transform rotate-90"
+          className="font-plantin font-normal text-5xl lg:text-6xl tracking-tight text-stone-900 whitespace-nowrap [writing-mode:vertical-rl]"
         >
-          Robin
+          Robin Bailey
         </h1>
       </div>
 
@@ -19,7 +19,7 @@ const VerticalSidebar: React.FC = () => {
 
       {/* Bottom Marker / Social Hint */}
       <div className="flex flex-col items-center gap-6">
-        <img src="/rectangle_logo.png" alt="Logo" className="w-16 h-auto object-contain" />
+        <img src="/rb_logo_default_coloured.png" alt="Logo" className="w-16 h-auto object-contain" />
       </div>
     </aside>
   );

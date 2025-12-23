@@ -47,8 +47,8 @@ function App() {
 
       {/* Mobile Header (Visible only on small screens) */}
       <header className="md:hidden fixed top-0 left-0 w-full bg-[#fcfcfc]/90 backdrop-blur-md z-50 border-b border-stone-200 p-4 flex justify-between items-center">
-        <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin</h1>
-        <img src="/rectangle_logo.png" alt="Logo" className="h-7 w-auto object-contain" />
+        <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin Bailey</h1>
+        <img src="/rb_logo_default_coloured.png" alt="Logo" className="h-7 w-auto object-contain" />
       </header>
 
       {/* Main Content Area */}
