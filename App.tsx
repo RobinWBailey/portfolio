@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import VerticalSidebar from './components/VerticalSidebar';
+import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import { PROJECTS } from './constants';
@@ -42,17 +42,11 @@ function App() {
       <div className="fixed top-[-20%] right-[-10%] w-[800px] h-[800px] bg-orange-100/40 rounded-full blur-[120px] pointer-events-none z-0 mix-blend-multiply opacity-60 animate-pulse duration-[10000ms]" />
       <div className="fixed bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply opacity-60" />
 
-      {/* Fixed Sidebar (Desktop) */}
-      <VerticalSidebar />
-
-      {/* Mobile Header (Visible only on small screens) */}
-      <header className="md:hidden fixed top-0 left-0 w-full bg-[#fcfcfc]/90 backdrop-blur-md z-50 border-b border-stone-200 p-4 flex justify-between items-center">
-        <h1 className="font-display font-medium italic text-3xl tracking-tight text-stone-900">Robin Bailey</h1>
-        <img src="/rb_logo_default_coloured.png" alt="Logo" className="h-7 w-auto object-contain" />
-      </header>
+      {/* Navigation */}
+      <Navbar />
 
       {/* Main Content Area */}
-      <main className="relative z-10 md:pl-24 lg:pl-32 pt-20 md:pt-0">
+      <main className="relative z-10 pt-32">
         
         <div className="max-w-screen-2xl mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-24">
           
@@ -103,7 +97,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="max-w-xl pb-2 xl:mb-2">
+              <div className="max-w-xl pb-2 xl:mb-2" id="contact">
                 <p className="font-sans font-light text-stone-600 leading-relaxed text-lg md:text-xl">
                   I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real <span className="relative inline-block z-0"><span className="relative z-10">impact</span><svg className="absolute -z-10 w-[140%] h-[150%] -top-[25%] -left-[20%] text-orange-500 opacity-90 rotate-[-2deg]" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M40 40 C 40 20 90 10 130 15 C 190 20 230 50 220 80 C 210 110 140 115 80 110 C 30 105 10 70 25 50 C 35 35 90 25 140 30 C 180 35 210 60 200 85" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="800" strokeDashoffset="800" style={{ animation: 'draw-stroke 0.8s ease-out forwards 2.3s' }} /></svg></span>.
                 </p>
@@ -126,7 +120,7 @@ function App() {
             <div className="lg:col-span-7 space-y-16">
               
               {/* Experience */}
-              <div>
+              <div id="experience">
                 <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center not-italic">
                      <Briefcase size={20} />
@@ -553,7 +547,7 @@ function App() {
 
             <div className="lg:col-span-5 space-y-16">
               {/* Expertise */}
-              <div className="relative group">
+              <div className="relative group" id="expertise">
                  <h3 className="font-display text-3xl md:text-4xl mb-8 italic text-stone-900 flex items-center gap-3">
                    <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center not-italic">
                       <Lightbulb size={20} />
@@ -628,7 +622,7 @@ function App() {
               </div>
 
               {/* Education */}
-              <div>
+              <div id="education">
                 <h3 className="font-display italic text-3xl md:text-4xl mb-8 text-stone-900 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center not-italic">
                      <GraduationCap size={20} />
@@ -787,7 +781,7 @@ function App() {
              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-stone-200 rounded-full hidden md:block"></div>
              
              {/* Volunteering */}
-             <div>
+             <div id="volunteering">
                <h3 className="font-display italic text-3xl mb-8 text-stone-900 flex items-center gap-3">
                  <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center not-italic">
                     <Globe size={16} />
@@ -855,7 +849,7 @@ function App() {
            </div>
 
              {/* Speaking */}
-             <div>
+             <div id="speaking">
                <h3 className="font-display italic text-3xl mb-8 text-stone-900 flex items-center gap-3 relative z-30">
                  <div className="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center not-italic">
                     <Mic size={16} />
