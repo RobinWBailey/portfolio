@@ -39,8 +39,17 @@ function App() {
       `}} />
 
       {/* 2. Atmosphere / Color Orbs */}
-      <div className="fixed top-[-20%] right-[-10%] w-[800px] h-[800px] bg-orange-100/40 rounded-full blur-[120px] pointer-events-none z-0 mix-blend-multiply opacity-60 animate-pulse duration-[10000ms]" />
       <div className="fixed bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply opacity-60" />
+
+      {/* Top Glassy Fade Overlay */}
+      <div className="fixed top-0 left-0 w-full h-32 z-40 pointer-events-none"
+           style={{
+             backdropFilter: 'blur(12px)',
+             WebkitBackdropFilter: 'blur(12px)',
+             maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+             WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)'
+           }}
+      />
 
       {/* Navigation */}
       <Navbar />
@@ -97,7 +106,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="max-w-xl pb-2 xl:mb-2" id="contact">
+              <div className="max-w-xl pb-2 xl:mb-2">
                 <p className="font-sans font-light text-stone-600 leading-relaxed text-lg md:text-xl">
                   I help turn complex business challenges into clear, user-focused product solutions — working with you to design, architect, and implement technical systems that deliver real <span className="relative inline-block z-0"><span className="relative z-10">impact</span><svg className="absolute -z-10 w-[140%] h-[150%] -top-[25%] -left-[20%] text-orange-500 opacity-90 rotate-[-2deg]" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M40 40 C 40 20 90 10 130 15 C 190 20 230 50 220 80 C 210 110 140 115 80 110 C 30 105 10 70 25 50 C 35 35 90 25 140 30 C 180 35 210 60 200 85" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="800" strokeDashoffset="800" style={{ animation: 'draw-stroke 0.8s ease-out forwards 2.3s' }} /></svg></span>.
                 </p>
@@ -994,7 +1003,7 @@ function App() {
           </section>
 
           {/* Final CTA / Contact */}
-          <section className="grid grid-cols-1 md:grid-cols-12 gap-16 pb-24">
+          <section className="grid grid-cols-1 md:grid-cols-12 gap-16 pb-24" id="contact">
              <div className="md:col-span-8 md:col-start-3 text-center relative">
                {/* Background shape behind CTA */}
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gradient-to-b from-transparent via-white/50 to-transparent -z-10 blur-xl"></div>
