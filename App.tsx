@@ -790,7 +790,7 @@ function App() {
              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-stone-200 rounded-full hidden md:block"></div>
              
              {/* Volunteering */}
-             <div id="volunteering">
+             <div id="advisory">
                <h3 className="font-display italic text-3xl mb-8 text-stone-900 flex items-center gap-3">
                  <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center not-italic">
                     <Globe size={16} />
