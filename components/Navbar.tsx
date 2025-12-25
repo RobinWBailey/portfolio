@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         {/* Left Pill: Logo & Name */}
         <div 
             className={`pointer-events-auto rounded-full border border-white/20 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-300 px-5 py-3 flex items-center gap-3 cursor-pointer group shadow-[inset_0_0.5px_0_rgba(255,255,255,0.7),inset_0_-0.5px_0_rgba(0,0,0,0.05)] ring-1 ring-white/30 ${
-              scrolled ? 'bg-white/60' : 'bg-white/20 supports-[backdrop-filter]:bg-stone-50/10'
+              scrolled ? 'bg-white/80' : 'bg-white/40 supports-[backdrop-filter]:bg-stone-50/30'
             }`}
              style={{ 
                 backdropFilter: 'blur(32px) saturate(180%) brightness(1.1) contrast(1.05)',
@@ -66,14 +66,14 @@ const Navbar: React.FC = () => {
            {/* CONTENT */}
            <div className="relative z-10 flex items-center gap-3">
                <img src="/rb_logo_default_coloured.png" alt="Robin Bailey" className="h-8 w-auto object-contain group-hover:scale-105 transition-transform" />
-               <span className="font-display font-medium italic text-xl tracking-tight text-stone-900 hidden lg:block group-hover:text-stone-700 transition-colors">Robin Bailey</span>
+               <span className="font-oswald font-normal text-lg hover:text-stone-600 transition-colors text-stone-900 hidden lg:block tracking-wide">Robin Bailey</span>
            </div>
         </div>
 
         {/* Right Pill: Navigation & Contact */}
         <div 
           className={`pointer-events-auto rounded-full border border-white/20 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-300 px-2 py-2 pl-3 flex items-center gap-2 shadow-[inset_0_0.5px_0_rgba(255,255,255,0.7),inset_0_-0.5px_0_rgba(0,0,0,0.05)] ring-1 ring-white/30 ${
-            scrolled ? 'bg-white/60' : 'bg-white/20 supports-[backdrop-filter]:bg-stone-50/10'
+            scrolled ? 'bg-white/80' : 'bg-white/40 supports-[backdrop-filter]:bg-stone-50/30'
           }`}
           style={{ 
             backdropFilter: 'blur(32px) saturate(180%) brightness(1.1) contrast(1.05)',
