@@ -696,6 +696,10 @@ function App() {
                                         <span className="text-yellow-500 text-sm">★</span>
                                         <span>Dean's List Award for Academic Excellence</span>
                                       </li>
+                                      <li className="flex items-baseline gap-3 font-lato text-sm text-stone-200 leading-relaxed">
+                                        <span className="text-yellow-500 text-sm">★</span>
+                                        <span>Professorate Postgraduate Scholarship</span>
+                                      </li>
                                     </ul>
                                  </div>
                               </div>
