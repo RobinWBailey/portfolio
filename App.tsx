@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
+import DepartureBoard from './components/DepartureBoard';
 import { PROJECTS } from './constants';
 import { Project } from './types';
 import { ArrowDown, ArrowUp, Linkedin, Github, Twitter, Mail, Calendar, Globe, Mic, ExternalLink, Briefcase, GraduationCap, Lightbulb, Star, LayoutTemplate, Cloud, Smartphone, Database, PenTool, Zap, BookOpen, Stethoscope, Landmark, Megaphone, Waves, BarChart3, Activity, Layers, Code, Play, Users, Award, Shield } from 'lucide-react';
@@ -122,6 +123,11 @@ function App() {
                 </div>
               </div>
             </div>
+          </section>
+
+          {/* Departure Board Ticker */}
+          <section className="mb-24 flex justify-center">
+             <DepartureBoard projects={PROJECTS.filter(p => p.isSelected)} />
           </section>
 
           {/* Experience & Education Columns */}
