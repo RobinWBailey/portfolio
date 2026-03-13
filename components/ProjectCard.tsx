@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       {/* Top Row: ID & Category */}
-      <div className="flex justify-between items-start text-xs font-lato uppercase tracking-widest text-stone-400 group-hover:text-stone-900 transition-colors">
+      <div className="flex justify-between items-start text-xs font-sans uppercase tracking-widest text-stone-400 group-hover:text-stone-900 transition-colors">
         <span className={`transition-colors duration-300 ${accentClass.split(' ')[1]}`}>{project.category}</span>
         <span>/{project.year}</span>
       </div>
@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         
         {/* Title - Big Serif */}
         <div className="md:col-span-5">
-          <h3 className="font-serif text-3xl md:text-4xl text-stone-900 font-medium leading-tight group-hover:translate-x-2 transition-transform duration-500">
+          <h3 className="font-sans text-2xl md:text-3xl text-stone-900 font-semibold leading-tight tracking-tight">
             {project.title}
           </h3>
         </div>

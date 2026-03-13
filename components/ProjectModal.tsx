@@ -46,13 +46,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
         <div className="p-8 md:p-12 lg:p-16">
           {/* Header Info */}
           <div className="mb-12 border-b border-stone-200 pb-8">
-            <div className="flex items-center gap-3 text-xs font-lato tracking-widest uppercase text-stone-500 mb-4">
+            <div className="flex items-center gap-3 text-xs font-sans tracking-widest uppercase text-stone-500 mb-4">
               <span>{project.year}</span>
               <span className="w-1 h-1 rounded-full bg-stone-400" />
               <span>{project.category}</span>
             </div>
             
-            <h2 className="font-serif text-5xl md:text-6xl font-bold text-stone-900 mb-6 leading-none">
+            <h2 className="font-sans text-4xl md:text-5xl font-bold text-stone-900 mb-6 leading-none tracking-tight">
               {project.title}
             </h2>
             
@@ -73,7 +73,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
           {/* Detailed Description */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="md:col-span-2">
-              <h3 className="font-serif text-2xl font-medium mb-4">The Project</h3>
+              <h3 className="font-sans text-xl font-semibold mb-4">The Project</h3>
               <div className="prose prose-stone font-sans font-light text-stone-600 leading-loose">
                 {project.description}
               </div>
@@ -81,7 +81,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
               {project.link && project.link !== '#' && (
                 <a 
                   href={project.link} 
-                  className="inline-flex items-center gap-2 mt-8 font-lato text-sm uppercase tracking-widest border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors"
+                  className="inline-flex items-center gap-2 mt-8 font-sans text-sm uppercase tracking-widest border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors"
                 >
                   Visit Live Project <ArrowRight size={14} />
                 </a>
@@ -93,23 +93,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
               
               {project.client && (
                 <div>
-                  <h4 className="font-serif text-lg mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Building size={16} /> Client</h4>
-                  <p className="font-lato text-sm text-stone-500">{project.client}</p>
+                  <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Building size={16} /> Client</h4>
+                  <p className="font-sans text-sm text-stone-500">{project.client}</p>
                 </div>
               )}
 
               {project.role && (
                 <div>
-                  <h4 className="font-serif text-lg mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><User size={16} /> Role</h4>
-                  <p className="font-lato text-sm text-stone-500">{project.role}</p>
+                  <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><User size={16} /> Role</h4>
+                  <p className="font-sans text-sm text-stone-500">{project.role}</p>
                 </div>
               )}
 
               <div>
-                <h4 className="font-serif text-lg mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Tag size={16} /> Tech & Skills</h4>
+                <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Tag size={16} /> Tech & Skills</h4>
                 <ul className="space-y-2">
                   {project.tags.map(tag => (
-                    <li key={tag} className="flex items-center gap-2 font-lato text-sm text-stone-500">
+                    <li key={tag} className="flex items-center gap-2 font-sans text-sm text-stone-500">
                       {tag}
                     </li>
                   ))}
