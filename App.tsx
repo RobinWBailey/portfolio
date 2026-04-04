@@ -215,6 +215,25 @@ function App() {
             {/* ━━━━━ RIGHT: CONTENT FEED ━━━━━ */}
             <div className="flex-1 min-w-0 space-y-8">
 
+              {/* ── FEATURED ── */}
+              <section className="reveal visible mb-8">
+                <div className="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 rounded-3xl border border-stone-800/80 shadow-xl overflow-hidden relative group">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 mix-blend-overlay group-hover:bg-emerald-500/20 transition-all duration-700"></div>
+                  <div className="px-7 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+                    <div>
+                      <h2 className="font-sans text-[11px] font-bold uppercase tracking-widest text-emerald-500 mb-1.5 flex items-center gap-1.5">
+                        <Star size={10} className="fill-current" /> Featured Work
+                      </h2>
+                      <p className="font-sans text-lg font-bold text-white tracking-tight leading-snug">PULSE Student Success Platform</p>
+                      <p className="font-sans text-stone-400 text-sm mt-1 max-w-md">Transforming medical education with an industry-first student tracking platform.</p>
+                    </div>
+                    <button onClick={() => window.scrollTo({ top: document.getElementById('experience')?.offsetTop || 0, behavior: 'smooth' })} className="inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-stone-900 bg-white hover:bg-stone-100 px-4 py-2.5 rounded-xl transition-colors shrink-0">
+                      View details
+                    </button>
+                  </div>
+                </div>
+              </section>
+
               {/* ── EXPERIENCE ── */}
               <section id="experience" ref={experience.ref} className={`reveal ${experience.isVisible ? 'visible' : ''}`}>
                 <div className="bg-white rounded-3xl border border-stone-200/60 shadow-sm overflow-hidden">
@@ -240,22 +259,28 @@ function App() {
                         <span className="font-sans text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg self-start whitespace-nowrap uppercase tracking-wider">2025 — Present</span>
                       </div>
                       <p className="font-sans text-stone-600 text-sm leading-relaxed mb-4">
-                        Leading the strategic product development and technical implementation of a wide £<span className="font-mono text-[10px] bg-stone-100 text-stone-400 px-1.5 py-0.5 rounded ml-0.5 mr-1 tracking-widest select-none cursor-help" title="Value redacted for confidentiality">REDACTED</span> programme of transformational features, enabling data-informed student success initiatives.
+                        Leading the strategic product development and technical implementation of a wide £<span className="font-mono text-[10px] bg-stone-100 text-stone-400 px-1.5 py-0.5 rounded ml-0.5 mr-1 tracking-widest select-none cursor-help" title="Value redacted for confidentiality">REDACTED</span> programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.
                       </p>
                       <div className="space-y-3">
                         <div className="flex gap-2.5 items-start">
                           <span className="text-emerald-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">Learning Analytics for Early Intervention</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Led the design and development of a data-informed learning analytics platform to identify at-risk students. Implemented an organisational first student ambassador-led call centre for peer-led support. Designed the first <em className="font-semibold text-stone-700 not-italic">Insights</em> service for proactive calls to action.</p>
-                            <p className="font-sans text-xs text-emerald-600 font-semibold mt-1.5 flex items-center gap-1.5"><span className="text-sm leading-none">★</span> Vice-Chancellor's Award 'Highly Commended'</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented a organisational first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span className="relative inline-block px-1 italic font-medium z-10 text-stone-700">Insights<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-purple-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> service and design to enable proactive calls to action.
+                            </p>
+                            <p className="font-sans text-xs text-emerald-600 font-semibold mt-1.5 flex items-center gap-1.5">
+                              <span className="text-sm leading-none">★</span> Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'
+                            </p>
                           </div>
                         </div>
                         <div className="flex gap-2.5 items-start">
                           <span className="text-emerald-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">Student Support Enquiry & Case Management</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Leading design and implementation of a fully integrated student support enquiry & case management system across the entire institution.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -279,21 +304,27 @@ function App() {
                           <span className="text-blue-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">PULSE Student Success Platform</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry.
+                            </p>
                           </div>
                         </div>
                         <div className="flex gap-2.5 items-start">
                           <span className="text-blue-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">Content Adaptive Progress Testing</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Designed and implemented an industry-first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Designed and implemented a industry first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of student based on past assessment performance.
+                            </p>
                           </div>
                         </div>
                         <div className="flex gap-2.5 items-start">
                           <span className="text-blue-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">On-Clinic Dental Experience Assessment</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Digitised clinical dental experience assessment, replacing paper logs. Used across <em className="font-semibold text-stone-700 not-italic">TBA clinical sites</em> across the south-west, enabling over <em className="font-semibold text-stone-700 not-italic">TBA appointments</em> per year with the #1 ranked dental school in the UK.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span className="relative inline-block px-1 italic font-medium z-10 text-stone-700">TBA clinical sites<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> across the south-west of England, enabling over <span className="relative inline-block px-1 italic font-medium z-10 text-stone-700">TBA appointments<svg className="absolute -bottom-1 -left-1 -right-1 h-3/4 w-[110%] -z-10 text-yellow-200/70" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q50,40 100,50" stroke="currentColor" strokeWidth="80" fill="none" /></svg></span> per year in collaboration with PDSE and the #1 ranked dental school in the UK.
+                            </p>
                           </div>
                         </div>
 
@@ -303,7 +334,9 @@ function App() {
                               <span className="text-blue-500 mt-1.5 text-[7px]">●</span>
                               <div>
                                 <h4 className="font-sans text-sm font-semibold text-stone-800">Academic Benchmarking</h4>
-                                <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Developed a comparative analytics tool for benchmarking cohort performance against national standards.</p>
+                                <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                                  Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.
+                                </p>
                               </div>
                             </div>
                             <div className="flex gap-2.5 items-start">
@@ -347,14 +380,18 @@ function App() {
                           <span className="text-violet-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">iotec Horizon Platform Interface</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Designed and built campaign management and reporting web interface for internal teams and professional clients. Fully internationalised for major European markets.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. The platform was fully internationalised for major European markets to enable strategic expansion.
+                            </p>
                           </div>
                         </div>
                         <div className="flex gap-2.5 items-start">
                           <span className="text-violet-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">iotec Platform RESTful API</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Led the development of a RESTful API enabling seamless integration with external systems and a unified platform for developing new products internally.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally. A key enabling strategic functionality for the self service Horizon platform interface.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -390,15 +427,21 @@ function App() {
                           <span className="text-orange-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">Bento for iOS & Android</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">A "Do Less" to-do list focused on mindful productivity.</p>
-                            <p className="font-sans text-xs text-orange-600 font-semibold mt-1.5 flex items-center gap-1.5"><span className="text-sm leading-none">★</span> Featured by Apple: "New & Noteworthy" + Top 5 Paid Productivity in 30 countries</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              A "Do Less" to-do list application focused on mindful productivity.
+                            </p>
+                            <p className="font-sans text-xs text-orange-600 font-semibold mt-1.5 flex items-center gap-1.5">
+                              <span className="text-sm leading-none">★</span> Featured by Apple as a "New & Noteworthy" and a Top 5 Paid Productivity App in 30 different countries
+                            </p>
                           </div>
                         </div>
                         <div className="flex gap-2.5 items-start">
                           <span className="text-orange-500 mt-1.5 text-[7px]">●</span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-800">Investigate Invertebrates</h4>
-                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Interactive companion app for Paignton Zoo that increased visitor dwell time through gamification.</p>
+                            <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                              Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification.
+                            </p>
                           </div>
                         </div>
                         
@@ -407,7 +450,9 @@ function App() {
                             <span className="text-orange-500 mt-1.5 text-[7px]">●</span>
                             <div>
                               <h4 className="font-sans text-sm font-semibold text-stone-800">BearForms</h4>
-                              <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">Designed and developed an offline-first data capture app for iOS and Android.</p>
+                              <p className="font-sans text-stone-500 text-[13px] mt-0.5 leading-relaxed">
+                                Designed and developed an offline-first data capture application for iOS and Android.
+                              </p>
                             </div>
                           </div>
                         </div>
