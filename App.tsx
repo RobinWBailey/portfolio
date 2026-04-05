@@ -330,7 +330,7 @@ function App() {
                     
                     {/* Role 1 — Current */}
                     <div className="border-l border-stone-200 pl-7 pb-12 relative">
-                      <div className="absolute -left-[5px] top-[6px] w-[10px] h-[10px] rounded-full bg-emerald-500 border-[3px] border-white shadow-[0_0_0_1px_rgba(16,185,129,0.3)]"></div>
+                      <div className="absolute -left-[5px] top-[7px] w-[9px] h-[9px] rounded-full bg-white border-[2px] border-emerald-500 ring-[3px] ring-emerald-500/10"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Product & Technical Lead: Learning Analytics & Student Support</h3>
@@ -368,7 +368,7 @@ function App() {
 
                     {/* Role 2 — Digital Education */}
                     <div className="border-l border-stone-200 pl-7 pb-12 relative">
-                      <div className="absolute -left-[5px] top-[6px] w-[10px] h-[10px] rounded-full bg-blue-500 border-[3px] border-white shadow-[0_0_0_1px_rgba(59,130,246,0.3)]"></div>
+                      <div className="absolute -left-[5px] top-[7px] w-[9px] h-[9px] rounded-full bg-white border-[2px] border-blue-500 ring-[3px] ring-blue-500/10"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Digital Education Product Manager</h3>
