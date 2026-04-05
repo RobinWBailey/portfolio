@@ -329,8 +329,8 @@ function App() {
                   <div className={`px-8 pb-8 space-y-0 reveal-child ${experience.isVisible ? 'visible' : ''}`}>
                     
                     {/* Role 1 — Current */}
-                    <div className="border-l-[3px] border-emerald-500 pl-6 pb-10 relative">
-                      <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    <div className="border-l border-stone-200 pl-7 pb-12 relative">
+                      <div className="absolute -left-[5px] top-[6px] w-[10px] h-[10px] rounded-full bg-emerald-500 border-[3px] border-white shadow-[0_0_0_1px_rgba(16,185,129,0.3)]"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Product & Technical Lead: Learning Analytics & Student Support</h3>
@@ -343,7 +343,7 @@ function App() {
                       </p>
                       <div className="space-y-4">
                         <div className="flex gap-3 items-start">
-                          <span className="text-emerald-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-emerald-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Learning Analytics for Early Intervention</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -355,7 +355,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-emerald-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-emerald-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Student Support Enquiry & Case Management</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -367,8 +367,8 @@ function App() {
                     </div>
 
                     {/* Role 2 — Digital Education */}
-                    <div className="border-l-[3px] border-blue-500 pl-6 pb-10 relative">
-                      <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-blue-500 border-2 border-white"></div>
+                    <div className="border-l border-stone-200 pl-7 pb-12 relative">
+                      <div className="absolute -left-[5px] top-[6px] w-[10px] h-[10px] rounded-full bg-blue-500 border-[3px] border-white shadow-[0_0_0_1px_rgba(59,130,246,0.3)]"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Digital Education Product Manager</h3>
@@ -381,7 +381,7 @@ function App() {
                       </p>
                       <div className="space-y-4">
                         <div className="flex gap-3 items-start">
-                          <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">PULSE Student Success Platform</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -390,7 +390,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Content Adaptive Progress Testing</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -399,7 +399,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">On-Clinic Dental Experience Assessment</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -411,7 +411,7 @@ function App() {
                         <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showDigitalEdProjects ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                           <div className="space-y-4">
                             <div className="flex gap-3 items-start">
-                              <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                              <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                               <div>
                                 <h4 className="font-sans text-sm font-semibold text-stone-900">Academic Benchmarking</h4>
                                 <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -420,14 +420,14 @@ function App() {
                               </div>
                             </div>
                             <div className="flex gap-3 items-start">
-                              <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                              <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                               <div>
                                 <h4 className="font-sans text-sm font-semibold text-stone-900">Wave Digital Assistant</h4>
                                 <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">AI chatbot for staff digital education queries in Moodle & student careers advice in the university app.</p>
                               </div>
                             </div>
                             <div className="flex gap-3 items-start">
-                              <span className="text-blue-500 mt-[7px] text-[6px]">●</span>
+                              <span className="w-3 h-px bg-blue-400 mt-[11px] shrink-0"></span>
                               <div>
                                 <h4 className="font-sans text-sm font-semibold text-stone-900">Dynamic Clinical Assessments</h4>
                                 <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">More details coming soon.</p>
@@ -443,8 +443,8 @@ function App() {
                     </div>
 
                     {/* Role 3 — iotec */}
-                    <div className="border-l-[3px] border-violet-500 pl-6 pb-10 relative">
-                      <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-violet-500 border-2 border-white"></div>
+                    <div className="border-l border-stone-200 pl-7 pb-12 relative">
+                      <div className="absolute -left-[5px] top-[7px] w-[9px] h-[9px] rounded-full bg-white border-[2px] border-violet-500 ring-[3px] ring-violet-500/10"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Product Architect; Senior UX Designer</h3>
@@ -457,7 +457,7 @@ function App() {
                       </p>
                       <div className="space-y-4">
                         <div className="flex gap-3 items-start">
-                          <span className="text-violet-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-violet-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">iotec Horizon Platform Interface</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -466,7 +466,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-violet-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-violet-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">iotec Platform RESTful API</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -478,8 +478,8 @@ function App() {
                     </div>
 
                     {/* Role 4 — Freelance */}
-                    <div className="border-l-[3px] border-orange-500 pl-6 pb-2 relative">
-                      <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-orange-500 border-2 border-white"></div>
+                    <div className="border-l border-stone-200 pl-7 pb-2 relative">
+                      <div className="absolute -left-[5px] top-[7px] w-[9px] h-[9px] rounded-full bg-white border-[2px] border-orange-500 ring-[3px] ring-orange-500/10"></div>
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                         <div>
                           <h3 className="font-sans text-[15px] font-semibold text-stone-900 leading-snug">Freelance Product Design & Development</h3>
@@ -497,14 +497,14 @@ function App() {
                       </div>
                       <div className="space-y-4">
                         <div className="flex gap-3 items-start">
-                          <span className="text-orange-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-orange-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Local Government Digital Healthcare Initiative</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1">More details coming soon.</p>
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-orange-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-orange-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Bento for iOS & Android</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -516,7 +516,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex gap-3 items-start">
-                          <span className="text-orange-500 mt-[7px] text-[6px]">●</span>
+                          <span className="w-3 h-px bg-orange-400 mt-[11px] shrink-0"></span>
                           <div>
                             <h4 className="font-sans text-sm font-semibold text-stone-900">Investigate Invertebrates</h4>
                             <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
@@ -527,7 +527,7 @@ function App() {
                         
                         <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showFreelanceProjects ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
                           <div className="flex gap-3 items-start pb-1">
-                            <span className="text-orange-500 mt-[7px] text-[6px]">●</span>
+                            <span className="w-3 h-px bg-orange-400 mt-[11px] shrink-0"></span>
                             <div>
                               <h4 className="font-sans text-sm font-semibold text-stone-900">BearForms</h4>
                               <p className="font-sans text-stone-600 text-sm mt-1 leading-[1.7]">
