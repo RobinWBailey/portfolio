@@ -27,6 +27,62 @@ function useLocalTime() {
   return time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Europe/London' });
 }
 
+const CLIENTS: { name: string; note: string; logo?: string; icon?: React.ReactNode }[] = [
+  { name: 'Plymouth University', note: '1,200+ students daily', logo: '/rectangle_logo.png' },
+  { name: 'iotec Global', note: 'Scaled to 200+ clients', icon: <Zap size={16} /> },
+  { name: 'Medical Schools Council', note: 'Security advisory', logo: '/msc_logo.png' },
+  { name: 'Peninsula Medical School', note: 'Adaptive testing first', icon: <Stethoscope size={16} /> },
+  { name: 'Peninsula Dental School', note: 'Digital clinical assessment', icon: <Stethoscope size={16} /> },
+  { name: 'HESPA', note: 'Analytics steering group', logo: '/hespa_logo.png' },
+  { name: 'Wild Planet Trust', note: 'Conservation education', logo: '/wildplanettrust_logo.png' },
+  { name: 'Apple Featured', note: 'Top 5 in 30 countries', icon: <Smartphone size={16} /> },
+];
+
+function MarqueeTrack({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex shrink-0 gap-10 animate-marquee">
+      {children}
+    </div>
+  );
+}
+
+function ClientCarousel() {
+  const renderItems = () =>
+    CLIENTS.map((client) => (
+      <div key={client.name} className="flex items-center gap-2.5 shrink-0">
+        <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-200/60 flex items-center justify-center overflow-hidden">
+          {client.logo ? (
+            <img src={client.logo} alt={client.name} className="w-5 h-5 object-contain opacity-60 mix-blend-multiply" />
+          ) : (
+            <span className="text-stone-400">{client.icon}</span>
+          )}
+        </div>
+        <div>
+          <p className="font-sans text-xs font-semibold text-stone-600 tracking-tight whitespace-nowrap">{client.name}</p>
+          <p className="font-sans text-[10px] text-stone-400 whitespace-nowrap">{client.note}</p>
+        </div>
+      </div>
+    ));
+
+  return (
+    <section className="reveal visible -mt-2">
+      <div className="px-1">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="h-px flex-1 bg-stone-200/60"></div>
+          <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400">Trusted by</span>
+          <div className="h-px flex-1 bg-stone-200/60"></div>
+        </div>
+        <div className="relative overflow-hidden mask-marquee group">
+          <div className="flex w-max gap-10 group-hover:[animation-play-state:paused] *:[animation-play-state:inherit]">
+            <MarqueeTrack>{renderItems()}</MarqueeTrack>
+            <MarqueeTrack>{renderItems()}</MarqueeTrack>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -233,6 +289,9 @@ function App() {
                   </div>
                 </div>
               </section>
+
+              {/* ── CLIENTS & OUTCOMES CAROUSEL ── */}
+              <ClientCarousel />
 
               {/* ── EXPERIENCE ── */}
               <section id="experience" ref={experience.ref} className={`reveal ${experience.isVisible ? 'visible' : ''}`}>
