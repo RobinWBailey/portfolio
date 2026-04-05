@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <img src="/rb_logo_default_coloured.png" alt="Robin Bailey" className="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
-          <span className="font-sans font-bold text-[14px] text-stone-900 tracking-tight hidden md:block">Robin Bailey</span>
+          <span className="font-heading font-extrabold text-[14px] text-stone-900 tracking-normal hidden md:block">Robin Bailey</span>
         </div>
 
         {/* Right — Minimal Nav */}
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-sans text-[12px] font-semibold uppercase tracking-wider px-3 py-2 rounded-xl transition-all duration-200 text-stone-500 hover:text-stone-900 hover:bg-stone-100/80"
+                className="font-sans text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-2 rounded-xl transition-all duration-200 text-stone-600 hover:text-stone-900 hover:bg-stone-100/80"
               >
                 {item.label}
               </button>
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </div>
           <button 
             onClick={() => scrollToSection('contact')} 
-            className="bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded-xl font-sans text-[12px] font-bold uppercase tracking-wider transition-all hover:shadow-md flex items-center gap-1.5 group flex-shrink-0"
+            className="bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded-xl font-sans text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:shadow-md flex items-center gap-1.5 group flex-shrink-0"
           >
             <span>Contact</span>
             <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
