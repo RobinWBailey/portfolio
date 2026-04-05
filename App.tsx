@@ -205,7 +205,7 @@ function App() {
                         { label: 'Wireframing', icon: <PenTool size={11} /> },
                         { label: 'Prototyping', icon: <Zap size={11} /> }
                       ].map(s => (
-                        <span key={s.label} className="px-2.5 py-1.5 bg-stone-50 border border-stone-200/60 rounded-lg text-xs font-sans font-medium text-stone-600 flex items-center gap-1.5 hover:bg-stone-100 transition-colors cursor-default">
+                        <span key={s.label} className="px-3 py-1.5 bg-white border border-stone-200 rounded-full text-xs font-sans font-medium text-stone-700 flex items-center gap-1.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:border-stone-300 transition-all cursor-default">
                           <span className="text-stone-400">{s.icon}</span> {s.label}
                         </span>
                       ))}
@@ -490,9 +490,9 @@ function App() {
                       <p className="font-sans text-stone-600 text-sm leading-[1.7] mb-4">
                         Designing, building, and implementing 0 → 1 products across multiple industries.
                       </p>
-                      <div className="flex flex-wrap gap-1.5 mb-5">
+                      <div className="flex flex-wrap gap-2 mb-5">
                         {['Wild Planet Trust', 'ToolFinder', 'Local Gov', 'Apollo Health'].map(c => (
-                          <span key={c} className="font-sans text-xs font-medium text-stone-600 bg-stone-50 border border-stone-200/60 px-2.5 py-1 rounded-lg">{c}</span>
+                          <span key={c} className="font-sans text-xs font-medium text-stone-700 bg-white border border-stone-200 px-3 py-1.5 rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)]">{c}</span>
                         ))}
                       </div>
                       <div className="space-y-4">
