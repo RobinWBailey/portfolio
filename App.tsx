@@ -276,25 +276,6 @@ function App() {
             {/* ━━━━━ RIGHT: CONTENT FEED ━━━━━ */}
             <div className="flex-1 min-w-0 space-y-10">
 
-              {/* ── FEATURED ── */}
-              <section className="reveal visible">
-                <div className="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 rounded-3xl border border-stone-800/80 shadow-xl overflow-hidden relative group">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 mix-blend-overlay group-hover:bg-emerald-500/20 transition-all duration-700"></div>
-                  <div className="px-8 py-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5 relative z-10">
-                    <div>
-                      <h2 className="font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-emerald-500 mb-2 flex items-center gap-1.5">
-                        <Star size={10} className="fill-current" /> Featured Work
-                      </h2>
-                      <p className="font-heading text-lg font-extrabold text-white tracking-normal leading-snug">PULSE Student Success Platform</p>
-                      <p className="font-sans text-stone-400 text-sm mt-1.5 max-w-md leading-relaxed">Transforming medical education with an industry-first student tracking platform.</p>
-                    </div>
-                    <button onClick={() => window.scrollTo({ top: document.getElementById('experience')?.offsetTop || 0, behavior: 'smooth' })} className="inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-stone-900 bg-white hover:bg-stone-100 px-5 py-2.5 rounded-xl transition-colors shrink-0">
-                      View details
-                    </button>
-                  </div>
-                </div>
-              </section>
-
               {/* ── CLIENTS & OUTCOMES CAROUSEL ── */}
               <ClientCarousel />
 
