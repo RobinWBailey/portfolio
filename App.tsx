@@ -350,8 +350,8 @@ function FilterChip({ tag, active, onClick }: { tag: FilterTag; active: boolean;
     <button
       onClick={onClick}
       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium border transition-all duration-150 select-none ${active
-          ? cfg.active
-          : 'bg-white border-stone-200 text-stone-600 hover:border-stone-300 hover:bg-stone-50'
+        ? cfg.active
+        : 'bg-white border-stone-200 text-stone-600 hover:border-stone-300 hover:bg-stone-50'
         }`}
     >
       <span className={`flex-shrink-0 transition-colors ${active ? 'opacity-70' : cfg.iconClass}`}>
@@ -435,7 +435,7 @@ function App() {
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 lg:gap-14">
 
             {/* Left: Identity */}
-            <div className="flex-1 min-w-0 max-w-[560px]">
+            <div className="flex-1 min-w-0 max-w-[720px]">
 
               {/* Availability */}
               <div className="inline-flex items-center gap-2 mb-10 bg-emerald-50 border border-emerald-100 rounded-full px-4 py-2">
@@ -449,12 +449,12 @@ function App() {
               </div>
 
               {/* Role — now the primary opening statement */}
-              <p className="font-sans text-[26px] md:text-[30px] font-bold text-stone-900 tracking-[-0.02em] mb-7 leading-snug">
+              <p className="font-sans text-[32px] md:text-[42px] font-extrabold text-stone-900 tracking-[-0.03em] mb-6 leading-tight">
                 Product Leader · Designer · Engineer
               </p>
 
               {/* Bio */}
-              <p className="font-sans text-[18px] text-stone-700 leading-[1.68] mb-0">
+              <p className="font-sans text-[20px] md:text-[24px] font-semibold text-stone-900 leading-[1.6] tracking-[-0.02em] mb-0">
                 I help turn complex business challenges into clear, user-focused product solutions — designing, architecting, and implementing technical systems that deliver real impact.
               </p>
             </div>
@@ -490,8 +490,8 @@ function App() {
                 <button
                   onClick={() => setIsDetailed(false)}
                   className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all duration-200 ${!isDetailed
-                      ? 'bg-stone-900 text-white shadow-sm'
-                      : 'text-stone-500 hover:text-stone-800'
+                    ? 'bg-stone-900 text-white shadow-sm'
+                    : 'text-stone-500 hover:text-stone-800'
                     }`}
                 >
                   Condensed
@@ -499,8 +499,8 @@ function App() {
                 <button
                   onClick={() => setIsDetailed(true)}
                   className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all duration-200 ${isDetailed
-                      ? 'bg-stone-900 text-white shadow-sm'
-                      : 'text-stone-500 hover:text-stone-800'
+                    ? 'bg-stone-900 text-white shadow-sm'
+                    : 'text-stone-500 hover:text-stone-800'
                     }`}
                 >
                   Detailed
