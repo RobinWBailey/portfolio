@@ -1,11 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight } from 'lucide-react';
-
-const NAV_ITEMS = [
-  { id: 'experience', label: 'Experience' },
-  { id: 'advisory', label: 'Advisory' },
-  { id: 'speaking', label: 'Speaking' },
-];
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,56 +9,62 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
-      <div 
-        className={`w-full flex justify-between items-center px-4 md:px-8 lg:px-12 py-3 transition-all duration-500 pointer-events-auto ${
-          scrolled 
-            ? 'bg-white/80 border-b border-stone-200/60 shadow-sm' 
+      <div
+        className={`w-full max-w-5xl mx-auto flex justify-between items-center px-6 md:px-10 py-4 transition-all duration-500 pointer-events-auto ${scrolled
+            ? 'bg-white/85 border-b border-stone-100'
             : 'bg-transparent'
-        }`}
-        style={{ 
+          }`}
+        style={{
           backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
         }}
       >
         {/* Left — Logo */}
-        <div 
+        <div
           className="flex items-center gap-2.5 cursor-pointer group"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <img src="/rb_logo_default_coloured.png" alt="Robin Bailey" className="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
-          <span className="font-heading font-extrabold text-[14px] text-stone-900 tracking-normal hidden md:block">Robin Bailey</span>
+          <span className="font-heading font-extrabold text-[21px] tracking-[-0.03em] text-stone-900">Robin Bailey</span>
         </div>
 
-        {/* Right — Minimal Nav */}
-        <div className="flex items-center gap-1">
-          <div className="hidden md:flex items-center gap-0.5 mr-2">
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="font-sans text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-2 rounded-xl transition-all duration-200 text-stone-600 hover:text-stone-900 hover:bg-stone-100/80"
-              >
-                {item.label}
-              </button>
-            ))}
+        {/* Right — Social text links + CTA */}
+        <div className="flex items-center gap-5">
+          <div className="hidden md:flex items-center gap-7">
+            <a
+              href="https://www.linkedin.com/in/robinwbailey/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://twitter.com/RobinBailey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
+            >
+              Twitter
+            </a>
+            <a
+              href="https://github.com/robinwbailey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
+            >
+              GitHub
+            </a>
           </div>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded-xl font-sans text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:shadow-md flex items-center gap-1.5 group flex-shrink-0"
+          <div className="w-px h-4 bg-stone-200 hidden md:block flex-shrink-0" />
+          <a
+            href="mailto:robin.w.bailey@gmail.com"
+            className="font-sans text-[16px] font-extrabold bg-stone-900 text-white px-7 py-3 rounded-full hover:bg-stone-700 transition-colors uppercase tracking-[0.07em] whitespace-nowrap"
           >
-            <span>Contact</span>
-            <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-          </button>
+            Get in Touch
+          </a>
         </div>
       </div>
     </nav>
