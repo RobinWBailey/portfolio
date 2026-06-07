@@ -314,8 +314,8 @@ function ClientCarousel() {
         <span className="font-sans text-[11px] font-medium uppercase tracking-[0.10em] text-stone-400">Trusted by</span>
         <div className="h-px flex-1 bg-stone-100" />
       </div>
-      <div className="relative overflow-hidden mask-marquee group">
-        <div className="flex w-max gap-10 group-hover:[animation-play-state:paused] *:[animation-play-state:inherit]">
+      <div className="relative overflow-hidden mask-marquee">
+        <div className="flex w-max gap-10">
           <MarqueeTrack>{items()}</MarqueeTrack>
           <MarqueeTrack>{items()}</MarqueeTrack>
         </div>
