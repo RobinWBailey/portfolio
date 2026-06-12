@@ -1,0 +1,26 @@
+{
+  "name": "Robin Bailey",
+  "title": "Robin | Portfolio",
+  "logo": "/rb_logo_default_coloured.png",
+  "headshot": "/headshot.jpg",
+  "tagline": "Product Leader · Designer · Engineer",
+  "bio": "I help turn complex business challenges into clear, user-focused product solutions — designing, architecting, and implementing technical systems that deliver real impact.",
+  "availability": {
+    "active": true,
+    "label": "Available for opportunities"
+  },
+  "email": "robin.w.bailey@gmail.com",
+  "location": "Cornwall, UK",
+  "locationTagline": "Made with care in Cornwall",
+  "copyrightYear": "2025",
+  "cta": {
+    "heading": "Let's build something meaningful.",
+    "subtext": "I'd love to hear what you're working on.",
+    "buttonLabel": "Get in Touch"
+  },
+  "social": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/robinwbailey/" },
+    { "label": "Twitter", "url": "https://twitter.com/RobinBailey" },
+    { "label": "GitHub", "url": "https://github.com/robinwbailey" }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "learning-analytics",
+    "title": "Product & Technical Lead: Learning Analytics & Student Support",
+    "company": "Plymouth University",
+    "period": "2025 — Present",
+    "accentColor": "emerald",
+    "summary": "Leading the strategic product development and technical implementation of a wide £\u00a0programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.",
+    "tags": ["product", "data", "salesforce", "education"],
+    "projects": [
+      {
+        "title": "Learning Analytics for Early Intervention",
+        "body": "Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented an organisational-first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span class=\"highlight highlight-purple\">Insights</span> service and design to enable proactive calls to action.",
+        "award": "Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'"
+      },
+      {
+        "title": "Student Support Enquiry & Case Management",
+        "body": "Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution."
+      }
+    ],
+    "extraProjects": []
+  },
+  {
+    "id": "digital-ed",
+    "title": "Digital Education Product Manager",
+    "company": "Academic Development, Plymouth University",
+    "period": "2019 — 2025",
+    "accentColor": "blue",
+    "summary": "Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.",
+    "tags": ["product", "mobile", "salesforce", "education", "health"],
+    "projects": [
+      {
+        "title": "PULSE Student Success Platform",
+        "body": "Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry."
+      },
+      {
+        "title": "Content Adaptive Progress Testing",
+        "body": "Designed and implemented an industry-first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of students based on past assessment performance."
+      },
+      {
+        "title": "On-Clinic Dental Experience Assessment",
+        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span class=\"highlight highlight-yellow\">TBA clinical sites</span> across the south-west of England."
+      }
+    ],
+    "extraProjects": [
+      {
+        "title": "Academic Benchmarking",
+        "body": "Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards."
+      },
+      {
+        "title": "Wave Digital Assistant",
+        "body": "AI chatbot for staff digital education queries in Moodle & student careers advice in the university app."
+      },
+      {
+        "title": "Dynamic Clinical Assessments",
+        "body": "More details coming soon."
+      }
+    ]
+  },
+  {
+    "id": "iotec",
+    "title": "Product Architect; Senior UX Designer",
+    "company": "iotec Global",
+    "period": "2016 — 2018",
+    "accentColor": "violet",
+    "summary": "Leading UX and product design, building campaign management and reporting tools for a cutting-edge AdTech platform.",
+    "tags": ["design", "product", "adtech"],
+    "projects": [
+      {
+        "title": "iotec Horizon Platform Interface",
+        "body": "Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. The platform was fully internationalised for major European markets."
+      },
+      {
+        "title": "iotec Platform RESTful API",
+        "body": "Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally."
+      }
+    ],
+    "extraProjects": []
+  },
+  {
+    "id": "freelance",
+    "title": "Freelance Product Design & Development",
+    "company": "Multiple Clients",
+    "period": "2010 — Present",
+    "accentColor": "orange",
+    "summary": "Designing, building, and implementing 0 → 1 products across multiple industries.",
+    "tags": ["design", "mobile", "product", "government", "health"],
+    "projects": [
+      {
+        "title": "Local Government Digital Healthcare Initiative",
+        "body": "More details coming soon."
+      },
+      {
+        "title": "Bento for iOS & Android",
+        "body": "A \"Do Less\" to-do list application focused on mindful productivity.",
+        "award": "Featured by Apple as a \"New & Noteworthy\" and a Top 5 Paid Productivity App in 30 different countries"
+      },
+      {
+        "title": "Investigate Invertebrates",
+        "body": "Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification."
+      }
+    ],
+    "extraProjects": [
+      {
+        "title": "BearForms",
+        "body": "Designed and developed an offline-first data capture application for iOS and Android."
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "tags": [
+    { "id": "product", "label": "Product", "color": "blue", "icon": "layout-template" },
+    { "id": "design", "label": "Design", "color": "orange", "icon": "pen-tool" },
+    { "id": "engineering", "label": "Engineering", "color": "violet", "icon": "zap" },
+    { "id": "data", "label": "Analytics", "color": "amber", "icon": "database" },
+    { "id": "salesforce", "label": "Salesforce", "color": "teal", "icon": "cloud" },
+    { "id": "mobile", "label": "Mobile", "color": "indigo", "icon": "smartphone" },
+    { "id": "education", "label": "Education", "color": "green", "icon": "book-open" },
+    { "id": "health", "label": "Health", "color": "red", "icon": "stethoscope" },
+    { "id": "government", "label": "Government", "color": "sky", "icon": "landmark" },
+    { "id": "adtech", "label": "AdTech", "color": "yellow", "icon": "megaphone" }
+  ],
+  "tagOrder": [
+    "product", "design", "engineering", "data", "salesforce", "mobile",
+    "education", "health", "government", "adtech"
+  ],
+  "categoryTagMap": {
+    "Education": ["education"],
+    "AdTech": ["adtech"],
+    "Mobile App": ["mobile"],
+    "Mobile": ["mobile"],
+    "Concept": ["design"],
+    "Branding": ["design"],
+    "Data": ["data"],
+    "AI": ["engineering"],
+    "Web": ["engineering"],
+    "Government": ["government"]
+  }
+}

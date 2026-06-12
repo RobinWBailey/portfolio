@@ -1,0 +1,10 @@
+[
+  { "name": "Plymouth University", "note": "1,200+ students daily", "logo": "/rectangle_logo.png" },
+  { "name": "iotec Global", "note": "Scaled to 200+ clients", "icon": "zap" },
+  { "name": "Medical Schools Council", "note": "Security advisory", "logo": "/msc_logo.png" },
+  { "name": "Peninsula Medical School", "note": "Adaptive testing first", "icon": "stethoscope" },
+  { "name": "Peninsula Dental School", "note": "Digital clinical assessment", "icon": "stethoscope" },
+  { "name": "HESPA", "note": "Analytics steering group", "logo": "/hespa_logo.png" },
+  { "name": "Wild Planet Trust", "note": "Conservation education", "logo": "/wildplanettrust_logo.png" },
+  { "name": "Apple Featured", "note": "Top 5 in 30 countries", "icon": "smartphone" }
+]

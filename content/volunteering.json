@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Assessment Alliance Security Group",
+    "org": "Medical Schools Council UK",
+    "period": "2025 — Present",
+    "body": "Advising on best practices for digital assessment security across UK medical schools.",
+    "logo": "/msc_logo.png",
+    "tags": ["health", "education"]
+  },
+  {
+    "title": "Learning Analytics Steering Group",
+    "org": "HESPA",
+    "period": "2025 — Present",
+    "logo": "/hespa_logo.png",
+    "tags": ["data", "education"]
+  },
+  {
+    "title": "Education",
+    "org": "Wild Planet Trust",
+    "period": "2004 — 2023",
+    "body": "Supporting conservation education for public audiences and school groups.",
+    "logo": "/wildplanettrust_logo.png",
+    "tags": ["education"]
+  },
+  {
+    "title": "Mayor's Youth Council Representative",
+    "org": "Town Council",
+    "period": "2006 — 2009",
+    "body": "Representing young people in local government decision making.",
+    "tags": ["government"]
+  }
+]

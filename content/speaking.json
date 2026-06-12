@@ -1,0 +1,39 @@
+[
+  {
+    "year": "2024",
+    "title": "EBMA Annual European Conference",
+    "subtitle": "Assessment in Medical Education",
+    "entries": [
+      { "type": "Symposium", "text": "Adaptive Testing: Current & Future Perspectives" },
+      { "type": "Presentation", "text": "Content Adaptive Progress Tests at Peninsula Medical School" }
+    ],
+    "tags": ["health", "education"]
+  },
+  {
+    "year": "2024",
+    "title": "Salesforce UK/EMEA Education User Group",
+    "subtitle": "Student Success Platform for Medicine",
+    "entries": [
+      { "text": "Showcasing our bespoke Salesforce Student Success Platform for the Faculty of Medicine." }
+    ],
+    "tags": ["salesforce", "education"]
+  },
+  {
+    "year": "2022",
+    "title": "Peninsula Medical School Conference",
+    "subtitle": "Visualising Adaptive Progress Testing",
+    "entries": [
+      { "text": "Data visualisation techniques for complex longitudinal assessment data." }
+    ],
+    "tags": ["health", "education", "data"]
+  },
+  {
+    "year": "2012",
+    "title": "Learning Without Frontiers",
+    "subtitle": "London",
+    "entries": [
+      { "text": "The future of mobile learning and digital engagement in education." }
+    ],
+    "tags": ["education", "mobile"]
+  }
+]

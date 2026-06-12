@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import siteConfig from '../content/site.json';
+import { SiteConfig } from '../types';
+
+const SITE = siteConfig as SiteConfig;
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,41 +30,28 @@ const Navbar: React.FC = () => {
           className="flex items-center gap-2.5 cursor-pointer group"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <img src="/rb_logo_default_coloured.png" alt="Robin Bailey" className="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
-          <span className="font-heading font-extrabold text-[21px] tracking-[-0.03em] text-stone-900">Robin Bailey</span>
+          <img src={SITE.logo} alt={SITE.name} className="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+          <span className="font-heading font-extrabold text-[21px] tracking-[-0.03em] text-stone-900">{SITE.name}</span>
         </div>
 
         {/* Right — Social text links + CTA */}
         <div className="flex items-center gap-5">
           <div className="hidden md:flex items-center gap-7">
-            <a
-              href="https://www.linkedin.com/in/robinwbailey/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://twitter.com/RobinBailey"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://github.com/robinwbailey"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
-            >
-              GitHub
-            </a>
+            {SITE.social.map(link => (
+              <a
+                key={link.label}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans text-[17px] font-extrabold text-stone-500 hover:text-stone-900 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
           <div className="w-px h-4 bg-stone-200 hidden md:block flex-shrink-0" />
           <a
-            href="mailto:robin.w.bailey@gmail.com"
+            href={`mailto:${SITE.email}`}
             className="font-sans text-[16px] font-extrabold bg-stone-900 text-white px-7 py-3 rounded-full hover:bg-stone-700 transition-colors uppercase tracking-[0.07em] whitespace-nowrap"
           >
             Get in Touch

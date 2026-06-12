@@ -1,0 +1,14 @@
+[
+  {
+    "degree": "MSc Business & Management",
+    "classification": "Distinction",
+    "institution": "Plymouth University",
+    "awards": ["Dean's List Award", "Professorate Scholarship"]
+  },
+  {
+    "degree": "BSc Computer Science",
+    "classification": "First",
+    "institution": "Plymouth University",
+    "awards": ["Dean's List (2010–2012)"]
+  }
+]
