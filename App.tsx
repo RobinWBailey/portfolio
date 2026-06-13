@@ -240,8 +240,8 @@ function HtmlText({ html, className }: { html: string; className?: string }) {
 
 /** Expandable project disclosure row */
 function ProjectDisclosure(
-  { projectKey, title, body, award, client, role, year, tags, images, link, isOpen, onToggle }:
-  { projectKey: string; title: string; body: string; award?: string; client?: string; role?: string; year?: string; tags?: string[]; images?: string[]; link?: string; isOpen: boolean; onToggle: () => void }
+  { projectKey, title, summary, body, award, client, role, year, tags, images, link, isOpen, onToggle }:
+  { projectKey: string; title: string; summary?: string; body: string; award?: string; client?: string; role?: string; year?: string; tags?: string[]; images?: string[]; link?: string; isOpen: boolean; onToggle: () => void }
 ) {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -258,26 +258,35 @@ function ProjectDisclosure(
     <div className="disclosure-row group">
       <button
         onClick={onToggle}
-        className={`w-full flex items-center gap-3 py-3 px-3 -mx-3 rounded-lg text-left transition-colors duration-150 min-h-[44px] ${
+        className={`w-full flex items-start gap-3 py-3 px-3 -mx-3 rounded-lg text-left transition-colors duration-150 min-h-[44px] ${
           isOpen
             ? 'bg-stone-50'
             : 'hover:bg-stone-50/60'
         }`}
       >
-        <span className={`flex-shrink-0 text-stone-400 transition-transform duration-200 ${
+        <span className={`flex-shrink-0 text-stone-400 transition-transform duration-200 mt-1 ${
           isOpen ? 'rotate-90' : 'group-hover:text-stone-600'
         }`}>
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="mt-[1px]">
             <path d="M3 1.5L7 5L3 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </span>
-        <span className={`font-sans text-[15px] font-semibold leading-snug transition-colors duration-150 ${
-          isOpen ? 'text-stone-900' : 'text-stone-600 group-hover:text-stone-800'
-        }`}>
-          {title}
-        </span>
+        <div className="flex-1 flex flex-col justify-start">
+          <span className={`font-sans text-[15px] font-semibold leading-snug transition-colors duration-150 ${
+            isOpen ? 'text-stone-900' : 'text-stone-800 group-hover:text-stone-900'
+          }`}>
+            {title}
+          </span>
+          {summary && (
+            <span className={`font-sans text-[13.5px] mt-0.5 leading-snug font-medium transition-colors duration-150 ${
+              isOpen ? 'text-stone-600' : 'text-stone-500 group-hover:text-stone-600'
+            }`}>
+              {summary}
+            </span>
+          )}
+        </div>
         {award && !isOpen && (
-          <span className="ml-auto flex-shrink-0 text-amber-400 text-[11px]">★</span>
+          <span className="ml-auto flex-shrink-0 text-amber-400 text-[11px] mt-1.5">★</span>
         )}
       </button>
       <div
@@ -299,7 +308,7 @@ function ProjectDisclosure(
               )}
             </div>
           )}
-          <HtmlText html={body} className="font-sans text-[15px] font-medium text-stone-500 leading-[1.7]" />
+          <HtmlText html={body} className="font-sans text-[15px] font-medium text-stone-700 leading-[1.75]" />
           {award && (
             <p className="font-sans text-[12px] text-emerald-600 font-semibold mt-3 flex items-center gap-1.5">
               <span className="leading-none">★</span> {award}
@@ -571,6 +580,7 @@ function App() {
                             key={key}
                             projectKey={key}
                             title={p.title}
+                            summary={p.summary}
                             body={p.body}
                             award={p.award}
                             client={p.client}
