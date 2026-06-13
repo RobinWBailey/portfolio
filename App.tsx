@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
-import ProjectModal from './components/ProjectModal';
 import {
-  Project, ExperienceRole, Education as EducationType, Volunteering as VolunteeringType,
+  ExperienceRole, Education as EducationType, Volunteering as VolunteeringType,
   Speaking as SpeakingType, Client, FilterTagDef, FiltersConfig, SiteConfig,
 } from './types';
 import {
@@ -19,7 +18,6 @@ import educationData from './content/education.json';
 import volunteeringData from './content/volunteering.json';
 import speakingData from './content/speaking.json';
 import clientsData from './content/clients.json';
-import projectsData from './content/projects.json';
 import filtersData from './content/filters.json';
 
 const SITE = siteConfig as SiteConfig;
@@ -28,7 +26,6 @@ const EDUCATION = educationData as EducationType[];
 const VOLUNTEERING = volunteeringData as VolunteeringType[];
 const SPEAKING = speakingData as SpeakingType[];
 const CLIENTS = clientsData as Client[];
-const PROJECTS = projectsData as Project[];
 const FILTERS = filtersData as FiltersConfig;
 
 // ── Lookup maps ──────────────────────────────────────────────────────────────
@@ -243,8 +240,8 @@ function HtmlText({ html, className }: { html: string; className?: string }) {
 
 /** Expandable project disclosure row */
 function ProjectDisclosure(
-  { projectKey, title, body, award, isOpen, onToggle }:
-  { projectKey: string; title: string; body: string; award?: string; isOpen: boolean; onToggle: () => void }
+  { projectKey, title, body, award, client, role, year, tags, images, link, isOpen, onToggle }:
+  { projectKey: string; title: string; body: string; award?: string; client?: string; role?: string; year?: string; tags?: string[]; images?: string[]; link?: string; isOpen: boolean; onToggle: () => void }
 ) {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -254,6 +251,8 @@ function ProjectDisclosure(
       setHeight(bodyRef.current.scrollHeight);
     }
   }, [isOpen, body]);
+
+  const hasMeta = client || role || year;
 
   return (
     <div className="disclosure-row group">
@@ -286,11 +285,59 @@ function ProjectDisclosure(
         style={{ maxHeight: isOpen ? `${height + 16}px` : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div ref={bodyRef} className="pl-[22px] pb-4 pt-1">
+          {/* Meta row */}
+          {hasMeta && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-3">
+              {client && (
+                <span className="font-sans text-[12px] font-semibold text-stone-400 uppercase tracking-[0.06em]">{client}</span>
+              )}
+              {role && (
+                <span className="font-sans text-[12px] font-medium text-stone-400">{role}</span>
+              )}
+              {year && (
+                <span className="font-sans text-[11px] font-medium text-stone-400 bg-stone-100 px-2 py-0.5 rounded">{year}</span>
+              )}
+            </div>
+          )}
           <HtmlText html={body} className="font-sans text-[15px] font-medium text-stone-500 leading-[1.7]" />
           {award && (
             <p className="font-sans text-[12px] text-emerald-600 font-semibold mt-3 flex items-center gap-1.5">
               <span className="leading-none">★</span> {award}
             </p>
+          )}
+          {/* Tags */}
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mt-4">
+              {tags.map(tag => (
+                <span key={tag} className="font-sans text-[11px] font-medium text-stone-400 bg-stone-100 border border-stone-100 px-2 py-0.5 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+          {/* Images */}
+          {images && images.length > 0 && (
+            <div className="mt-6 flex gap-4 overflow-x-auto pb-4 snap-x">
+              {images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`${title} screenshot ${idx + 1}`}
+                  className="w-[280px] h-[180px] object-cover rounded-md border border-stone-200 snap-center flex-shrink-0"
+                />
+              ))}
+            </div>
+          )}
+          {/* Link */}
+          {link && link !== '#' && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-6 font-sans font-semibold text-sm uppercase tracking-widest border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors"
+            >
+              Visit Live Project <ArrowRight size={14} />
+            </a>
           )}
         </div>
       </div>
@@ -301,15 +348,12 @@ function ProjectDisclosure(
 // ── App ───────────────────────────────────────────────────────────────────────
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [expandedProjects, setExpandedProjects] = useState<Set<string>>(new Set());
 
   const experience = useScrollReveal();
   const volunteering = useScrollReveal();
   const speaking = useScrollReveal();
-  const archive = useScrollReveal();
   const cta = useScrollReveal();
   const localTime = useLocalTime();
 
@@ -317,11 +361,6 @@ function App() {
     setActiveFilters(prev =>
       prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
     );
-  };
-
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
   };
 
   // Project disclosure helpers
@@ -348,7 +387,6 @@ function App() {
   const filteredExperience = EXPERIENCE.filter(r => matchesTags(r.tags, activeFilters));
   const filteredVolunteering = VOLUNTEERING.filter(v => matchesTags(v.tags, activeFilters));
   const filteredSpeaking = SPEAKING.filter(s => matchesTags(s.tags, activeFilters));
-  const filteredProjects = PROJECTS.filter(p => matchesTags(getProjectTags(p), activeFilters));
 
   const hasFilters = activeFilters.length > 0;
 
@@ -535,6 +573,12 @@ function App() {
                             title={p.title}
                             body={p.body}
                             award={p.award}
+                            client={p.client}
+                            role={p.role}
+                            year={p.year}
+                            tags={p.tags}
+                            images={p.images}
+                            link={p.link}
                             isOpen={expandedProjects.has(key)}
                             onToggle={() => toggleProject(key)}
                           />
@@ -630,44 +674,6 @@ function App() {
 
         </div>
 
-        {/* ── Project Archive ── */}
-        <section ref={archive.ref} className={`reveal ${archive.isVisible ? 'visible' : ''}`}>
-          <SectionHeading label="All work">Project Archive</SectionHeading>
-          {filteredProjects.length === 0 ? (
-            <p className="font-sans text-[15px] text-stone-400 italic">No projects match the selected filters.</p>
-          ) : (
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-stone-200">
-                  <th className="py-3.5 w-5" />
-                  <th className="py-3.5 pr-6 font-sans text-[11px] uppercase tracking-[0.12em] font-medium text-stone-400 w-16">Year</th>
-                  <th className="py-3.5 pr-6 font-sans text-[11px] uppercase tracking-[0.12em] font-medium text-stone-400">Project</th>
-                  <th className="py-3.5 pr-6 font-sans text-[11px] uppercase tracking-[0.12em] font-medium text-stone-400 hidden md:table-cell">Category</th>
-                  <th className="py-3.5 font-sans text-[11px] uppercase tracking-[0.12em] font-medium text-stone-400 hidden lg:table-cell">Client</th>
-                  <th className="py-3.5 w-5" />
-                </tr>
-              </thead>
-              <tbody>
-                {filteredProjects.map((project) => (
-                  <tr key={project.id} className="border-b border-stone-100 archive-row cursor-pointer" onClick={() => handleProjectClick(project)}>
-                    <td className="py-4 pl-1">{project.isSelected && <Star size={11} className="text-stone-400 fill-current" />}</td>
-                    <td className="py-4 pr-6 font-sans text-[13px] text-stone-400 font-medium">{project.year}</td>
-                    <td className="py-4 pr-6">
-                      <span className="font-sans text-[15px] text-stone-900 font-semibold block">{project.title}</span>
-                      <span className="font-sans text-[12px] font-medium text-stone-400 md:hidden mt-0.5 block">{project.category}</span>
-                    </td>
-                    <td className="py-4 pr-6 hidden md:table-cell">
-                      <span className="font-sans text-[12px] font-medium text-stone-500 bg-stone-50 border border-stone-100 px-2.5 py-1 rounded">{project.category}</span>
-                    </td>
-                    <td className="py-4 font-sans text-[13px] font-medium text-stone-500 hidden lg:table-cell">{project.client || '—'}</td>
-                    <td className="py-4 text-stone-400"><ArrowUpRight size={13} className="archive-arrow" /></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </section>
-
         {/* ── CTA ── */}
         <section ref={cta.ref} className={`reveal ${cta.isVisible ? 'visible' : ''}`} id="contact">
           <div className="bg-stone-900 rounded-3xl overflow-hidden">
@@ -705,8 +711,6 @@ function App() {
         </footer>
 
       </main>
-
-      <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

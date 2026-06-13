@@ -1,19 +1,6 @@
 // ── Project (archive table + modal) ──────────────────────────────────────────
 
-export interface Project {
-  id: string;
-  title: string;
-  category: string;
-  year: string;
-  summary: string;
-  description: string;
-  images: string[];
-  tags: string[];
-  link?: string;
-  client?: string;
-  role?: string;
-  isSelected?: boolean;
-}
+
 
 // ── Site config ──────────────────────────────────────────────────────────────
 
@@ -44,6 +31,15 @@ export interface ExperienceProject {
   title: string;
   body: string;
   award?: string;
+  client?: string;
+  role?: string;
+  category?: string;
+  year?: string;
+  tags?: string[];
+  images?: string[];
+  link?: string;
+  summary?: string;
+  isSelected?: boolean;
 }
 
 export interface ExperienceRole {
