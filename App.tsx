@@ -241,14 +241,70 @@ function HtmlText({ html, className }: { html: string; className?: string }) {
   return <p className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
+/** Expandable project disclosure row */
+function ProjectDisclosure(
+  { projectKey, title, body, award, isOpen, onToggle }:
+  { projectKey: string; title: string; body: string; award?: string; isOpen: boolean; onToggle: () => void }
+) {
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      setHeight(bodyRef.current.scrollHeight);
+    }
+  }, [isOpen, body]);
+
+  return (
+    <div className="disclosure-row group">
+      <button
+        onClick={onToggle}
+        className={`w-full flex items-center gap-3 py-3 px-3 -mx-3 rounded-lg text-left transition-colors duration-150 min-h-[44px] ${
+          isOpen
+            ? 'bg-stone-50'
+            : 'hover:bg-stone-50/60'
+        }`}
+      >
+        <span className={`flex-shrink-0 text-stone-400 transition-transform duration-200 ${
+          isOpen ? 'rotate-90' : 'group-hover:text-stone-600'
+        }`}>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="mt-[1px]">
+            <path d="M3 1.5L7 5L3 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+        <span className={`font-sans text-[15px] font-semibold leading-snug transition-colors duration-150 ${
+          isOpen ? 'text-stone-900' : 'text-stone-600 group-hover:text-stone-800'
+        }`}>
+          {title}
+        </span>
+        {award && !isOpen && (
+          <span className="ml-auto flex-shrink-0 text-amber-400 text-[11px]">★</span>
+        )}
+      </button>
+      <div
+        className="overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        style={{ maxHeight: isOpen ? `${height + 16}px` : '0px', opacity: isOpen ? 1 : 0 }}
+      >
+        <div ref={bodyRef} className="pl-[22px] pb-4 pt-1">
+          <HtmlText html={body} className="font-sans text-[15px] font-medium text-stone-500 leading-[1.7]" />
+          {award && (
+            <p className="font-sans text-[12px] text-emerald-600 font-semibold mt-3 flex items-center gap-1.5">
+              <span className="leading-none">★</span> {award}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── App ───────────────────────────────────────────────────────────────────────
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showExpandedFor, setShowExpandedFor] = useState<string | null>(null);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const [isDetailed, setIsDetailed] = useState(false);
+  const [expandedProjects, setExpandedProjects] = useState<Set<string>>(new Set());
 
   const experience = useScrollReveal();
   const volunteering = useScrollReveal();
@@ -266,6 +322,26 @@ function App() {
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
+  };
+
+  // Project disclosure helpers
+  const toggleProject = (key: string) => {
+    setExpandedProjects(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      return next;
+    });
+  };
+
+  /** Build all project keys across filtered experience for expand/collapse all */
+  const getAllProjectKeys = (roles: ExperienceRole[]) => {
+    const keys: string[] = [];
+    for (const role of roles) {
+      for (const p of [...role.projects, ...(role.extraProjects ?? [])]) {
+        keys.push(`${role.id}--${p.title}`);
+      }
+    }
+    return keys;
   };
 
   // Derived filtered data
@@ -307,6 +383,7 @@ function App() {
         .highlight::after { content: ''; position: absolute; bottom: -2px; left: -2px; right: -2px; height: 75%; width: 110%; z-index: -1; }
         .highlight-purple::after { background: rgb(233 213 255 / 0.7); border-radius: 2px; }
         .highlight-yellow::after { background: rgb(254 249 195 / 0.7); border-radius: 2px; }
+        .disclosure-row + .disclosure-row { border-top: 1px solid #f5f5f4; }
       `}</style>
 
       <Navbar />
@@ -366,73 +443,66 @@ function App() {
 
         {/* ── Filter strip ── */}
         <div className="sticky top-[70px] z-40 bg-white/95 backdrop-blur-md pt-6 pb-6 border-b border-stone-200 mb-10 -mx-6 px-6 md:-mx-10 md:px-10 transition-all shadow-sm">
-          <div className="flex items-start gap-6">
-
-            {/* Left col: View toggle */}
-            <div className="flex-shrink-0">
-              <Label>View</Label>
-              <div className="inline-flex items-center bg-stone-200 rounded-full p-1 gap-1 mt-2">
-                <button
-                  onClick={() => setIsDetailed(false)}
-                  className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all duration-200 ${!isDetailed
-                    ? 'bg-stone-900 text-white shadow-sm'
-                    : 'text-stone-500 hover:text-stone-800'
-                    }`}
-                >
-                  Condensed
-                </button>
-                <button
-                  onClick={() => setIsDetailed(true)}
-                  className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all duration-200 ${isDetailed
-                    ? 'bg-stone-900 text-white shadow-sm'
-                    : 'text-stone-500 hover:text-stone-800'
-                    }`}
-                >
-                  Detailed
-                </button>
-              </div>
-            </div>
-
-            {/* Vertical divider */}
-            <div className="w-px self-stretch bg-stone-200 flex-shrink-0" />
-
-            {/* Right col: Filter chips */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-3 mb-2">
-                <Label>Filter by skill or sector</Label>
-                {hasFilters && (
-                  <button
-                    onClick={() => setActiveFilters([])}
-                    className="inline-flex items-center gap-1 font-sans text-[10px] font-medium text-stone-400 hover:text-stone-700 transition-colors uppercase tracking-[0.08em] -mt-0.5"
-                  >
-                    <X size={10} /> Clear
-                  </button>
-                )}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {ALL_FILTERS.map(tag => (
-                  <FilterChip
-                    key={tag}
-                    tag={tag}
-                    active={activeFilters.includes(tag)}
-                    onClick={() => toggleFilter(tag)}
-                  />
-                ))}
-              </div>
-              {hasFilters && (
-                <p className="font-sans text-[11px] text-stone-400 mt-3">
-                  Showing: {activeFilters.map(t => FILTER_CONFIG[t]?.label ?? t).join(', ')}
-                </p>
-              )}
-            </div>
-
+          <div className="flex items-center gap-3 mb-2">
+            <Label>Filter by skill or sector</Label>
+            {hasFilters && (
+              <button
+                onClick={() => setActiveFilters([])}
+                className="inline-flex items-center gap-1 font-sans text-[10px] font-medium text-stone-400 hover:text-stone-700 transition-colors uppercase tracking-[0.08em] -mt-0.5"
+              >
+                <X size={10} /> Clear
+              </button>
+            )}
           </div>
+          <div className="flex flex-wrap gap-2">
+            {ALL_FILTERS.map(tag => (
+              <FilterChip
+                key={tag}
+                tag={tag}
+                active={activeFilters.includes(tag)}
+                onClick={() => toggleFilter(tag)}
+              />
+            ))}
+          </div>
+          {hasFilters && (
+            <p className="font-sans text-[11px] font-medium text-stone-400 mt-3">
+              Showing: {activeFilters.map(t => FILTER_CONFIG[t]?.label ?? t).join(', ')}
+            </p>
+          )}
         </div>
 
         {/* ── Experience ── */}
         <section id="experience" ref={experience.ref} className={`reveal ${experience.isVisible ? 'visible' : ''}`}>
 
-          <SectionHeading label="Work">Experience</SectionHeading>
+          {/* Section heading with expand/collapse all */}
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <Label>Work</Label>
+              <h2 className="font-heading text-[28px] font-semibold tracking-[-0.018em] text-stone-900 leading-none mt-1">Experience</h2>
+            </div>
+            {filteredExperience.length > 0 && (() => {
+              const allKeys = getAllProjectKeys(filteredExperience);
+              const allOpen = allKeys.length > 0 && allKeys.every(k => expandedProjects.has(k));
+              return (
+                <button
+                  onClick={() => {
+                    if (allOpen) {
+                      setExpandedProjects(new Set());
+                    } else {
+                      setExpandedProjects(prev => {
+                        const next = new Set(prev);
+                        allKeys.forEach(k => next.add(k));
+                        return next;
+                      });
+                    }
+                  }}
+                  className="inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-stone-400 hover:text-stone-700 transition-colors"
+                >
+                  {allOpen ? (<>Collapse All <ArrowUp size={10} /></>) : (<>Expand All <ArrowDown size={10} /></>)}
+                </button>
+              );
+            })()}
+          </div>
 
           {filteredExperience.length === 0 ? (
             <p className="font-sans text-[15px] text-stone-400 italic">No experience entries match the selected filters.</p>
@@ -440,11 +510,10 @@ function App() {
             <div className={`space-y-0 reveal-child ${experience.isVisible ? 'visible' : ''}`}>
               {filteredExperience.map((role, idx) => {
                 const isLast = idx === filteredExperience.length - 1;
-                const expandKey = role.extraProjects && role.extraProjects.length > 0 ? role.id : undefined;
-                const isExpanded = showExpandedFor === expandKey;
                 const accent = accentClasses(role.accentColor);
+                const allProjects = [...role.projects, ...(role.extraProjects ?? [])];
                 return (
-                  <div key={role.id} className={`border-l border-stone-200 pl-8 ${isLast ? 'pb-2' : isDetailed ? 'pb-14' : 'pb-8'} relative`}>
+                  <div key={role.id} className={`border-l border-stone-200 pl-8 ${isLast ? 'pb-2' : 'pb-12'} relative`}>
                     <div className={`absolute -left-[4px] top-[7px] w-2 h-2 rounded-full bg-white border-2 ${accent.dotBorder} ring-2 ${accent.dotRing}`} />
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                       <div>
@@ -453,56 +522,25 @@ function App() {
                       </div>
                       <span className={`font-sans text-[11px] font-medium px-3 py-1 rounded-full self-start whitespace-nowrap uppercase tracking-[0.06em] border ${accent.accentClasses}`}>{role.period}</span>
                     </div>
-                    <p className={`font-sans text-[16px] font-medium text-stone-600 leading-[1.7] max-w-2xl ${isDetailed ? 'mb-0' : 'mb-0'}`}>{role.summary}</p>
+                    <p className="font-sans text-[16px] font-medium text-stone-600 leading-[1.7] max-w-2xl">{role.summary}</p>
 
-                    {/* Condensed: project titles as a child list */}
-                    {!isDetailed && (
-                      <div className="mt-5 pl-4 border-l-2 border-stone-100 space-y-2">
-                        {[...role.projects, ...(role.extraProjects ?? [])].map(p => (
-                          <p key={p.title} className="font-sans text-[13px] font-medium text-stone-400 leading-snug">
-                            {p.title}
-                          </p>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Detailed: full project blocks, visually nested */}
-                    {isDetailed && (
-                      <div className="mt-8 pl-5 border-l-2 border-stone-100 space-y-7">
-                        {role.projects.map(p => (
-                          <div key={p.title}>
-                            <h4 className="font-sans text-[15px] font-semibold text-stone-900">{p.title}</h4>
-                            <HtmlText html={p.body} className="font-sans text-[16px] font-medium text-stone-500 leading-[1.7] mt-2" />
-                            {p.award && (
-                              <p className="font-sans text-[12px] text-emerald-600 font-medium mt-3 flex items-center gap-1.5">
-                                <span className="leading-none">★</span> {p.award}
-                              </p>
-                            )}
-                          </div>
-                        ))}
-
-                        {expandKey && role.extraProjects && role.extraProjects.length > 0 && (
-                          <>
-                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                              <div className="space-y-6">
-                                {role.extraProjects.map(ep => (
-                                  <div key={ep.title}>
-                                    <h4 className="font-sans text-[15px] font-semibold text-stone-900">{ep.title}</h4>
-                                    <HtmlText html={ep.body} className="font-sans text-[16px] font-medium text-stone-500 leading-[1.7] mt-2" />
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <button
-                              onClick={() => setShowExpandedFor(isExpanded ? null : expandKey)}
-                              className="inline-flex items-center gap-1.5 font-sans text-[12px] font-medium uppercase tracking-[0.08em] text-stone-400 hover:text-stone-700 px-4 py-2 rounded-full transition-colors border border-stone-200 hover:border-stone-300 bg-white"
-                            >
-                              {isExpanded ? (<>Less <ArrowUp size={11} /></>) : (<>More <ArrowDown size={11} /></>)}
-                            </button>
-                          </>
-                        )}
-                      </div>
-                    )}
+                    {/* Project disclosures */}
+                    <div className="mt-6 pl-4 border-l-2 border-stone-100">
+                      {allProjects.map(p => {
+                        const key = `${role.id}--${p.title}`;
+                        return (
+                          <ProjectDisclosure
+                            key={key}
+                            projectKey={key}
+                            title={p.title}
+                            body={p.body}
+                            award={p.award}
+                            isOpen={expandedProjects.has(key)}
+                            onToggle={() => toggleProject(key)}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
                 );
               })}
