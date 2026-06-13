@@ -10,12 +10,12 @@
     "projects": [
       {
         "title": "Learning Analytics for Early Intervention",
-        "body": "Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Implemented an organisational-first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span class=\"highlight highlight-purple\">Insights</span> service and design to enable proactive calls to action.",
+        "body": "Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Created dashboards that allow faculty to visualise student learning data, identify trends, and support student success. Implemented an organisational-first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span class=\"highlight highlight-purple\">Insights</span> service and design to enable proactive calls to action.",
         "award": "Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'"
       },
       {
         "title": "Student Support Enquiry & Case Management",
-        "body": "Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution."
+        "body": "Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution. A secure system for managing sensitive student support cases and wellbeing interventions, ensuring data privacy and compliance."
       }
     ],
     "extraProjects": []
@@ -31,29 +31,37 @@
     "projects": [
       {
         "title": "PULSE Student Success Platform",
-        "body": "Led the design and implementation of a fully integrated Salesforce assessment platform for Medicine and Dentistry."
+        "body": "Led the design and implementation of a comprehensive student success platform for the Faculty of Medicine and Dentistry at Plymouth University, encompassing a wide range of modules to support the entire student journey from concept to launch. My role involved stakeholder engagement, requirements gathering, UX/UI design, and managing the agile development process. The platform now serves 1,200+ students daily and has reduced administrative overhead by 30%."
       },
       {
         "title": "Content Adaptive Progress Testing",
-        "body": "Designed and implemented an industry-first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of students based on past assessment performance."
+        "body": "Designed and implemented a sophisticated assessment platform delivering content-adaptive progress testing and topic mapping for medical students. Introduced an industry-first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of students based on past assessment performance."
       },
       {
         "title": "On-Clinic Dental Experience Assessment",
-        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span class=\"highlight highlight-yellow\">TBA clinical sites</span> across the south-west of England."
+        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking via a specialised mobile-friendly tool for recording and validating clinical experience in dental clinics. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span class=\"highlight highlight-yellow\">TBA clinical sites</span> across the south-west of England."
+      },
+      {
+        "title": "Competency Based Assessment",
+        "body": "System for tracking and verifying student competency across practical skills, enabling faculty to monitor progression and ensure students meet professional standards."
+      },
+      {
+        "title": "Short Courses Platform",
+        "body": "A web-based platform handling booking, payment, and management of short professional development courses for continuing education."
       }
     ],
     "extraProjects": [
+      {
+        "title": "Dynamic Assessments",
+        "body": "Integration services connecting assessment platforms with student record systems, enabling real-time assessment data flow."
+      },
       {
         "title": "Academic Benchmarking",
         "body": "Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards."
       },
       {
         "title": "Wave Digital Assistant",
-        "body": "AI chatbot for staff digital education queries in Moodle & student careers advice in the university app."
-      },
-      {
-        "title": "Dynamic Clinical Assessments",
-        "body": "More details coming soon."
+        "body": "AI chatbot for staff digital education queries in Moodle & student careers advice in the university app. Connects to live agents when needed."
       }
     ]
   },
@@ -68,7 +76,7 @@
     "projects": [
       {
         "title": "iotec Horizon Platform Interface",
-        "body": "Led the design and implementation of a new campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. The platform was fully internationalised for major European markets."
+        "body": "Led the design and implementation of a self-service campaign management and reporting web interface, empowering clients to manage their own digital advertising campaigns. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. The platform was fully internationalised for major European markets to enable strategic expansion, achieving an 80% reduction in campaign setup time and enabling the business to scale to 200+ clients."
       },
       {
         "title": "iotec Platform RESTful API",
@@ -87,23 +95,40 @@
     "tags": ["design", "mobile", "product", "government", "health"],
     "projects": [
       {
-        "title": "Local Government Digital Healthcare Initiative",
-        "body": "More details coming soon."
+        "title": "BearForms",
+        "body": "A simple, offline, no-fuss data capture form app for iPhone, iPad, and Android. Design your form. Capture your responses. Export your data. Done. Designed, developed, and launched this multi-platform app from scratch using React Native, including UI/UX design and App Store deployment."
       },
       {
         "title": "Bento for iOS & Android",
-        "body": "A \"Do Less\" to-do list application focused on mindful productivity.",
+        "body": "A \"Do Less\" to-do list application based on the Bento methodology, designed for focus and mindful productivity. This project explores the intersection of digital utility and mental well-being, using a limited-choice interface to reduce cognitive load.",
         "award": "Featured by Apple as a \"New & Noteworthy\" and a Top 5 Paid Productivity App in 30 different countries"
       },
       {
         "title": "Investigate Invertebrates",
-        "body": "Designed an interactive companion app for Paignton Zoo that increased visitor dwell time through gamification."
+        "body": "A companion iOS app for the Paignton Zoo exhibit, designed to educate and engage visitors, particularly younger audiences, with interactive content. The app utilized gamification to increase visitor dwell time and engagement with the exhibits.",
+        "client": "Wild Planet Trust"
+      },
+      {
+        "title": "Local Government Digital Healthcare Initiative",
+        "body": "A project to digitize citizen services for local government, focusing on accessibility and digital service transformation."
       }
     ],
     "extraProjects": [
       {
-        "title": "BearForms",
-        "body": "Designed and developed an offline-first data capture application for iOS and Android."
+        "title": "Trifecta Workout",
+        "body": "A beautiful and simply designed personal trainer app for iPhone, focusing on core workout principles. Built with Swift."
+      },
+      {
+        "title": "Soke",
+        "body": "Branding and UI concept for a creative agency focused on clarity and impact."
+      },
+      {
+        "title": "Stories",
+        "body": "A curated content aggregator app for your favourite topics. Built for iOS using Objective-C with API integrations."
+      },
+      {
+        "title": "Get Gear",
+        "body": "A mobile and location-based marketplace concept for easily buying and selling gear."
       }
     ]
   }
