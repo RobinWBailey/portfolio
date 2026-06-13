@@ -46,7 +46,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
         <div className="p-8 md:p-12 lg:p-16">
           {/* Header Info */}
           <div className="mb-12 border-b border-stone-200 pb-8">
-            <div className="flex items-center gap-3 text-xs font-sans tracking-widest uppercase text-stone-500 mb-4">
+            <div className="flex items-center gap-3 text-xs font-sans font-semibold tracking-widest uppercase text-stone-500 mb-4">
               <span>{project.year}</span>
               <span className="w-1 h-1 rounded-full bg-stone-400" />
               <span>{project.category}</span>
@@ -56,7 +56,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
               {project.title}
             </h2>
             
-            <p className="font-sans text-lg md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl">
+            <p className="font-sans text-lg md:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl">
               {project.summary}
             </p>
           </div>
@@ -74,14 +74,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="md:col-span-2">
               <h3 className="font-sans text-xl font-semibold mb-4">The Project</h3>
-              <div className="prose prose-stone font-sans font-light text-stone-600 leading-loose">
+              <div className="prose prose-stone font-sans font-normal text-stone-600 leading-loose">
                 {project.description}
               </div>
               
               {project.link && project.link !== '#' && (
                 <a 
                   href={project.link} 
-                  className="inline-flex items-center gap-2 mt-8 font-sans text-sm uppercase tracking-widest border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors"
+                  className="inline-flex items-center gap-2 mt-8 font-sans font-semibold text-sm uppercase tracking-widest border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors"
                 >
                   Visit Live Project <ArrowRight size={14} />
                 </a>
@@ -94,14 +94,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
               {project.client && (
                 <div>
                   <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Building size={16} /> Client</h4>
-                  <p className="font-sans text-sm text-stone-500">{project.client}</p>
+                  <p className="font-sans text-sm font-medium text-stone-500">{project.client}</p>
                 </div>
               )}
 
               {project.role && (
                 <div>
                   <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><User size={16} /> Role</h4>
-                  <p className="font-sans text-sm text-stone-500">{project.role}</p>
+                  <p className="font-sans text-sm font-medium text-stone-500">{project.role}</p>
                 </div>
               )}
 
@@ -109,7 +109,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                 <h4 className="font-sans text-base font-semibold mb-3 border-b border-stone-200 pb-2 flex items-center gap-2"><Tag size={16} /> Tech & Skills</h4>
                 <ul className="space-y-2">
                   {project.tags.map(tag => (
-                    <li key={tag} className="flex items-center gap-2 font-sans text-sm text-stone-500">
+                    <li key={tag} className="flex items-center gap-2 font-sans text-sm font-medium text-stone-500">
                       {tag}
                     </li>
                   ))}

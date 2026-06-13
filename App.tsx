@@ -211,7 +211,7 @@ function SectionHeading({ label, children }: { label: string; children: React.Re
   return (
     <div className="mb-10">
       <Label>{label}</Label>
-      <h2 className="font-heading text-[24px] font-medium tracking-[-0.012em] text-stone-900 leading-none mt-1">{children}</h2>
+      <h2 className="font-heading text-[28px] font-semibold tracking-[-0.018em] text-stone-900 leading-none mt-1">{children}</h2>
     </div>
   );
 }
@@ -334,7 +334,7 @@ function App() {
               )}
 
               {/* Role — now the primary opening statement */}
-              <p className="font-sans text-[32px] md:text-[42px] font-extrabold text-stone-900 tracking-[-0.03em] mb-6 leading-tight">
+              <p className="font-sans text-[34px] md:text-[46px] font-extrabold text-stone-900 tracking-[-0.03em] mb-6 leading-tight">
                 {SITE.tagline}
               </p>
 
@@ -448,18 +448,18 @@ function App() {
                     <div className={`absolute -left-[4px] top-[7px] w-2 h-2 rounded-full bg-white border-2 ${accent.dotBorder} ring-2 ${accent.dotRing}`} />
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                       <div>
-                        <h3 className="font-sans text-[16px] font-medium text-stone-900 leading-snug">{role.title}</h3>
-                        <p className="font-sans text-[12px] font-medium text-stone-400 uppercase tracking-[0.08em] mt-2">{role.company}</p>
+                        <h3 className="font-sans text-[17px] font-semibold text-stone-900 leading-snug">{role.title}</h3>
+                        <p className="font-sans text-[12px] font-semibold text-stone-400 uppercase tracking-[0.08em] mt-2">{role.company}</p>
                       </div>
                       <span className={`font-sans text-[11px] font-medium px-3 py-1 rounded-full self-start whitespace-nowrap uppercase tracking-[0.06em] border ${accent.accentClasses}`}>{role.period}</span>
                     </div>
-                    <p className={`font-sans text-[16px] text-stone-600 leading-[1.7] max-w-2xl ${isDetailed ? 'mb-0' : 'mb-0'}`}>{role.summary}</p>
+                    <p className={`font-sans text-[16px] font-medium text-stone-600 leading-[1.7] max-w-2xl ${isDetailed ? 'mb-0' : 'mb-0'}`}>{role.summary}</p>
 
                     {/* Condensed: project titles as a child list */}
                     {!isDetailed && (
                       <div className="mt-5 pl-4 border-l-2 border-stone-100 space-y-2">
                         {[...role.projects, ...(role.extraProjects ?? [])].map(p => (
-                          <p key={p.title} className="font-sans text-[13px] text-stone-400 leading-snug">
+                          <p key={p.title} className="font-sans text-[13px] font-medium text-stone-400 leading-snug">
                             {p.title}
                           </p>
                         ))}
@@ -471,8 +471,8 @@ function App() {
                       <div className="mt-8 pl-5 border-l-2 border-stone-100 space-y-7">
                         {role.projects.map(p => (
                           <div key={p.title}>
-                            <h4 className="font-sans text-[15px] font-medium text-stone-900">{p.title}</h4>
-                            <HtmlText html={p.body} className="font-sans text-[16px] text-stone-500 leading-[1.7] mt-2" />
+                            <h4 className="font-sans text-[15px] font-semibold text-stone-900">{p.title}</h4>
+                            <HtmlText html={p.body} className="font-sans text-[16px] font-medium text-stone-500 leading-[1.7] mt-2" />
                             {p.award && (
                               <p className="font-sans text-[12px] text-emerald-600 font-medium mt-3 flex items-center gap-1.5">
                                 <span className="leading-none">★</span> {p.award}
@@ -487,8 +487,8 @@ function App() {
                               <div className="space-y-6">
                                 {role.extraProjects.map(ep => (
                                   <div key={ep.title}>
-                                    <h4 className="font-sans text-[15px] font-medium text-stone-900">{ep.title}</h4>
-                                    <HtmlText html={ep.body} className="font-sans text-[16px] text-stone-500 leading-[1.7] mt-2" />
+                                    <h4 className="font-sans text-[15px] font-semibold text-stone-900">{ep.title}</h4>
+                                    <HtmlText html={ep.body} className="font-sans text-[16px] font-medium text-stone-500 leading-[1.7] mt-2" />
                                   </div>
                                 ))}
                               </div>
@@ -517,14 +517,14 @@ function App() {
             {EDUCATION.map(edu => (
               <div key={edu.degree} className="flex-1">
                 <div className="flex items-baseline gap-3 flex-wrap mb-1">
-                  <h3 className="font-sans text-[16px] font-medium text-stone-900">{edu.degree}</h3>
+                  <h3 className="font-sans text-[16px] font-semibold text-stone-900">{edu.degree}</h3>
                   <span className="font-sans text-[10px] font-medium uppercase tracking-[0.08em] text-stone-400 bg-stone-50 border border-stone-100 px-2 py-0.5 rounded whitespace-nowrap">{edu.classification}</span>
                 </div>
-                <p className="font-sans text-[12px] text-stone-400">{edu.institution}</p>
+                <p className="font-sans text-[12px] font-medium text-stone-400">{edu.institution}</p>
                 {edu.awards.length > 0 && (
                   <div className="mt-3 space-y-1.5">
                     {edu.awards.map(award => (
-                      <p key={award} className="font-sans text-[13px] text-stone-500 flex items-center gap-2">
+                      <p key={award} className="font-sans text-[13px] font-medium text-stone-500 flex items-center gap-2">
                         <span className="text-amber-400 text-[11px]">★</span> {award}
                       </p>
                     ))}
@@ -548,10 +548,10 @@ function App() {
                 {filteredVolunteering.map((v, idx) => (
                   <div key={v.title} className={`group flex justify-between items-start gap-4 ${idx < filteredVolunteering.length - 1 ? 'border-b border-stone-100 pb-7' : ''}`}>
                     <div>
-                      <h4 className="font-sans text-[15px] font-medium text-stone-900 group-hover:text-emerald-700 transition-colors">{v.title}</h4>
-                      <p className="font-sans text-[12px] text-stone-400 mt-1">{v.org}</p>
-                      <p className="font-sans text-[11px] font-medium uppercase tracking-[0.08em] text-stone-400 mt-2">{v.period}</p>
-                      {v.body && <p className="font-sans text-[15px] text-stone-500 leading-[1.75] mt-2">{v.body}</p>}
+                      <h4 className="font-sans text-[15px] font-semibold text-stone-900 group-hover:text-emerald-700 transition-colors">{v.title}</h4>
+                      <p className="font-sans text-[12px] font-medium text-stone-400 mt-1">{v.org}</p>
+                      <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-stone-400 mt-2">{v.period}</p>
+                      {v.body && <p className="font-sans text-[15px] font-medium text-stone-500 leading-[1.75] mt-2">{v.body}</p>}
                     </div>
                     {v.logo && <img src={v.logo} alt={v.org} className="w-8 h-8 object-contain opacity-40 mix-blend-multiply flex-shrink-0 mt-0.5" />}
                   </div>
@@ -573,12 +573,12 @@ function App() {
                       <span className="font-sans text-[13px] font-medium text-stone-400 group-hover:text-stone-600 transition-colors">{s.year}</span>
                     </div>
                     <div>
-                      <h4 className="font-sans text-[15px] font-medium text-stone-900">{s.title}</h4>
-                      <p className="font-sans text-[12px] text-stone-400 italic mt-1">{s.subtitle}</p>
+                      <h4 className="font-sans text-[15px] font-semibold text-stone-900">{s.title}</h4>
+                      <p className="font-sans text-[12px] font-medium text-stone-400 italic mt-1">{s.subtitle}</p>
                       <div className="mt-3 space-y-2">
                         {s.entries.map(e => (
-                          <p key={e.text} className="font-sans text-[15px] text-stone-500">
-                            {e.type && <span className="font-medium text-stone-700">{e.type}</span>}
+                          <p key={e.text} className="font-sans text-[15px] font-medium text-stone-500">
+                            {e.type && <span className="font-semibold text-stone-700">{e.type}</span>}
                             {e.type ? ` — ${e.text}` : e.text}
                           </p>
                         ))}
@@ -615,13 +615,13 @@ function App() {
                     <td className="py-4 pl-1">{project.isSelected && <Star size={11} className="text-stone-400 fill-current" />}</td>
                     <td className="py-4 pr-6 font-sans text-[13px] text-stone-400 font-medium">{project.year}</td>
                     <td className="py-4 pr-6">
-                      <span className="font-sans text-[15px] text-stone-900 font-medium block">{project.title}</span>
-                      <span className="font-sans text-[12px] text-stone-400 md:hidden mt-0.5 block">{project.category}</span>
+                      <span className="font-sans text-[15px] text-stone-900 font-semibold block">{project.title}</span>
+                      <span className="font-sans text-[12px] font-medium text-stone-400 md:hidden mt-0.5 block">{project.category}</span>
                     </td>
                     <td className="py-4 pr-6 hidden md:table-cell">
                       <span className="font-sans text-[12px] font-medium text-stone-500 bg-stone-50 border border-stone-100 px-2.5 py-1 rounded">{project.category}</span>
                     </td>
-                    <td className="py-4 font-sans text-[13px] text-stone-500 hidden lg:table-cell">{project.client || '—'}</td>
+                    <td className="py-4 font-sans text-[13px] font-medium text-stone-500 hidden lg:table-cell">{project.client || '—'}</td>
                     <td className="py-4 text-stone-400"><ArrowUpRight size={13} className="archive-arrow" /></td>
                   </tr>
                 ))}
@@ -634,13 +634,13 @@ function App() {
         <section ref={cta.ref} className={`reveal ${cta.isVisible ? 'visible' : ''}`} id="contact">
           <div className="bg-stone-900 rounded-3xl overflow-hidden">
             <div className="px-12 py-24 text-center">
-              <h2 className="font-heading text-[36px] md:text-[46px] font-medium text-white mb-4 tracking-[-0.022em] leading-tight">
+              <h2 className="font-heading text-[38px] md:text-[48px] font-semibold text-white mb-4 tracking-[-0.022em] leading-tight">
                 {SITE.cta.heading}
               </h2>
-              <p className="font-sans italic text-stone-500 text-[17px] mb-12">{SITE.cta.subtext}</p>
+              <p className="font-sans italic font-medium text-stone-500 text-[17px] mb-12">{SITE.cta.subtext}</p>
               <a
                 href={`mailto:${SITE.email}`}
-                className="inline-block bg-white text-stone-900 font-sans font-medium tracking-[0.06em] uppercase px-12 py-4 hover:bg-stone-100 transition-all rounded-full text-[13px]"
+                className="inline-block bg-white text-stone-900 font-sans font-semibold tracking-[0.06em] uppercase px-12 py-4 hover:bg-stone-100 transition-all rounded-full text-[13px]"
               >
                 {SITE.cta.buttonLabel}
               </a>
@@ -651,11 +651,11 @@ function App() {
         {/* ── Footer ── */}
         <footer className="flex flex-col md:flex-row justify-between items-start md:items-center pt-6 pb-4 border-t border-stone-100">
           <div>
-            <span className="font-sans text-[13px] text-stone-500 block">{SITE.name} © {SITE.copyrightYear}</span>
-            <span className="font-sans text-[12px] text-stone-400 flex items-center gap-1 mt-1">{SITE.locationTagline} <Waves size={11} className="text-sky-400" /></span>
+            <span className="font-sans text-[13px] font-medium text-stone-500 block">{SITE.name} © {SITE.copyrightYear}</span>
+            <span className="font-sans text-[12px] font-medium text-stone-400 flex items-center gap-1 mt-1">{SITE.locationTagline} <Waves size={11} className="text-sky-400" /></span>
           </div>
           <div className="flex flex-col items-start md:items-end gap-1.5 mt-4 md:mt-0">
-            <span className="font-sans text-[12px] text-stone-400">{localTime} in {SITE.location}</span>
+            <span className="font-sans text-[12px] font-medium text-stone-400">{localTime} in {SITE.location}</span>
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
