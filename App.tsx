@@ -165,9 +165,9 @@ function ClientCarousel() {
   const items = () =>
     CLIENTS.map((c) => (
       <div key={c.name} className="flex items-center gap-3 shrink-0">
-        <div className="w-7 h-7 rounded-lg bg-stone-100 flex items-center justify-center overflow-hidden flex-shrink-0">
+        <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
           {c.logo
-            ? <img src={c.logo} alt={c.name} className="w-5 h-5 object-contain opacity-50 mix-blend-multiply" />
+            ? <img src={c.logo} alt={c.name} className="w-7 h-7 object-contain" />
             : <span className="text-stone-400">{c.icon ? ICON_MAP_LG[c.icon] ?? <Star size={14} /> : <Star size={14} />}</span>}
         </div>
         <div>
