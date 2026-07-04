@@ -86,7 +86,7 @@
       },
       {
         "title": "On-Clinic Dental Experience Assessment",
-        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking via a specialised mobile-friendly tool for recording and validating clinical experience in dental clinics. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across <span class=\"highlight highlight-yellow\">TBA clinical sites</span> across the south-west of England.",
+        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking via a specialised mobile-friendly tool for recording and validating clinical experience in dental clinics. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across clinical sites across the south-west of England in collaboration with PDSE and the <span class=\"highlight highlight-yellow\">#1 ranked dental school in the UK</span>.",
         "client": "Peninsula Dental School",
         "role": "Product Owner",
         "category": "Education",
@@ -179,7 +179,7 @@
     "projects": [
       {
         "title": "iotec Horizon Platform Interface",
-        "body": "Led the design and implementation of a self-service campaign management and reporting web interface, empowering clients to manage their own digital advertising campaigns. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. The platform was fully internationalised for major European markets to enable strategic expansion, achieving an 80% reduction in campaign setup time and enabling the business to scale to 200+ clients.",
+        "body": "Led the design and implementation of a self-service campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. The platform was fully internationalised for major European markets to enable strategic expansion, achieving an 80% reduction in campaign setup time and enabling the business to scale to 200+ clients.",
         "client": "iotec Global",
         "role": "Lead UX Designer & Product Architect",
         "category": "AdTech",
@@ -196,7 +196,7 @@
       },
       {
         "title": "iotec Platform RESTful API",
-        "body": "Led the development of a RESTful API for the iotec Horizon Platform, enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally.",
+        "body": "Led the development of a RESTful API for the iotec Horizon Platform — a key enabling strategic functionality for the self-service Horizon platform interface — enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally.",
         "client": "iotec Global",
         "role": "Product Architect",
         "category": "AdTech",
@@ -278,6 +278,32 @@
         "summary": "Digital service transformation.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Gov"
+        ]
+      },
+      {
+        "title": "ToolFinder",
+        "body": "Product design and development work for ToolFinder.",
+        "client": "ToolFinder",
+        "role": "Product Designer & Developer",
+        "category": "Web",
+        "year": "2015",
+        "tags": ["Web", "Product Design"],
+        "summary": "Product design for ToolFinder.",
+        "images": [
+          "https://placehold.co/1200x800/2d3748/ffffff?text=ToolFinder"
+        ]
+      },
+      {
+        "title": "Apollo Health Innovations",
+        "body": "Product design and development work for Apollo Health Innovations.",
+        "client": "Apollo Health Innovations",
+        "role": "Product Designer & Developer",
+        "category": "Health",
+        "year": "2017",
+        "tags": ["Health", "Product Design"],
+        "summary": "Product design for Apollo Health Innovations.",
+        "images": [
+          "https://placehold.co/1200x800/2d3748/ffffff?text=Apollo"
         ]
       }
     ],

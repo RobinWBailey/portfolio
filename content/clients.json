@@ -6,5 +6,7 @@
   { "name": "Peninsula Dental School", "note": "Digital clinical assessment", "icon": "stethoscope" },
   { "name": "HESPA", "note": "Analytics steering group", "logo": "/hespa_logo.png" },
   { "name": "Wild Planet Trust", "note": "Conservation education", "logo": "/wildplanettrust_logo.png" },
-  { "name": "Apple Featured", "note": "Top 5 in 30 countries", "icon": "smartphone" }
+  { "name": "Apple Featured", "note": "Top 5 in 30 countries", "icon": "smartphone" },
+  { "name": "ToolFinder", "note": "Product design & dev", "icon": "zap" },
+  { "name": "Apollo Health Innovations", "note": "Health product design", "icon": "stethoscope" }
 ]
