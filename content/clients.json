@@ -1,12 +1,12 @@
 [
-  { "name": "Plymouth University", "note": "1,200+ students daily", "logo": "/rectangle_logo.png" },
+  { "name": "Plymouth University", "note": "1,200+ students daily", "logo": "/plymouth_logo.png" },
   { "name": "iotec Global", "note": "Scaled to 200+ clients", "logo": "/iotec_logo.png" },
   { "name": "Medical Schools Council", "note": "Security advisory", "logo": "/msc_logo.png" },
   { "name": "Peninsula Medical School", "note": "Adaptive testing first", "icon": "stethoscope" },
   { "name": "Peninsula Dental School", "note": "Digital clinical assessment", "logo": "/pdse_logo.png" },
   { "name": "HESPA", "note": "Analytics steering group", "logo": "/hespa_logo.png" },
   { "name": "Wild Planet Trust", "note": "Conservation education", "logo": "/wildplanettrust_logo.png" },
-  { "name": "Apple Featured", "note": "Top 5 in 30 countries", "icon": "smartphone" },
+  { "name": "Bento", "note": "Top 5 in 30 countries", "logo": "/bento_logo.png" },
   { "name": "ToolFinder", "note": "Product design & dev", "logo": "/toolfinder_logo.jpg" },
-  { "name": "Apollo Health Innovations", "note": "Health product design", "icon": "stethoscope" }
+  { "name": "Apollo Health Innovations", "note": "Health product design", "logo": "/apollo_logo.jpg" }
 ]
