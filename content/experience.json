@@ -6,8 +6,31 @@
     "period": "2025 — Present",
     "accentColor": "emerald",
     "summary": "Leading the strategic product development and technical implementation of a wide £\u00a0programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.",
-    "tags": ["product", "data", "salesforce", "education"],
+    "tags": [
+      "product",
+      "data",
+      "salesforce",
+      "education"
+    ],
     "projects": [
+      {
+        "title": "MyPlymouth Platform for Staff & Students",
+        "body": "TBA",
+        "award": "TBA",
+        "client": "Plymouth University",
+        "role": "Product & Technical Lead",
+        "category": "Data",
+        "year": "2026",
+        "tags": [
+          "TBA"
+        ],
+        "isSelected": true,
+        "summary": "TBA",
+        "images": [
+          "https://placehold.co/1200x800/2d3748/ffffff?text=TBA"
+        ],
+        "link": "#"
+      },
       {
         "title": "Learning Analytics for Early Intervention",
         "body": "Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Created dashboards that allow faculty to visualise student learning data, identify trends, and support student success. Implemented an organisational-first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span class=\"highlight highlight-purple\">Insights</span> service and design to enable proactive calls to action.",
@@ -16,7 +39,11 @@
         "role": "Product & Technical Lead",
         "category": "Data",
         "year": "2025",
-        "tags": ["Data Visualisation", "Salesforce", "Product Management"],
+        "tags": [
+          "Data Visualisation",
+          "Salesforce",
+          "Product Management"
+        ],
         "isSelected": true,
         "summary": "Data Visualization for Educational Success.",
         "images": [
@@ -33,7 +60,10 @@
         "role": "Product Architect",
         "category": "Education",
         "year": "2025",
-        "tags": ["Salesforce", "Privacy"],
+        "tags": [
+          "Salesforce",
+          "Privacy"
+        ],
         "summary": "Case management for student wellbeing.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Support"
@@ -49,7 +79,13 @@
     "period": "2019 — 2025",
     "accentColor": "blue",
     "summary": "Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.",
-    "tags": ["product", "mobile", "salesforce", "education", "health"],
+    "tags": [
+      "product",
+      "mobile",
+      "salesforce",
+      "education",
+      "health"
+    ],
     "projects": [
       {
         "title": "PULSE Student Success Platform",
@@ -58,7 +94,12 @@
         "role": "Product Owner & Architect",
         "category": "Education",
         "year": "2023",
-        "tags": ["Product Management", "UX/UI Design", "Salesforce", "Agile"],
+        "tags": [
+          "Product Management",
+          "UX/UI Design",
+          "Salesforce",
+          "Agile"
+        ],
         "isSelected": true,
         "summary": "Transforming Medical Education at Plymouth University.",
         "images": [
@@ -76,7 +117,11 @@
         "role": "Technical Lead",
         "category": "Education",
         "year": "2023",
-        "tags": ["Salesforce", "Assessment", "Education"],
+        "tags": [
+          "Salesforce",
+          "Assessment",
+          "Education"
+        ],
         "isSelected": true,
         "summary": "Content Adaptive Progress Testing.",
         "images": [
@@ -91,7 +136,10 @@
         "role": "Product Owner",
         "category": "Education",
         "year": "2023",
-        "tags": ["Salesforce", "Mobile"],
+        "tags": [
+          "Salesforce",
+          "Mobile"
+        ],
         "isSelected": true,
         "summary": "On-Clinic Experience Assessment.",
         "images": [
@@ -106,7 +154,10 @@
         "role": "Product Owner",
         "category": "Education",
         "year": "2024",
-        "tags": ["Education", "Skills"],
+        "tags": [
+          "Education",
+          "Skills"
+        ],
         "summary": "Tracking skills mastery.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Competency"
@@ -119,7 +170,10 @@
         "role": "Product Lead",
         "category": "Web",
         "year": "2020",
-        "tags": ["Web", "Commerce"],
+        "tags": [
+          "Web",
+          "Commerce"
+        ],
         "summary": "Platform for booking short courses.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Short+Courses"
@@ -134,7 +188,10 @@
         "role": "Tech Lead",
         "category": "Education",
         "year": "2023",
-        "tags": ["API", "Integration"],
+        "tags": [
+          "API",
+          "Integration"
+        ],
         "summary": "Real-time assessment integration.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Assessments"
@@ -147,7 +204,10 @@
         "role": "Data Lead",
         "category": "Data",
         "year": "2023",
-        "tags": ["Data", "Analytics"],
+        "tags": [
+          "Data",
+          "Analytics"
+        ],
         "summary": "Comparative academic performance analysis.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Benchmarking"
@@ -160,7 +220,11 @@
         "role": "Product Manager",
         "category": "AI",
         "year": "2023",
-        "tags": ["AI", "Chatbot", "Mobile"],
+        "tags": [
+          "AI",
+          "Chatbot",
+          "Mobile"
+        ],
         "summary": "AI Chatbot for student support.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Wave"
@@ -175,7 +239,11 @@
     "period": "2016 — 2018",
     "accentColor": "violet",
     "summary": "Leading UX and product design, building campaign management and reporting tools for a cutting-edge AdTech platform.",
-    "tags": ["design", "product", "adtech"],
+    "tags": [
+      "design",
+      "product",
+      "adtech"
+    ],
     "projects": [
       {
         "title": "iotec Horizon Platform Interface",
@@ -184,7 +252,12 @@
         "role": "Lead UX Designer & Product Architect",
         "category": "AdTech",
         "year": "2018",
-        "tags": ["UX/UI", "Product Design", "Django", "Python"],
+        "tags": [
+          "UX/UI",
+          "Product Design",
+          "Django",
+          "Python"
+        ],
         "isSelected": true,
         "summary": "Campaign management and reporting for high-scale AdTech.",
         "images": [
@@ -201,7 +274,11 @@
         "role": "Product Architect",
         "category": "AdTech",
         "year": "2018",
-        "tags": ["API", "REST", "Product Design"]
+        "tags": [
+          "API",
+          "REST",
+          "Product Design"
+        ]
       }
     ],
     "extraProjects": []
@@ -213,7 +290,13 @@
     "period": "2010 — Present",
     "accentColor": "orange",
     "summary": "Designing, building, and implementing 0 → 1 products across multiple industries.",
-    "tags": ["design", "mobile", "product", "government", "health"],
+    "tags": [
+      "design",
+      "mobile",
+      "product",
+      "government",
+      "health"
+    ],
     "projects": [
       {
         "title": "BearForms",
@@ -222,7 +305,11 @@
         "role": "Designer, Developer, Founder",
         "category": "Mobile App",
         "year": "2025",
-        "tags": ["React Native", "iOS & Android", "UI/UX Design"],
+        "tags": [
+          "React Native",
+          "iOS & Android",
+          "UI/UX Design"
+        ],
         "isSelected": true,
         "summary": "Offline-first data capture application for iOS & Android.",
         "images": [
@@ -240,7 +327,12 @@
         "role": "Concept Designer",
         "category": "Concept",
         "year": "2021",
-        "tags": ["iOS", "Android", "React Native", "UI/UX Design"],
+        "tags": [
+          "iOS",
+          "Android",
+          "React Native",
+          "UI/UX Design"
+        ],
         "isSelected": true,
         "summary": "The \"Do Less\" To-Do List based on mindful productivity.",
         "images": [
@@ -257,7 +349,11 @@
         "role": "Product Designer & iOS Developer",
         "category": "Education",
         "year": "2014",
-        "tags": ["iOS", "Objective C", "UI/UX Design"],
+        "tags": [
+          "iOS",
+          "Objective C",
+          "UI/UX Design"
+        ],
         "isSelected": true,
         "summary": "Interactive companion app for Paignton Zoo.",
         "images": [
@@ -274,7 +370,10 @@
         "role": "Developer",
         "category": "Government",
         "year": "2016",
-        "tags": ["Web", "Accessibility"],
+        "tags": [
+          "Web",
+          "Accessibility"
+        ],
         "summary": "Digital service transformation.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Gov"
@@ -287,7 +386,10 @@
         "role": "Product Designer & Developer",
         "category": "Web",
         "year": "2015",
-        "tags": ["Web", "Product Design"],
+        "tags": [
+          "Web",
+          "Product Design"
+        ],
         "summary": "Product design for ToolFinder.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=ToolFinder"
@@ -300,7 +402,10 @@
         "role": "Product Designer & Developer",
         "category": "Health",
         "year": "2017",
-        "tags": ["Health", "Product Design"],
+        "tags": [
+          "Health",
+          "Product Design"
+        ],
         "summary": "Product design for Apollo Health Innovations.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Apollo"
@@ -315,7 +420,11 @@
         "role": "iOS Developer",
         "category": "Mobile",
         "year": "2019",
-        "tags": ["iOS", "Swift", "Health"],
+        "tags": [
+          "iOS",
+          "Swift",
+          "Health"
+        ],
         "summary": "iOS Fitness App.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Trifecta"
@@ -328,7 +437,10 @@
         "role": "Brand Designer",
         "category": "Branding",
         "year": "Concept",
-        "tags": ["Branding", "UI/UX"],
+        "tags": [
+          "Branding",
+          "UI/UX"
+        ],
         "summary": "Branding Concept for a creative agency.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Soke"
@@ -341,7 +453,11 @@
         "role": "iOS Developer",
         "category": "Mobile",
         "year": "Side Project",
-        "tags": ["iOS", "Objective C", "API"],
+        "tags": [
+          "iOS",
+          "Objective C",
+          "API"
+        ],
         "summary": "Content Aggregator App.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Stories"
@@ -354,7 +470,11 @@
         "role": "UI/UX Designer",
         "category": "Concept",
         "year": "Concept",
-        "tags": ["Concept", "UI/UX", "Mobile"],
+        "tags": [
+          "Concept",
+          "UI/UX",
+          "Mobile"
+        ],
         "summary": "Marketplace Concept.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Get+Gear"

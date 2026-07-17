@@ -4,7 +4,7 @@
   "logo": "/rb_logo_default_coloured.png",
   "headshot": "/headshot.jpg",
   "tagline": "Product Leader · Designer · Engineer",
-  "bio": "I help turn complex business challenges into clear, user-focused product solutions — designing, architecting, and implementing technical systems that deliver real impact.",
+  "bio": "I help turn complex business challenges into clear, user-focused product solutions — designing, architecting, and implementing technical systems that deliver real impact. Currently focused on student success, learning analytics, CRM and Salesforce",
   "availability": {
     "active": true,
     "label": "Available for opportunities"
@@ -19,8 +19,17 @@
     "buttonLabel": "Get in Touch"
   },
   "social": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/robinwbailey/" },
-    { "label": "Twitter", "url": "https://twitter.com/RobinBailey" },
-    { "label": "GitHub", "url": "https://github.com/robinwbailey" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/robinwbailey/"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/RobinBailey"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/robinwbailey"
+    }
   ]
 }
