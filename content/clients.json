@@ -1,12 +1,72 @@
 [
-  { "name": "Plymouth University", "note": "1,200+ students daily", "logo": "/plymouth_logo.png" },
-  { "name": "iotec Global", "note": "Scaled to 200+ clients", "logo": "/iotec_logo.png" },
-  { "name": "Medical Schools Council", "note": "Security advisory", "logo": "/msc_logo.png" },
-  { "name": "Peninsula Medical School", "note": "Adaptive testing first", "icon": "stethoscope" },
-  { "name": "Peninsula Dental School", "note": "Digital clinical assessment", "logo": "/pdse_logo.png" },
-  { "name": "HESPA", "note": "Analytics steering group", "logo": "/hespa_logo.png" },
-  { "name": "Wild Planet Trust", "note": "Conservation education", "logo": "/wildplanettrust_logo.png" },
-  { "name": "Bento", "note": "Top 5 in 30 countries", "logo": "/bento_logo.png" },
-  { "name": "ToolFinder", "note": "Product design & dev", "logo": "/toolfinder_logo.jpg" },
-  { "name": "Apollo Health Innovations", "note": "Health product design", "logo": "/apollo_logo.jpg" }
+  {
+    "name": "Plymouth University",
+    "note": "1,200+ students daily",
+    "logo": "/plymouth_logo.png",
+    "highlight": {
+      "color": "emerald",
+      "icon": "database"
+    }
+  },
+  {
+    "name": "iotec Global",
+    "note": "200+ enterprise clients",
+    "logo": "/iotec_logo.png",
+    "highlight": {
+      "color": "violet",
+      "icon": "zap"
+    }
+  },
+  {
+    "name": "Medical Schools Council",
+    "note": "Security advisory",
+    "logo": "/msc_logo.png",
+    "highlight": {
+      "color": "sky",
+      "icon": "landmark"
+    }
+  },
+  {
+    "name": "Peninsula Medical School",
+    "note": "Adaptive testing first",
+    "icon": "stethoscope"
+  },
+  {
+    "name": "Peninsula Dental School",
+    "note": "Digital clinical assessment",
+    "logo": "/pdse_logo.png"
+  },
+  {
+    "name": "HESPA",
+    "note": "Analytics steering group",
+    "logo": "/hespa_logo.png",
+    "highlight": {
+      "color": "sky",
+      "icon": "landmark"
+    }
+  },
+  {
+    "name": "Wild Planet Trust",
+    "note": "Conservation education",
+    "logo": "/wildplanettrust_logo.png"
+  },
+  {
+    "name": "Bento",
+    "note": "Featured by Apple and top 5 in 30 countries",
+    "logo": "/bento_logo.png",
+    "highlight": {
+      "color": "amber",
+      "icon": "star"
+    }
+  },
+  {
+    "name": "ToolFinder",
+    "note": "Product design & dev",
+    "logo": "/toolfinder_logo.jpg"
+  },
+  {
+    "name": "Apollo Health Innovations",
+    "note": "Health product design",
+    "logo": "/apollo_logo.jpg"
+  }
 ]

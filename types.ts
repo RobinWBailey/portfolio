@@ -96,6 +96,7 @@ export interface Client {
   note: string;
   logo?: string;
   icon?: string;
+  highlight?: { color: string; icon: string };
 }
 
 // ── Filters ──────────────────────────────────────────────────────────────────

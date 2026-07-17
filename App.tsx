@@ -51,6 +51,26 @@ const ICON_MAP_LG: Record<string, React.ReactNode> = {
   'smartphone': <Smartphone size={14} />,
 };
 
+/** Small icons for highlight pill badges */
+const HIGHLIGHT_ICON_MAP: Record<string, React.ReactNode> = {
+  'database': <Database size={11} />,
+  'zap': <Zap size={11} />,
+  'star': <Star size={11} />,
+  'landmark': <Landmark size={11} />,
+  'stethoscope': <Stethoscope size={11} />,
+};
+
+/** Colour schemes for highlight pill badges */
+function highlightClasses(color: string): { bg: string; border: string; text: string } {
+  const map: Record<string, { bg: string; border: string; text: string }> = {
+    emerald: { bg: 'bg-emerald-50', border: 'border-emerald-100', text: 'text-emerald-700' },
+    violet:  { bg: 'bg-violet-50',  border: 'border-violet-100',  text: 'text-violet-700' },
+    amber:   { bg: 'bg-amber-50',   border: 'border-amber-100',   text: 'text-amber-700' },
+    sky:     { bg: 'bg-sky-50',     border: 'border-sky-100',     text: 'text-sky-700' },
+  };
+  return map[color] ?? { bg: 'bg-stone-50', border: 'border-stone-100', text: 'text-stone-500' };
+}
+
 /** Derive Tailwind class sets from a colour name */
 function colorClasses(color: string): { active: string; iconClass: string } {
   const map: Record<string, { active: string; iconClass: string }> = {
@@ -158,34 +178,46 @@ function getProjectTags(project: Project): string[] {
 // ── Shared components ─────────────────────────────────────────────────────────
 
 function MarqueeTrack({ children }: { children: React.ReactNode }) {
-  return <div className="flex shrink-0 gap-10 animate-marquee">{children}</div>;
+  return <div className="flex shrink-0 gap-14 animate-marquee">{children}</div>;
 }
 
 function ClientCarousel() {
   const items = () =>
-    CLIENTS.map((c) => (
-      <div key={c.name} className="flex items-center gap-3 shrink-0">
-        <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
-          {c.logo
-            ? <img src={c.logo} alt={c.name} className="w-7 h-7 object-contain" />
-            : <span className="text-stone-400">{c.icon ? ICON_MAP_LG[c.icon] ?? <Star size={14} /> : <Star size={14} />}</span>}
+    CLIENTS.map((c) => {
+      const hl = c.highlight;
+      const hc = hl ? highlightClasses(hl.color) : null;
+      return (
+        <div key={c.name} className="flex items-center gap-3.5 shrink-0">
+          <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center overflow-hidden flex-shrink-0 ring-1 ring-stone-100">
+            {c.logo
+              ? <img src={c.logo} alt={c.name} className="w-8 h-8 object-contain" />
+              : <span className="text-stone-400">{c.icon ? ICON_MAP_LG[c.icon] ?? <Star size={14} /> : <Star size={14} />}</span>}
+          </div>
+          <div className="flex flex-col gap-1">
+            <p className="font-sans text-[14px] font-semibold text-stone-700 whitespace-nowrap leading-none">{c.name}</p>
+            {hc ? (
+              <span className={`inline-flex items-center gap-1.5 ${hc.bg} border ${hc.border} ${hc.text} rounded-full px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap w-fit`}>
+                {HIGHLIGHT_ICON_MAP[hl!.icon] ?? <Star size={11} />} {c.note}
+              </span>
+            ) : (
+              <span className="inline-flex items-center bg-stone-50 border border-stone-100 text-stone-500 rounded-full px-2.5 py-0.5 text-[11px] font-medium whitespace-nowrap w-fit">
+                {c.note}
+              </span>
+            )}
+          </div>
         </div>
-        <div>
-          <p className="font-sans text-[13px] font-medium text-stone-700 whitespace-nowrap leading-none">{c.name}</p>
-          <p className="font-sans text-[12px] text-stone-400 whitespace-nowrap mt-0.5">{c.note}</p>
-        </div>
-      </div>
-    ));
+      );
+    });
 
   return (
     <div>
-      <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center gap-3 mb-6">
         <div className="h-px flex-1 bg-stone-100" />
-        <span className="font-sans text-[11px] font-medium uppercase tracking-[0.10em] text-stone-400">Trusted by</span>
+        <span className="font-sans text-[11px] font-medium uppercase tracking-[0.10em] text-stone-400">Highlights & Featured</span>
         <div className="h-px flex-1 bg-stone-100" />
       </div>
       <div className="relative overflow-hidden mask-marquee">
-        <div className="flex w-max gap-10">
+        <div className="flex w-max gap-14">
           <MarqueeTrack>{items()}</MarqueeTrack>
           <MarqueeTrack>{items()}</MarqueeTrack>
         </div>
@@ -466,6 +498,8 @@ function App() {
               <p className="font-sans text-[20px] md:text-[24px] font-semibold text-stone-900 leading-[1.6] tracking-[-0.02em] mb-0">
                 {SITE.bio}
               </p>
+
+
             </div>
 
             {/* Right: Photo */}
