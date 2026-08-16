@@ -447,6 +447,24 @@ img {
   line-height: 1.4;
 }
 
+.project-row__title > .project-row__client {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: var(--meta);
+  font-weight: 600;
+}
+
+.project-row__client > span {
+  color: var(--soft);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .project-row__meta {
   flex: 0 0 auto;
   display: flex;

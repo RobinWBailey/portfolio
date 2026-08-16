@@ -261,6 +261,11 @@ function ProjectDisclosure({
   const hasBodyCopy = project.body.trim().toUpperCase() !== 'TBA';
   const displayAward = project.award?.trim().toUpperCase() !== 'TBA' ? project.award : undefined;
   const displayTags = (project.tags ?? []).filter((tag) => tag.trim().toUpperCase() !== 'TBA');
+  const collapsedClient = project.roleId === 'freelance'
+    && project.client
+    && !['side project', 'concept'].includes(project.client.trim().toLowerCase())
+    ? project.client
+    : undefined;
 
   return (
     <article id={`project-${project.key}`} className={`project-row${open ? ' is-open' : ''}`}>
@@ -270,6 +275,12 @@ function ProjectDisclosure({
         </span>
         <span className="project-row__title">
           <strong>{project.title}</strong>
+          {collapsedClient && (
+            <span className="project-row__client">
+              <span>Client</span>
+              {collapsedClient}
+            </span>
+          )}
           {project.summary?.trim().toUpperCase() !== 'TBA' && <span>{project.summary}</span>}
         </span>
         <span className="project-row__meta">
@@ -374,7 +385,7 @@ function App() {
             <span className="hero__name">Robin Bailey</span> is a product leader, designer and engineer turning complex challenges into clear, useful digital products.
           </h1>
           <p className="hero__intro">
-            His work spans strategy, research, product design, architecture and implementation, with a current focus on student success, learning analytics, CRM, Salesforce and mobile products.
+            His work spans strategy, research, product design, architecture and implementation, with a current focus on student success, learning analytics, CRM, Salesforce and mobile products. His experience covers higher education, health and medical, local government and AdTech.
           </p>
           <div className="hero__meta">
             {SITE.availability.active && <span><span className="availability-dot" />{SITE.availability.label}</span>}

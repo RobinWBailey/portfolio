@@ -327,7 +327,7 @@
         "title": "Bento for iOS & Android",
         "body": "A \"Do Less\" to-do list application based on the Bento methodology, designed for focus and mindful productivity. This project explores the intersection of digital utility and mental well-being, using a limited-choice interface to reduce cognitive load.",
         "award": "Featured by Apple as a \"New & Noteworthy\" and a Top 5 Paid Productivity App in 30 different countries",
-        "client": "Side Project",
+        "client": "ToolFinder",
         "role": "Concept Designer",
         "category": "Concept",
         "year": "2021",
@@ -370,7 +370,7 @@
       {
         "title": "Local Government Digital Healthcare Initiative",
         "body": "A project to digitize citizen services for local government, focusing on accessibility and digital service transformation.",
-        "client": "Local Council",
+        "client": "Apollo Health Innovations",
         "role": "Developer",
         "category": "Government",
         "year": "2016",
@@ -381,38 +381,6 @@
         "summary": "Digital service transformation.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Gov"
-        ]
-      },
-      {
-        "title": "ToolFinder",
-        "body": "Product design and development work for ToolFinder.",
-        "client": "ToolFinder",
-        "role": "Product Designer & Developer",
-        "category": "Web",
-        "year": "2015",
-        "tags": [
-          "Web",
-          "Product Design"
-        ],
-        "summary": "Product design for ToolFinder.",
-        "images": [
-          "https://placehold.co/1200x800/2d3748/ffffff?text=ToolFinder"
-        ]
-      },
-      {
-        "title": "Apollo Health Innovations",
-        "body": "Product design and development work for Apollo Health Innovations.",
-        "client": "Apollo Health Innovations",
-        "role": "Product Designer & Developer",
-        "category": "Health",
-        "year": "2017",
-        "tags": [
-          "Health",
-          "Product Design"
-        ],
-        "summary": "Product design for Apollo Health Innovations.",
-        "images": [
-          "https://placehold.co/1200x800/2d3748/ffffff?text=Apollo"
         ]
       }
     ],
