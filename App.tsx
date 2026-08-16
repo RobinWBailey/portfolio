@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -30,6 +30,135 @@ const VOLUNTEERING = volunteeringData as VolunteeringType[];
 const SPEAKING = speakingData as SpeakingType[];
 const CLIENTS = clientsData as Client[];
 
+const SCROLL_GUIDE_ANCHORS = ['hero-title', 'work-title', 'profile-title', 'contact-title'];
+
+function ScrollGuide() {
+  const markerRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const marker = markerRef.current;
+    const main = document.getElementById('main-content');
+    if (!marker || !main) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let anchorPositions: number[] = [];
+    let currentPosition = 0;
+    let targetPosition = 0;
+    let velocity = 0;
+    let activeIndex = -1;
+    let animationFrame = 0;
+    let lastFrameTime = 0;
+    let ready = false;
+
+    const render = (position: number) => {
+      marker.style.transform = `translate3d(0, ${position.toFixed(2)}px, 0)`;
+    };
+
+    const animate = (time: number) => {
+      const elapsed = lastFrameTime ? Math.min((time - lastFrameTime) / 1000, 1 / 30) : 1 / 60;
+      lastFrameTime = time;
+
+      // A lightly under-damped spring gives the guide a small, controlled overshoot.
+      const acceleration = (targetPosition - currentPosition) * 190;
+      velocity = (velocity + acceleration * elapsed) * Math.exp(-18 * elapsed);
+      currentPosition += velocity * elapsed;
+      render(currentPosition);
+
+      if (Math.abs(targetPosition - currentPosition) < 0.1 && Math.abs(velocity) < 0.1) {
+        currentPosition = targetPosition;
+        velocity = 0;
+        render(currentPosition);
+        animationFrame = 0;
+        lastFrameTime = 0;
+        return;
+      }
+
+      animationFrame = window.requestAnimationFrame(animate);
+    };
+
+    const moveTo = (position: number, immediate = false) => {
+      targetPosition = position;
+
+      if (immediate || reduceMotion.matches || !ready) {
+        if (animationFrame) window.cancelAnimationFrame(animationFrame);
+        animationFrame = 0;
+        lastFrameTime = 0;
+        velocity = 0;
+        currentPosition = targetPosition;
+        render(currentPosition);
+        ready = true;
+        marker.dataset.ready = 'true';
+        return;
+      }
+
+      if (!animationFrame) animationFrame = window.requestAnimationFrame(animate);
+    };
+
+    const updateActiveAnchor = (immediate = false) => {
+      if (!anchorPositions.length) return;
+
+      const readingLine = window.scrollY + window.innerHeight * 0.38;
+      let nextIndex = 0;
+
+      anchorPositions.forEach((position, index) => {
+        if (position <= readingLine) nextIndex = index;
+      });
+
+      // The final heading cannot always reach the reading line on short viewports.
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        nextIndex = anchorPositions.length - 1;
+      }
+
+      if (nextIndex !== activeIndex || immediate) {
+        activeIndex = nextIndex;
+        marker.dataset.section = String(activeIndex);
+        moveTo(anchorPositions[activeIndex], immediate);
+      }
+    };
+
+    const measureAnchors = (immediate = false) => {
+      anchorPositions = SCROLL_GUIDE_ANCHORS.map((id) => document.getElementById(id))
+        .filter((element): element is HTMLElement => Boolean(element))
+        .map((element) => {
+          const rect = element.getBoundingClientRect();
+          const lineHeight = Number.parseFloat(window.getComputedStyle(element).lineHeight) || rect.height;
+          return rect.top + window.scrollY + Math.min(lineHeight, rect.height) / 2 - marker.offsetHeight / 2;
+        });
+
+      const previousIndex = activeIndex;
+      updateActiveAnchor(immediate);
+      if (!immediate && previousIndex === activeIndex && activeIndex >= 0) {
+        moveTo(anchorPositions[activeIndex]);
+      }
+    };
+
+    const onScroll = () => updateActiveAnchor();
+    const onResize = () => measureAnchors(true);
+    const onMotionPreferenceChange = () => moveTo(targetPosition, reduceMotion.matches);
+    const resizeObserver = new ResizeObserver(() => measureAnchors());
+
+    measureAnchors(true);
+    resizeObserver.observe(main);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    reduceMotion.addEventListener('change', onMotionPreferenceChange);
+
+    return () => {
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      resizeObserver.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+      reduceMotion.removeEventListener('change', onMotionPreferenceChange);
+    };
+  }, []);
+
+  return (
+    <div ref={markerRef} className="scroll-guide" aria-hidden="true">
+      <span className="scroll-guide__orb" />
+    </div>
+  );
+}
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -43,11 +172,11 @@ function yearValue(year?: string) {
   return match ? Number(match[0]) : 0;
 }
 
-function SectionHeading({ eyebrow, title, detail }: { eyebrow: string; title: string; detail?: string }) {
+function SectionHeading({ id, eyebrow, title, detail }: { id: string; eyebrow: string; title: string; detail?: string }) {
   return (
     <header className="section-heading">
       <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
+      <h2 id={id}>{title}</h2>
       {detail && <p className="section-heading__detail">{detail}</p>}
     </header>
   );
@@ -182,6 +311,7 @@ function App() {
   return (
     <div className="site-shell">
       <a className="skip-link" href="#main-content">Skip to content</a>
+      <ScrollGuide />
 
       <main id="main-content">
         {/* ── Hero ──────────────────────────────────────────── */}
@@ -203,6 +333,7 @@ function App() {
         {/* ── Work (two-column experience) ────────────────── */}
         <section id="experience" className="content-section work" aria-labelledby="work-title">
           <SectionHeading
+            id="work-title"
             eyebrow="Work"
             title="Experience and projects."
           />
@@ -256,6 +387,7 @@ function App() {
         {/* ── Profile ───────────────────────────────────────── */}
         <section id="profile" className="content-section profile" aria-labelledby="profile-title">
           <SectionHeading
+            id="profile-title"
             eyebrow="Profile"
             title="The wider practice."
             detail="Education, speaking, advisory work and long-running collaborations."
