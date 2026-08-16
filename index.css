@@ -159,7 +159,7 @@ img {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 74px;
 }
 
 .work-grid__col {
