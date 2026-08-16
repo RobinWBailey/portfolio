@@ -611,59 +611,7 @@ img {
   color: var(--ink);
 }
 
-/* ── Profile ───────────────────────────────────────────────────── */
-
-.profile-intro {
-  display: flex;
-  align-items: start;
-  gap: 28px;
-}
-
-.profile-photo {
-  flex: 0 0 80px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--surface);
-}
-
-.profile-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.72) contrast(0.96);
-}
-
-.profile-intro__text {
-  flex: 1 1 auto;
-}
-
-.profile-intro__text > p {
-  margin: 0;
-  font-size: var(--intro);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.45;
-}
-
-.profile-intro__meta {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 18px;
-  color: var(--soft);
-  font-size: var(--meta);
-  font-weight: 400;
-}
-
-.profile-intro__meta span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* Client index */
+/* ── Profile / client index ────────────────────────────────────── */
 
 .client-index {
   margin: 56px 0 64px;
@@ -901,21 +849,6 @@ img {
   .role-block__trigger {
     flex-wrap: wrap;
     gap: 4px 12px;
-  }
-
-  .profile-intro {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .profile-photo {
-    flex: 0 0 64px;
-    width: 64px;
-    height: 64px;
-  }
-
-  .profile-intro__text > p {
-    font-size: var(--body);
   }
 
   .client-grid {

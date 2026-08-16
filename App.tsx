@@ -371,10 +371,10 @@ function App() {
         {/* ── Hero ──────────────────────────────────────────── */}
         <section id="top" className="hero" aria-labelledby="hero-title">
           <h1 id="hero-title" data-scroll-guide data-scroll-guide-section="hero">
-            <span className="hero__name">Robin Bailey</span> is a product leader, designer and engineer turning complex services into clear, useful digital products.
+            <span className="hero__name">Robin Bailey</span> is a product leader, designer and engineer turning complex challenges into clear, useful digital products.
           </h1>
           <p className="hero__intro">
-            My work spans student success platforms, learning analytics, Salesforce architecture, product design and mobile products — from strategy and research through to architecture and implementation.
+            His work spans strategy, research, product design, architecture and implementation, with a current focus on student success, learning analytics, CRM, Salesforce and mobile products.
           </p>
           <div className="hero__meta">
             {SITE.availability.active && <span><span className="availability-dot" />{SITE.availability.label}</span>}
@@ -452,19 +452,6 @@ function App() {
             detail="Education, speaking, advisory work and long-running collaborations."
             guideSection="profile"
           />
-
-          <div className="profile-intro">
-            <div className="profile-photo">
-              <img src={SITE.headshot} alt="Robin Bailey" />
-            </div>
-            <div className="profile-intro__text">
-              <p>{SITE.bio}.</p>
-              <div className="profile-intro__meta">
-                <span><MapPin size={13} />{SITE.locationTagline}</span>
-                <span>{EXPERIENCE[0].period}</span>
-              </div>
-            </div>
-          </div>
 
           <div className="client-index">
             <p className="eyebrow">Selected organisations and products</p>
