@@ -30,7 +30,14 @@ const VOLUNTEERING = volunteeringData as VolunteeringType[];
 const SPEAKING = speakingData as SpeakingType[];
 const CLIENTS = clientsData as Client[];
 
-const SCROLL_GUIDE_ANCHORS = ['hero-title', 'work-title', 'profile-title', 'contact-title'];
+type ScrollGuideSection = 'hero' | 'work' | 'profile' | 'contact';
+
+interface ScrollGuideAnchorPoint {
+  x: number;
+  y: number;
+  activationY: number;
+  section: ScrollGuideSection;
+}
 
 function ScrollGuide() {
   const markerRef = useRef<HTMLDivElement>(null);
@@ -41,17 +48,20 @@ function ScrollGuide() {
     if (!marker || !main) return;
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let anchorPositions: number[] = [];
-    let currentPosition = 0;
-    let targetPosition = 0;
-    let velocity = 0;
+    let anchorPoints: ScrollGuideAnchorPoint[] = [];
+    let currentX = 0;
+    let currentY = 0;
+    let targetX = 0;
+    let targetY = 0;
+    let velocityX = 0;
+    let velocityY = 0;
     let activeIndex = -1;
     let animationFrame = 0;
     let lastFrameTime = 0;
     let ready = false;
 
-    const render = (position: number) => {
-      marker.style.transform = `translate3d(0, ${position.toFixed(2)}px, 0)`;
+    const render = (x: number, y: number) => {
+      marker.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0)`;
     };
 
     const animate = (time: number) => {
@@ -59,15 +69,23 @@ function ScrollGuide() {
       lastFrameTime = time;
 
       // A lightly under-damped spring gives the guide a small, controlled overshoot.
-      const acceleration = (targetPosition - currentPosition) * 190;
-      velocity = (velocity + acceleration * elapsed) * Math.exp(-18 * elapsed);
-      currentPosition += velocity * elapsed;
-      render(currentPosition);
+      const accelerationX = (targetX - currentX) * 190;
+      const accelerationY = (targetY - currentY) * 190;
+      const damping = Math.exp(-18 * elapsed);
+      velocityX = (velocityX + accelerationX * elapsed) * damping;
+      velocityY = (velocityY + accelerationY * elapsed) * damping;
+      currentX += velocityX * elapsed;
+      currentY += velocityY * elapsed;
+      render(currentX, currentY);
 
-      if (Math.abs(targetPosition - currentPosition) < 0.1 && Math.abs(velocity) < 0.1) {
-        currentPosition = targetPosition;
-        velocity = 0;
-        render(currentPosition);
+      const nearTarget = Math.abs(targetX - currentX) < 0.1 && Math.abs(targetY - currentY) < 0.1;
+      const nearlyStill = Math.abs(velocityX) < 0.1 && Math.abs(velocityY) < 0.1;
+      if (nearTarget && nearlyStill) {
+        currentX = targetX;
+        currentY = targetY;
+        velocityX = 0;
+        velocityY = 0;
+        render(currentX, currentY);
         animationFrame = 0;
         lastFrameTime = 0;
         return;
@@ -76,16 +94,19 @@ function ScrollGuide() {
       animationFrame = window.requestAnimationFrame(animate);
     };
 
-    const moveTo = (position: number, immediate = false) => {
-      targetPosition = position;
+    const moveTo = (point: ScrollGuideAnchorPoint, immediate = false) => {
+      targetX = point.x;
+      targetY = point.y;
 
       if (immediate || reduceMotion.matches || !ready) {
         if (animationFrame) window.cancelAnimationFrame(animationFrame);
         animationFrame = 0;
         lastFrameTime = 0;
-        velocity = 0;
-        currentPosition = targetPosition;
-        render(currentPosition);
+        velocityX = 0;
+        velocityY = 0;
+        currentX = targetX;
+        currentY = targetY;
+        render(currentX, currentY);
         ready = true;
         marker.dataset.ready = 'true';
         return;
@@ -95,46 +116,67 @@ function ScrollGuide() {
     };
 
     const updateActiveAnchor = (immediate = false) => {
-      if (!anchorPositions.length) return;
+      if (!anchorPoints.length) return;
 
       const readingLine = window.scrollY + window.innerHeight * 0.38;
       let nextIndex = 0;
 
-      anchorPositions.forEach((position, index) => {
-        if (position <= readingLine) nextIndex = index;
+      anchorPoints.forEach((point, index) => {
+        if (point.activationY <= readingLine) nextIndex = index;
       });
 
       // The final heading cannot always reach the reading line on short viewports.
       if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
-        nextIndex = anchorPositions.length - 1;
+        nextIndex = anchorPoints.length - 1;
       }
 
       if (nextIndex !== activeIndex || immediate) {
         activeIndex = nextIndex;
-        marker.dataset.section = String(activeIndex);
-        moveTo(anchorPositions[activeIndex], immediate);
+        marker.dataset.section = anchorPoints[activeIndex].section;
+        moveTo(anchorPoints[activeIndex], immediate);
       }
     };
 
     const measureAnchors = (immediate = false) => {
-      anchorPositions = SCROLL_GUIDE_ANCHORS.map((id) => document.getElementById(id))
-        .filter((element): element is HTMLElement => Boolean(element))
-        .map((element) => {
-          const rect = element.getBoundingClientRect();
-          const lineHeight = Number.parseFloat(window.getComputedStyle(element).lineHeight) || rect.height;
-          return rect.top + window.scrollY + Math.min(lineHeight, rect.height) / 2 - marker.offsetHeight / 2;
-        });
+      const measuredPoints = Array.from(main.querySelectorAll<HTMLElement>('[data-scroll-guide]'))
+        .map((element): ScrollGuideAnchorPoint => {
+          const roleSummary = element.nextElementSibling instanceof HTMLElement
+            && element.nextElementSibling.classList.contains('role-block__summary')
+            ? element.nextElementSibling.querySelector<HTMLElement>('p')
+            : null;
+          const verticalAnchor = window.innerWidth <= 700 && roleSummary ? roleSummary : element;
+          const rect = verticalAnchor.getBoundingClientRect();
+          const horizontalRect = element.getBoundingClientRect();
+          const lineHeight = Number.parseFloat(window.getComputedStyle(verticalAnchor).lineHeight) || rect.height;
+          const horizontalOffset = Number(element.dataset.scrollGuideOffset ?? 34);
+          return {
+            x: Math.max(0, horizontalRect.left + window.scrollX - horizontalOffset),
+            y: rect.top + window.scrollY + Math.min(lineHeight, rect.height) / 2 - marker.offsetHeight / 2,
+            activationY: 0,
+            section: (element.dataset.scrollGuideSection ?? 'hero') as ScrollGuideSection,
+          };
+        })
+        .sort((a, b) => Math.abs(a.y - b.y) < 4 ? a.x - b.x : a.y - b.y);
+
+      let previousActivationY = Number.NEGATIVE_INFINITY;
+      anchorPoints = measuredPoints.map((point) => {
+        const activationY = Math.max(point.y, previousActivationY + 96);
+        previousActivationY = activationY;
+        return { ...point, activationY };
+      });
 
       const previousIndex = activeIndex;
       updateActiveAnchor(immediate);
       if (!immediate && previousIndex === activeIndex && activeIndex >= 0) {
-        moveTo(anchorPositions[activeIndex]);
+        moveTo(anchorPoints[activeIndex]);
       }
     };
 
     const onScroll = () => updateActiveAnchor();
     const onResize = () => measureAnchors(true);
-    const onMotionPreferenceChange = () => moveTo(targetPosition, reduceMotion.matches);
+    const onMotionPreferenceChange = () => {
+      if (activeIndex >= 0) moveTo(anchorPoints[activeIndex], reduceMotion.matches);
+    };
     const resizeObserver = new ResizeObserver(() => measureAnchors());
 
     measureAnchors(true);
@@ -172,11 +214,23 @@ function yearValue(year?: string) {
   return match ? Number(match[0]) : 0;
 }
 
-function SectionHeading({ id, eyebrow, title, detail }: { id: string; eyebrow: string; title: string; detail?: string }) {
+function SectionHeading({
+  id,
+  eyebrow,
+  title,
+  detail,
+  guideSection,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  detail?: string;
+  guideSection: ScrollGuideSection;
+}) {
   return (
     <header className="section-heading">
       <p className="eyebrow">{eyebrow}</p>
-      <h2 id={id}>{title}</h2>
+      <h2 id={id} data-scroll-guide data-scroll-guide-section={guideSection}>{title}</h2>
       {detail && <p className="section-heading__detail">{detail}</p>}
     </header>
   );
@@ -316,14 +370,13 @@ function App() {
       <main id="main-content">
         {/* ── Hero ──────────────────────────────────────────── */}
         <section id="top" className="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title">
+          <h1 id="hero-title" data-scroll-guide data-scroll-guide-section="hero">
             <span className="hero__name">Robin Bailey</span> is a product leader, designer and engineer turning complex services into clear, useful digital products.
           </h1>
           <p className="hero__intro">
             My work spans student success platforms, learning analytics, Salesforce architecture, product design and mobile products — from strategy and research through to architecture and implementation.
           </p>
           <div className="hero__meta">
-            <a href="#experience">Work <ArrowDown size={12} /></a>
             {SITE.availability.active && <span><span className="availability-dot" />{SITE.availability.label}</span>}
             <span><MapPin size={11} />{SITE.location}</span>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
@@ -336,6 +389,7 @@ function App() {
             id="work-title"
             eyebrow="Work"
             title="Experience and projects."
+            guideSection="work"
           />
 
           <div className="work-grid">
@@ -348,7 +402,12 @@ function App() {
                       .filter(Boolean) as IndexedProject[];
                     return (
                       <article key={role.id} className="role-block">
-                        <div className="role-block__header">
+                        <div
+                          className="role-block__header"
+                          data-scroll-guide
+                          data-scroll-guide-section="work"
+                          data-scroll-guide-offset="58"
+                        >
                           {role.logo && (
                             <span className="role-block__logo" aria-hidden="true">
                               <img src={role.logo} alt="" />
@@ -391,6 +450,7 @@ function App() {
             eyebrow="Profile"
             title="The wider practice."
             detail="Education, speaking, advisory work and long-running collaborations."
+            guideSection="profile"
           />
 
           <div className="profile-intro">
@@ -420,7 +480,7 @@ function App() {
 
           <div className="profile-columns">
             <section aria-labelledby="education-heading">
-              <h3 id="education-heading">Education</h3>
+              <h3 id="education-heading" data-scroll-guide data-scroll-guide-section="profile">Education</h3>
               <div className="profile-list">
                 {EDUCATION.map((item) => (
                   <article key={item.degree}>
@@ -434,7 +494,7 @@ function App() {
             </section>
 
             <section aria-labelledby="speaking-heading">
-              <h3 id="speaking-heading">Speaking</h3>
+              <h3 id="speaking-heading" data-scroll-guide data-scroll-guide-section="profile">Speaking</h3>
               <div className="profile-list">
                 {SPEAKING.map((item) => (
                   <article key={`${item.year}-${item.title}`}>
@@ -448,7 +508,7 @@ function App() {
             </section>
 
             <section aria-labelledby="volunteering-heading">
-              <h3 id="volunteering-heading">Advisory & volunteering</h3>
+              <h3 id="volunteering-heading" data-scroll-guide data-scroll-guide-section="profile">Advisory & volunteering</h3>
               <div className="profile-list">
                 {VOLUNTEERING.map((item) => (
                   <article key={`${item.org}-${item.title}`}>
@@ -466,7 +526,7 @@ function App() {
         {/* ── Contact ───────────────────────────────────────── */}
         <section className="contact-section" aria-labelledby="contact-title">
           <p className="eyebrow">Available for thoughtful work</p>
-          <h2 id="contact-title">{SITE.cta.heading}</h2>
+          <h2 id="contact-title" data-scroll-guide data-scroll-guide-section="contact">{SITE.cta.heading}</h2>
           <div className="contact-section__action">
             <p>{SITE.cta.subtext}</p>
             <a href={`mailto:${SITE.email}`}>{SITE.cta.buttonLabel} — {SITE.email} <ArrowUpRight size={14} /></a>
