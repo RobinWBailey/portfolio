@@ -4,8 +4,9 @@
     "title": "Product & Technical Lead: Learning Analytics & Student Support",
     "company": "Plymouth University",
     "period": "2025 — Present",
+    "logo": "/plymouth_logo.png",
     "accentColor": "emerald",
-    "summary": "Leading the strategic product development and technical implementation of a wide £\u00a0programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.",
+    "summary": "Leading the strategic product development and technical implementation of a wide-ranging programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.",
     "tags": [
       "product",
       "data",
@@ -77,6 +78,7 @@
     "title": "Digital Education Product Manager",
     "company": "Academic Development, Plymouth University",
     "period": "2019 — 2025",
+    "logo": "/plymouth_logo.png",
     "accentColor": "blue",
     "summary": "Building a first class student success platform for the Faculty of Medicine and Dentistry. Member of multiple faculty committees.",
     "tags": [
@@ -237,6 +239,7 @@
     "title": "Product Architect; Senior UX Designer",
     "company": "iotec Global",
     "period": "2016 — 2018",
+    "logo": "/iotec_logo.png",
     "accentColor": "violet",
     "summary": "Leading UX and product design, building campaign management and reporting tools for a cutting-edge AdTech platform.",
     "tags": [
@@ -288,6 +291,7 @@
     "title": "Freelance Product Design & Development",
     "company": "Multiple Clients",
     "period": "2010 — Present",
+    "logo": "/rb_logo_default.png",
     "accentColor": "orange",
     "summary": "Designing, building, and implementing 0 → 1 products across multiple industries.",
     "tags": [

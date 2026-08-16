@@ -50,6 +50,7 @@ export interface ExperienceRole {
   accentColor: string;
   summary: string;
   tags: string[];
+  logo?: string;
   projects: ExperienceProject[];
   extraProjects?: ExperienceProject[];
 }
