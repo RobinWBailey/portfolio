@@ -25,7 +25,7 @@
         "tags": [
           "TBA"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "TBA",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=TBA"
@@ -45,7 +45,7 @@
           "Salesforce",
           "Product Management"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Data Visualization for Educational Success.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Learning+Analytics",
@@ -65,6 +65,7 @@
           "Salesforce",
           "Privacy"
         ],
+        "isFeatured": true,
         "summary": "Case management for student wellbeing.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Support"
@@ -102,7 +103,7 @@
           "Salesforce",
           "Agile"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Transforming Medical Education at Plymouth University.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=PULSE+Dashboard",
@@ -124,7 +125,7 @@
           "Assessment",
           "Education"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Content Adaptive Progress Testing.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=CAPT+Interface"
@@ -142,7 +143,7 @@
           "Salesforce",
           "Mobile"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "On-Clinic Experience Assessment.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Clinical+App"
@@ -160,6 +161,7 @@
           "Education",
           "Skills"
         ],
+        "isFeatured": true,
         "summary": "Tracking skills mastery.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Competency"
@@ -176,6 +178,7 @@
           "Web",
           "Commerce"
         ],
+        "isFeatured": false,
         "summary": "Platform for booking short courses.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Short+Courses"
@@ -194,6 +197,7 @@
           "API",
           "Integration"
         ],
+        "isFeatured": true,
         "summary": "Real-time assessment integration.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Assessments"
@@ -210,6 +214,7 @@
           "Data",
           "Analytics"
         ],
+        "isFeatured": false,
         "summary": "Comparative academic performance analysis.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Benchmarking"
@@ -227,6 +232,7 @@
           "Chatbot",
           "Mobile"
         ],
+        "isFeatured": false,
         "summary": "AI Chatbot for student support.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Wave"
@@ -261,7 +267,7 @@
           "Django",
           "Python"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Campaign management and reporting for high-scale AdTech.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Horizon+Overview",
@@ -281,7 +287,8 @@
           "API",
           "REST",
           "Product Design"
-        ]
+        ],
+        "isFeatured": true
       }
     ],
     "extraProjects": []
@@ -314,7 +321,7 @@
           "iOS & Android",
           "UI/UX Design"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Offline-first data capture application for iOS & Android.",
         "images": [
           "https://placehold.co/800x1200/2d3748/ffffff?text=BearForms+Mobile",
@@ -337,7 +344,7 @@
           "React Native",
           "UI/UX Design"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "The \"Do Less\" To-Do List based on mindful productivity.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Bento+Header",
@@ -358,7 +365,7 @@
           "Objective C",
           "UI/UX Design"
         ],
-        "isSelected": true,
+        "isFeatured": true,
         "summary": "Interactive companion app for Paignton Zoo.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Zoo+App",
@@ -378,6 +385,7 @@
           "Web",
           "Accessibility"
         ],
+        "isFeatured": true,
         "summary": "Digital service transformation.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Gov"
@@ -397,6 +405,7 @@
           "Swift",
           "Health"
         ],
+        "isFeatured": false,
         "summary": "iOS Fitness App.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Trifecta"
@@ -413,6 +422,7 @@
           "Branding",
           "UI/UX"
         ],
+        "isFeatured": false,
         "summary": "Branding Concept for a creative agency.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Soke"
@@ -430,6 +440,7 @@
           "Objective C",
           "API"
         ],
+        "isFeatured": false,
         "summary": "Content Aggregator App.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Stories"
@@ -447,6 +458,7 @@
           "UI/UX",
           "Mobile"
         ],
+        "isFeatured": false,
         "summary": "Marketplace Concept.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Get+Gear"

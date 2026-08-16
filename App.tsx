@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowDown,
+  ArrowLeft,
   ArrowUpRight,
   MapPin,
   Plus,
@@ -244,6 +245,7 @@ interface IndexedProject extends ExperienceProject {
   key: string;
   roleId: string;
   roleCompany: string;
+  roleTitle: string;
 }
 
 function ProjectDisclosure({
@@ -323,8 +325,118 @@ function ProjectDisclosure({
   );
 }
 
+function ProjectCard({ project }: { key?: React.Key; project: IndexedProject }) {
+  const hasBodyCopy = project.body.trim().toUpperCase() !== 'TBA';
+  const displayAward = project.award?.trim().toUpperCase() !== 'TBA' ? project.award : undefined;
+  const displaySummary = project.summary?.trim().toUpperCase() !== 'TBA' ? project.summary : undefined;
+  const displayTags = (project.tags ?? []).filter((tag) => tag.trim().toUpperCase() !== 'TBA');
+  const realImages = (project.images ?? []).filter((image) => !image.includes('placehold.co'));
+  const contextLabel = project.client && ['side project', 'concept'].includes(project.client.trim().toLowerCase())
+    ? 'Context'
+    : 'Client';
+
+  return (
+    <article id={`project-${project.key}`} className="project-card">
+      <div className="project-card__meta">
+        <span>{project.year ?? '—'}</span>
+        {project.category && <span>{project.category}</span>}
+        {project.isFeatured && <span>Featured</span>}
+      </div>
+      <h2>{project.title}</h2>
+      {displaySummary && <p className="project-card__summary">{displaySummary}</p>}
+
+      <div className="project-card__context">
+        <p><span>Experience</span>{project.roleTitle}</p>
+        {project.client && <p><span>{contextLabel}</span>{project.client}</p>}
+        {project.role && <p><span>Role</span>{project.role}</p>}
+      </div>
+
+      {hasBodyCopy && (
+        <div className="project-card__body">
+          <HtmlText html={project.body} />
+        </div>
+      )}
+      {displayAward && (
+        <p className="project-card__award"><Sparkles size={14} />{displayAward}</p>
+      )}
+      {realImages.length > 0 && (
+        <div className="project-card__images">
+          {realImages.map((image, index) => (
+            <img key={image} src={image} alt={`${project.title}, view ${index + 1}`} />
+          ))}
+        </div>
+      )}
+      {displayTags.length > 0 && (
+        <div className="project-card__tags" aria-label="Project skills">
+          {displayTags.map((tag) => <span key={tag}>{tag}</span>)}
+        </div>
+      )}
+      {project.link && project.link !== '#' && (
+        <a className="text-link" href={project.link} target="_blank" rel="noreferrer">
+          Visit project <ArrowUpRight size={14} />
+        </a>
+      )}
+    </article>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div>
+        <strong>{SITE.name}</strong>
+        <span>{SITE.tagline}</span>
+      </div>
+      <div className="footer-socials">
+        {SITE.social.map((social) => (
+          <a key={social.label} href={social.url} target="_blank" rel="noreferrer">
+            {social.label}
+          </a>
+        ))}
+        <a href={`mailto:${SITE.email}`}>Email</a>
+      </div>
+      <a href="#top">Back to top <ArrowDown size={13} className="back-to-top-icon" /></a>
+    </footer>
+  );
+}
+
+function AllProjectsPage({ projects, homeHref }: { projects: IndexedProject[]; homeHref: string }) {
+  const sortedProjects = [...projects].sort((a, b) => yearValue(b.year) - yearValue(a.year));
+
+  return (
+    <div className="site-shell site-shell--projects">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <ScrollGuide />
+
+      <main id="main-content" className="projects-page">
+        <header id="top" className="projects-hero">
+          <a className="projects-hero__back" href={`${homeHref}#experience`}>
+            <ArrowLeft size={14} /> Back to portfolio
+          </a>
+          <p className="eyebrow">Project archive</p>
+          <h1 data-scroll-guide data-scroll-guide-section="work">All projects.</h1>
+          <p className="projects-hero__intro">
+            {projects.length} projects spanning product strategy, research, design, architecture and implementation.
+          </p>
+        </header>
+
+        <section className="all-projects" aria-label="All projects">
+          <div className="all-projects-grid">
+            {sortedProjects.map((project) => <ProjectCard key={project.key} project={project} />)}
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </div>
+  );
+}
+
 function App() {
   const [expandedProjects, setExpandedProjects] = useState<Set<string>>(new Set());
+  const isProjectsView = new URLSearchParams(window.location.search).get('view') === 'projects';
+  const homeHref = window.location.pathname;
+  const projectsHref = `${homeHref}?view=projects`;
 
   const indexedProjects = useMemo<IndexedProject[]>(() => (
     EXPERIENCE.flatMap((role) => (
@@ -333,6 +445,7 @@ function App() {
         key: slugify(`${role.id}-${project.title}`),
         roleId: role.id,
         roleCompany: role.company,
+        roleTitle: role.title,
       }))
     ))
   ), []);
@@ -364,6 +477,12 @@ function App() {
     return () => window.removeEventListener('hashchange', revealFromHash);
   }, [indexedProjects]);
 
+  useEffect(() => {
+    document.title = isProjectsView
+      ? 'All Projects — Robin Bailey'
+      : 'Robin Bailey — Product Leader, Designer & Engineer';
+  }, [isProjectsView]);
+
   const toggleProject = (key: string) => {
     setExpandedProjects((current) => {
       const next = new Set(current);
@@ -372,6 +491,10 @@ function App() {
       return next;
     });
   };
+
+  if (isProjectsView) {
+    return <AllProjectsPage projects={indexedProjects} homeHref={homeHref} />;
+  }
 
   return (
     <div className="site-shell">
@@ -409,6 +532,7 @@ function App() {
                 <div className="role-list">
                   {group.map((role) => {
                     const roleProjects = [...role.projects, ...(role.extraProjects ?? [])]
+                      .filter((project) => project.isFeatured)
                       .map((project) => projectLookup.get(`${role.id}--${project.title}`))
                       .filter(Boolean) as IndexedProject[];
                     return (
@@ -451,6 +575,13 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="work__archive-link">
+            <a href={projectsHref}>
+              View all projects <ArrowUpRight size={14} />
+            </a>
+            <span>{indexedProjects.length} projects</span>
           </div>
         </section>
 
@@ -533,21 +664,7 @@ function App() {
       </main>
 
       {/* ── Footer ──────────────────────────────────────────── */}
-      <footer className="site-footer">
-        <div>
-          <strong>{SITE.name}</strong>
-          <span>{SITE.tagline}</span>
-        </div>
-        <div className="footer-socials">
-          {SITE.social.map((social) => (
-            <a key={social.label} href={social.url} target="_blank" rel="noreferrer">
-              {social.label}
-            </a>
-          ))}
-          <a href={`mailto:${SITE.email}`}>Email</a>
-        </div>
-        <a href="#top">Back to top <ArrowDown size={13} className="back-to-top-icon" /></a>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

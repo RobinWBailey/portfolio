@@ -39,7 +39,7 @@ export interface ExperienceProject {
   images?: string[];
   link?: string;
   summary?: string;
-  isSelected?: boolean;
+  isFeatured: boolean;
 }
 
 export interface ExperienceRole {
