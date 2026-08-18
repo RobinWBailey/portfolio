@@ -6,7 +6,7 @@
     "period": "2025 — Present",
     "logo": "/plymouth_logo.png",
     "accentColor": "emerald",
-    "summary": "Leading the strategic product development and technical implementation of a wide-ranging programme of transformational features, enabling data-informed student success initiatives and experience platforms for student support, retention, and operational efficiency.",
+    "summary": "Leading multidisciplinary teams of developers, business analysts, and service-area experts to transform the university's Salesforce platform and student support services. Responsible for product strategy, product design, technical architecture, and implementation across MyPlymouth, integrated enquiry services, and responsible learning analytics.",
     "tags": [
       "product",
       "data",
@@ -15,18 +15,20 @@
     ],
     "projects": [
       {
-        "title": "MyPlymouth Platform for Staff & Students",
-        "body": "TBA",
-        "award": "TBA",
+        "title": "MyPlymouth Platform for Students & Staff",
+        "body": "Led the product strategy, design, architecture, and end-to-end implementation of MyPlymouth: a comprehensive redesign and rebrand of the university's Salesforce platform. MyPlymouth brings legacy capabilities into a clearer, modern platform with dedicated experiences for students, academics, professional services, and support staff. It also provides the foundation for new integrated services, including referrals, a knowledge base, student enquiries, a student-facing chatbot, and insights that help staff and students understand patterns of engagement. The platform is currently being launched progressively across its user groups.",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
-        "category": "Data",
+        "category": "Digital Platform",
         "year": "2026",
         "tags": [
-          "TBA"
+          "Salesforce",
+          "Product Strategy",
+          "Product Design",
+          "Student Experience"
         ],
         "isFeatured": true,
-        "summary": "TBA",
+        "summary": "A modern, integrated Salesforce platform supporting the entire student journey.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=TBA"
         ],
@@ -34,19 +36,20 @@
       },
       {
         "title": "Learning Analytics for Early Intervention",
-        "body": "Led the design and development of a data-informed learning analytics platform to identify at-risk students early in the semester. Created dashboards that allow faculty to visualise student learning data, identify trends, and support student success. Implemented an organisational-first student ambassador led call centre to enable peer-led support and signposting. Also designed and introduced the first version of a platform-wide <span class=\"highlight highlight-purple\">Insights</span> service and design to enable proactive calls to action.",
-        "award": "Vice-Chancellor's Award for Supporting a Great Student Experience 'Highly Commended'",
+        "body": "Led the strategy, product design, architecture, implementation, and operating-model development of a learning analytics service designed to identify students who may benefit from additional support early in their university journey. The platform brings together defined engagement indicators, including use of digital services, lecture attendance, enrolment completion, and the frequency of other early university touchpoints. It prioritises students who may merit attention, enabling trained student ambassadors to make supportive contact, understand their circumstances, and direct them towards relevant services and resources. The service supports structured follow-up when initial engagement concerns appear unresolved and established Plymouth University's first student ambassador outreach service of its kind. A comprehensive operating policy defines which data may be used, how it is handled, and the legitimate support purposes for which it can be applied. Selected insights are surfaced through MyPlymouth, while the learning analytics service remains a distinct product and workstream.",
+        "award": "Vice-Chancellor's Award for Supporting a Great Student Experience — Highly Commended",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
-        "category": "Data",
+        "category": "Learning Analytics",
         "year": "2025",
         "tags": [
-          "Data Visualisation",
-          "Salesforce",
-          "Product Management"
+          "Learning Analytics",
+          "Student Success",
+          "Responsible Data",
+          "Service Design"
         ],
         "isFeatured": true,
-        "summary": "Data Visualization for Educational Success.",
+        "summary": "Responsible learning analytics enabling timely, student-led support.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Learning+Analytics",
           "https://placehold.co/1200x800/8e44ad/ffffff?text=Data+Charts",
@@ -55,18 +58,20 @@
         "link": "#"
       },
       {
-        "title": "Student Support Enquiry & Case Management",
-        "body": "Leading the design and implementation of a fully integrated student support enquiry & case management system across the entire institution. A secure system for managing sensitive student support cases and wellbeing interventions, ensuring data privacy and compliance.",
+        "title": "Integrated Student Enquiry & Support Service",
+        "body": "Led the design and implementation of a new institution-wide student enquiry and support service within MyPlymouth. The service replaced fragmented processes based on email, spreadsheets, and independently operated team systems. It brings together faculty offices, careers, the Student Hub, disability services, and wellbeing teams, giving authorised staff a more complete view of each student's support journey. Students can track the progress of their enquiries, see which team is responsible, follow transfers between services, and know when an enquiry has been resolved. Referrals and longer-running support or wellbeing interventions can begin from the same joined-up journey. The work also included redesigning how front-line teams collaborate and operate. Consistent service data now makes it possible to identify recurring issues and support ongoing service improvement. The service has been fully rolled out across the participating teams and is in comprehensive use.",
         "client": "Plymouth University",
-        "role": "Product Architect",
-        "category": "Education",
+        "role": "Product & Technical Lead",
+        "category": "Student Experience",
         "year": "2025",
         "tags": [
           "Salesforce",
-          "Privacy"
+          "Service Design",
+          "Student Support",
+          "Enquiry Management"
         ],
         "isFeatured": true,
-        "summary": "Case management for student wellbeing.",
+        "summary": "A joined-up enquiry and support journey for students and staff.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Support"
         ]
