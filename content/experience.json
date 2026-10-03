@@ -6,7 +6,7 @@
     "period": "2025 — Present",
     "logo": "/plymouth_logo.png",
     "accentColor": "emerald",
-    "summary": "Leading multidisciplinary teams of developers, business analysts, and service-area experts to transform the university's Salesforce platform and student support services. Responsible for product strategy, product design, technical architecture, and implementation across MyPlymouth, integrated enquiry services, and responsible learning analytics.",
+    "summary": "Leading multidisciplinary teams of developers, business analysts, and service-area experts to transform the university's Salesforce platform and student support services. Responsible for product strategy, product design, technical architecture, and implementation across MyPlymouth, integrated enquiry services, and responsible learning analytics. My work also includes shaping business cases, phased delivery plans, and service operating models, connecting student needs with implementation priorities and operational delivery.",
     "tags": [
       "product",
       "data",
@@ -28,7 +28,7 @@
           "Student Experience"
         ],
         "isFeatured": true,
-        "summary": "A modern, integrated Salesforce platform supporting the entire student journey.",
+        "summary": "A modern Salesforce platform connecting student support, enquiry management and engagement insights for students and staff.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=TBA"
         ],
