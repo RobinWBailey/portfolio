@@ -16,7 +16,7 @@
     "projects": [
       {
         "title": "MyPlymouth Platform for Students & Staff",
-        "body": "Led the product strategy, design, architecture, and end-to-end implementation of MyPlymouth: a comprehensive redesign and rebrand of the university's Salesforce platform. MyPlymouth brings legacy capabilities into a clearer, modern platform with dedicated experiences for students, academics, professional services, and support staff. It also provides the foundation for new integrated services, including referrals, a knowledge base, student enquiries, a student-facing chatbot, and insights that help staff and students understand patterns of engagement. The platform is currently being launched progressively across its user groups.",
+        "body": "Led the product strategy, design, architecture, and end-to-end implementation of MyPlymouth: a comprehensive redesign and rebrand of the university's Salesforce platform. MyPlymouth brings legacy capabilities into a clearer, modern platform with dedicated experiences for students, academics, professional services, and support staff. It also provides the foundation for new integrated services, including referrals, a knowledge base, student enquiries, a student-facing chatbot, and insights that help staff and students understand patterns of engagement. The platform is currently being launched progressively across its user groups.<br /><br /><strong>Usage statistics — to be added:</strong> student users: TBA; staff users: TBA.",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
         "category": "Digital Platform",
@@ -36,7 +36,7 @@
       },
       {
         "title": "Learning Analytics for Early Intervention",
-        "body": "Led the strategy, product design, architecture, implementation, and operating-model development of a learning analytics service designed to identify students who may benefit from additional support early in their university journey. The platform brings together defined engagement indicators, including use of digital services, lecture attendance, enrolment completion, and the frequency of other early university touchpoints. It prioritises students who may merit attention, enabling trained student ambassadors to make supportive contact, understand their circumstances, and direct them towards relevant services and resources. The service supports structured follow-up when initial engagement concerns appear unresolved and established Plymouth University's first student ambassador outreach service of its kind. A comprehensive operating policy defines which data may be used, how it is handled, and the legitimate support purposes for which it can be applied. Selected insights are surfaced through MyPlymouth, while the learning analytics service remains a distinct product and workstream.",
+        "body": "Led the strategy, product design, architecture, implementation, and operating-model development of a learning analytics service designed to identify students who may benefit from additional support early in their university journey. The platform brings together defined engagement indicators, including use of digital services, lecture attendance, enrolment completion, and the frequency of other early university touchpoints. It prioritises students who may merit attention, enabling trained student ambassadors to make supportive contact, understand their circumstances, and direct them towards relevant services and resources. Trained student ambassadors deliver the outreach using the system and support process I developed with the team. The service supports structured follow-up when initial engagement concerns appear unresolved and established Plymouth University's first student ambassador outreach service of its kind. A comprehensive operating policy defines which data may be used, how it is handled, and the legitimate support purposes for which it can be applied. Selected insights are surfaced through MyPlymouth, while the learning analytics service remains a distinct product and workstream.",
         "award": "Vice-Chancellor's Award for Supporting a Great Student Experience — Highly Commended",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
@@ -49,7 +49,7 @@
           "Service Design"
         ],
         "isFeatured": true,
-        "summary": "Responsible learning analytics enabling timely, student-led support.",
+        "summary": "Responsible learning analytics enabling timely outreach by student ambassadors.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Learning+Analytics",
           "https://placehold.co/1200x800/8e44ad/ffffff?text=Data+Charts",
@@ -59,7 +59,7 @@
       },
       {
         "title": "Integrated Student Enquiry & Support Service",
-        "body": "Led the design and implementation of a new institution-wide student enquiry and support service within MyPlymouth. The service replaced fragmented processes based on email, spreadsheets, and independently operated team systems. It brings together faculty offices, careers, the Student Hub, disability services, and wellbeing teams, giving authorised staff a more complete view of each student's support journey. Students can track the progress of their enquiries, see which team is responsible, follow transfers between services, and know when an enquiry has been resolved. Referrals and longer-running support or wellbeing interventions can begin from the same joined-up journey. The work also included redesigning how front-line teams collaborate and operate. Consistent service data now makes it possible to identify recurring issues and support ongoing service improvement. The service has been fully rolled out across the participating teams and is in comprehensive use.",
+        "body": "Led the design and implementation of a new institution-wide student enquiry and support service within MyPlymouth. The service replaced fragmented processes based on email, spreadsheets, and independently operated team systems. All internal student-facing teams have adopted the service, including faculty offices, careers, the Student Hub, disability services, and wellbeing teams. Staff manage and refer enquiries between teams, giving authorised staff a more complete view of each student's support journey. Students can view and track their enquiries, see which team is responsible, follow transfers between services, and know when an enquiry has been resolved. Self-service enquiry creation is not yet available to students. The service also supports referrals and longer-term support or wellbeing interventions. The work also included redesigning how front-line teams collaborate and operate. Consistent service data now makes it possible to identify recurring issues and support ongoing service improvement.",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
         "category": "Student Experience",
@@ -71,7 +71,7 @@
           "Enquiry Management"
         ],
         "isFeatured": true,
-        "summary": "A joined-up enquiry and support journey for students and staff.",
+        "summary": "Integrated enquiry management and support for students and staff.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Support"
         ]
@@ -97,7 +97,7 @@
     "projects": [
       {
         "title": "PULSE Student Success Platform",
-        "body": "Led the design and implementation of a comprehensive student success platform for the Faculty of Medicine and Dentistry at Plymouth University, encompassing a wide range of modules to support the entire student journey from concept to launch. My role involved stakeholder engagement, requirements gathering, UX/UI design, and managing the agile development process. The platform now serves 1,200+ students daily and has reduced administrative overhead by 30%.",
+        "body": "Led the design and implementation of a comprehensive student success platform for the Faculty of Medicine and Dentistry at Plymouth University, encompassing a wide range of modules to support the entire student journey from concept to launch. My role involved stakeholder engagement, requirements gathering, UX/UI design, and managing the agile development process.<br /><br /><strong>Student usage statistics — to be added:</strong> TBA.",
         "client": "Plymouth University",
         "role": "Product Owner & Architect",
         "category": "Education",
@@ -120,7 +120,7 @@
       },
       {
         "title": "Content Adaptive Progress Testing",
-        "body": "Designed and implemented a sophisticated assessment platform delivering content-adaptive progress testing and topic mapping for medical students. Introduced an industry-first feedback system to enable longitudinal personalised learning feedback to medical students against the GMC topic map. Coinciding and enabling dynamic assessment of students based on past assessment performance.",
+        "body": "Developed and implemented a new approach to content-adaptive progress testing for medical students, mapped to the newly introduced Medical Licensing Assessment (MLA) content map. The approach integrated adaptive assessment with personalised, longitudinal feedback, enabling students to understand their demonstrated strengths, areas for development, and the content of future assessments as they progressed through the programme. To my knowledge, this was the first implementation of this specific approach at any medical school worldwide.",
         "client": "Peninsula Medical School",
         "role": "Technical Lead",
         "category": "Education",
@@ -139,7 +139,7 @@
       },
       {
         "title": "On-Clinic Dental Experience Assessment",
-        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking via a specialised mobile-friendly tool for recording and validating clinical experience in dental clinics. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across clinical sites across the south-west of England in collaboration with PDSE and the <span class=\"highlight highlight-yellow\">#1 ranked dental school in the UK</span>.",
+        "body": "Digitised the assessment of clinical dental experience, replacing paper logs and enabling real-time progression tracking via a specialised mobile-friendly tool for recording and validating clinical experience in dental clinics. Providing process assurance for patient safety and enabling students to work towards their longitudinal GDC requirements. Also enabled capacity management to ensure patient availability for student needs and scheduling. Used across clinical sites across the south-west of England in collaboration with PDSE and Peninsula Dental School, which was <span class=\"highlight highlight-yellow\">ranked first in the UK for dentistry in the Guardian University Guide 2022</span> while the project was in operation.",
         "client": "Peninsula Dental School",
         "role": "Product Owner",
         "category": "Education",
@@ -261,7 +261,7 @@
     "projects": [
       {
         "title": "iotec Horizon Platform Interface",
-        "body": "Led the design and implementation of a self-service campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. I led the entire product design lifecycle, from user research and wireframing to high-fidelity prototypes and front-end development support. The platform was fully internationalised for major European markets to enable strategic expansion, achieving an 80% reduction in campaign setup time and enabling the business to scale to 200+ clients.",
+        "body": "Led the design and implementation of the Horizon self-service campaign management and reporting web interface, enabling advanced configuration, setup, and performance monitoring for internal teams and professional clients, including self-service capabilities for high-value accounts. I led the product design lifecycle, from user research and wireframing to high-fidelity prototypes, and contributed directly to front-end development. The platform was fully internationalised for major European markets to enable strategic expansion, reducing campaign setup time and supporting growth in the client base.<br /><br /><strong>Results — to be added:</strong> campaign setup time reduction: TBA; clients supported: TBA.",
         "client": "iotec Global",
         "role": "Lead UX Designer & Product Architect",
         "category": "AdTech",
@@ -283,7 +283,7 @@
       },
       {
         "title": "iotec Platform RESTful API",
-        "body": "Led the development of a RESTful API for the iotec Horizon Platform — a key enabling strategic functionality for the self-service Horizon platform interface — enabling seamless integration with external systems and applications as well as a unified platform for developing new products and features internally.",
+        "body": "Led the design and delivery of the RESTful API development project for the iotec Horizon Platform, with implementation carried out by the development team. The API enabled the self-service Horizon interface, integration with external systems and applications, and a shared foundation for developing new products and features internally.",
         "client": "iotec Global",
         "role": "Product Architect",
         "category": "AdTech",
@@ -337,11 +337,11 @@
       },
       {
         "title": "Bento for iOS & Android",
-        "body": "A \"Do Less\" to-do list application based on the Bento methodology, designed for focus and mindful productivity. This project explores the intersection of digital utility and mental well-being, using a limited-choice interface to reduce cognitive load.",
+        "body": "A published \"Do Less\" task management application based on the Bento methodology, designed to support focus and mindful productivity. As one of three co-founders, I contributed to concept design, development, and production of the application using React Native for iOS and Android. The interface limits the number of tasks presented to support focus and reduce cognitive load.",
         "award": "Featured by Apple as a \"New & Noteworthy\" and a Top 5 Paid Productivity App in 30 different countries",
         "client": "ToolFinder",
-        "role": "Concept Designer",
-        "category": "Concept",
+        "role": "Co-founder, Designer & Developer",
+        "category": "Mobile App",
         "year": "2021",
         "tags": [
           "iOS",
@@ -380,18 +380,17 @@
         "link": "#"
       },
       {
-        "title": "Local Government Digital Healthcare Initiative",
-        "body": "A project to digitize citizen services for local government, focusing on accessibility and digital service transformation.",
-        "client": "Apollo Health Innovations",
+        "title": "Healthy Ageing Digital Services",
+        "body": "Contributed to a local government digital project focused on healthy ageing and support through major life changes.",
+        "client": "Large local authority, in collaboration with Apollo Health Innovations",
         "role": "Developer",
         "category": "Government",
-        "year": "2016",
         "tags": [
           "Web",
           "Accessibility"
         ],
         "isFeatured": true,
-        "summary": "Digital service transformation.",
+        "summary": "Digital services supporting healthy ageing in local government.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Gov"
         ]

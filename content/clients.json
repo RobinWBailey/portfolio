@@ -1,7 +1,7 @@
 [
   {
     "name": "Plymouth University",
-    "note": "1,200+ students daily",
+    "note": "Student and staff usage: TBA — to be added",
     "logo": "/plymouth_logo.png",
     "highlight": {
       "color": "emerald",
@@ -10,7 +10,7 @@
   },
   {
     "name": "iotec Global",
-    "note": "200+ enterprise clients",
+    "note": "Clients supported: TBA — to be added",
     "logo": "/iotec_logo.png",
     "highlight": {
       "color": "violet",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Peninsula Medical School",
-    "note": "Adaptive testing first",
+    "note": "Novel adaptive progress testing",
     "icon": "stethoscope"
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "name": "Apollo Health Innovations",
-    "note": "Health product design",
+    "note": "Healthy ageing for local government",
     "logo": "/apollo_logo.jpg"
   }
 ]

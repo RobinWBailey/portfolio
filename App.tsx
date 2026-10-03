@@ -285,9 +285,11 @@ function ProjectDisclosure({
           )}
           {project.summary?.trim().toUpperCase() !== 'TBA' && <span>{project.summary}</span>}
         </span>
-        <span className="project-row__meta">
-          <span>{project.year ?? '—'}</span>
-        </span>
+        {project.year && (
+          <span className="project-row__meta">
+            <span>{project.year}</span>
+          </span>
+        )}
       </button>
 
       <div id={detailId} className="project-detail" aria-hidden={!open}>
@@ -338,7 +340,7 @@ function ProjectCard({ project }: { key?: React.Key; project: IndexedProject }) 
   return (
     <article id={`project-${project.key}`} className="project-card">
       <div className="project-card__meta">
-        <span>{project.year ?? '—'}</span>
+        {project.year && <span>{project.year}</span>}
         {project.category && <span>{project.category}</span>}
         {project.isFeatured && <span>Featured</span>}
       </div>
