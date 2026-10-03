@@ -149,7 +149,8 @@ function ScrollGuide() {
           const rect = verticalAnchor.getBoundingClientRect();
           const horizontalRect = element.getBoundingClientRect();
           const lineHeight = Number.parseFloat(window.getComputedStyle(verticalAnchor).lineHeight) || rect.height;
-          const horizontalOffset = Number(element.dataset.scrollGuideOffset ?? 34);
+          const preferredOffset = Number(element.dataset.scrollGuideOffset ?? 34);
+          const horizontalOffset = window.innerWidth <= 700 ? Math.min(preferredOffset, 24) : preferredOffset;
           return {
             x: Math.max(0, horizontalRect.left + window.scrollX - horizontalOffset),
             y: rect.top + window.scrollY + Math.min(lineHeight, rect.height) / 2 - marker.offsetHeight / 2,
@@ -510,7 +511,7 @@ function App() {
             <span className="hero__name">Robin Bailey</span> is a product leader, designer and engineer turning complex challenges into clear, useful digital products.
           </h1>
           <p className="hero__intro">
-            His work spans strategy, research, product design, architecture and implementation, with a current focus on student success, learning analytics, CRM, Salesforce and mobile products. His experience covers higher education, health and medical, local government and AdTech.
+            His work spans strategy, product design, architecture and implementation, with a current focus on student success, learning analytics, CRM, Salesforce and mobile products. His experience covers higher education, health and medical, local government and AdTech.
           </p>
           <div className="hero__meta">
             {SITE.availability.active && <span><span className="availability-dot" />{SITE.availability.label}</span>}

@@ -47,16 +47,16 @@
   --serif: "Newsreader", "Iowan Old Style", Baskerville, "Times New Roman", serif;
 
   /* Scale */
-  --meta: 13px;
-  --small: 14px;
-  --body: 16px;
-  --intro: 18px;
-  --title: 22px;
-  --section-title: 26px;
-  --display: 38px;
+  --meta: 14px;
+  --small: 16px;
+  --body: 18px;
+  --intro: 20px;
+  --title: 24px;
+  --section-title: 28px;
+  --display: 42px;
 
   /* Layout */
-  --page: min(860px, calc(100% - 48px));
+  --page: min(1000px, calc(100% - 64px));
   --projects-page: min(1180px, calc(100% - 48px));
   --section-space: 160px;
 }
@@ -79,7 +79,7 @@ body {
   font-family: var(--sans);
   font-size: var(--body);
   font-synthesis: none;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -214,7 +214,7 @@ img {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 74px;
+  gap: 80px;
 }
 
 .work-grid__col {
@@ -257,7 +257,7 @@ img {
 /* ── Section headings ──────────────────────────────────────────── */
 
 .section-heading {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .eyebrow {
@@ -295,7 +295,7 @@ img {
 .hero h1 {
   margin: 0;
   font-size: var(--display);
-  font-weight: 500;
+  font-weight: 550;
   letter-spacing: -0.035em;
   line-height: 1.15;
 }
@@ -308,7 +308,7 @@ img {
 }
 
 .hero__intro {
-  max-width: 620px;
+  max-width: 700px;
   margin: 24px 0 0;
   color: var(--muted);
   font-size: var(--intro);
@@ -324,7 +324,7 @@ img {
   gap: 8px 20px;
   color: var(--soft);
   font-size: var(--meta);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
 }
 
@@ -362,7 +362,7 @@ img {
 .role-list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 44px;
 }
 
 .role-block__header {
@@ -418,10 +418,10 @@ img {
 }
 
 .role-block__summary {
-  margin: 12px 0 24px 0;
+  margin: 16px 0 28px 0;
   color: var(--muted);
-  font-size: var(--meta);
-  line-height: 1.5;
+  font-size: var(--small);
+  line-height: 1.65;
 }
 
 .role-block__summary p {
@@ -441,7 +441,7 @@ img {
   display: flex;
   align-items: baseline;
   gap: 16px;
-  padding: 10px 0;
+  padding: 14px 0;
   border: 0;
   border-bottom: 1px solid var(--rule);
   background: transparent;
@@ -475,10 +475,10 @@ img {
 
 .project-row__title > span {
   display: block;
-  margin-top: 1px;
+  margin-top: 4px;
   color: var(--muted);
   font-size: var(--meta);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .project-row__title > .project-row__client {
@@ -493,7 +493,7 @@ img {
 
 .project-row__client > span {
   color: var(--soft);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -511,7 +511,7 @@ img {
 .project-row__action {
   position: absolute;
   left: -34px;
-  top: 10px;
+  top: 14px;
   width: 24px;
   height: 20px;
   display: grid;
@@ -558,7 +558,7 @@ img {
 }
 
 .project-row.is-open .project-detail__inner {
-  padding: 16px 0 32px;
+  padding: 20px 0 36px;
 }
 
 .project-detail__aside {
@@ -583,7 +583,7 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .tag-list {
@@ -736,7 +736,7 @@ img {
   flex-wrap: wrap;
   gap: 4px 12px;
   color: var(--soft);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
   line-height: 1.4;
@@ -776,7 +776,7 @@ img {
 .project-card__context p span {
   margin-bottom: 1px;
   color: var(--soft);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -827,7 +827,7 @@ img {
   flex-wrap: wrap;
   gap: 5px 10px;
   color: var(--soft);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
 }
 
@@ -861,7 +861,7 @@ img {
 }
 
 .client-item strong {
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .client-item span {
@@ -900,7 +900,7 @@ img {
 .profile-list h4 {
   margin: 0;
   font-size: var(--small);
-  font-weight: 500;
+  font-weight: 550;
   line-height: 1.4;
 }
 
@@ -1034,10 +1034,21 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .work-grid {
     grid-template-columns: 1fr;
     gap: 64px 0;
+  }
+
+  .role-block__header {
+    gap: 8px;
+  }
+
+  .role-block__logo {
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: -28px;
   }
 
   .all-projects-grid {
@@ -1049,11 +1060,11 @@ img {
 
 @media (max-width: 700px) {
   :root {
-    --page: calc(100% - 32px);
+    --page: calc(100% - 64px);
     --section-space: 100px;
-    --display: 32px;
-    --section-title: 24px;
-    --title: 20px;
+    --display: 35px;
+    --section-title: 26px;
+    --title: 22px;
   }
 
   .hero {
@@ -1086,7 +1097,7 @@ img {
   }
 
   .hero__intro {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .role-block__trigger {
