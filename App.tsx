@@ -139,6 +139,9 @@ function ScrollGuide() {
     };
 
     const measureAnchors = (immediate = false) => {
+      const frameInset = Number.parseFloat(
+        window.getComputedStyle(document.documentElement).getPropertyValue('--frame-inset'),
+      ) || 0;
       const measuredPoints = Array.from(main.querySelectorAll<HTMLElement>('[data-scroll-guide]'))
         .map((element): ScrollGuideAnchorPoint => {
           const roleSummary = element.nextElementSibling instanceof HTMLElement
@@ -152,7 +155,7 @@ function ScrollGuide() {
           const preferredOffset = Number(element.dataset.scrollGuideOffset ?? 34);
           const horizontalOffset = window.innerWidth <= 700 ? Math.min(preferredOffset, 24) : preferredOffset;
           return {
-            x: Math.max(0, horizontalRect.left + window.scrollX - horizontalOffset),
+            x: Math.max(frameInset + 4, horizontalRect.left + window.scrollX - horizontalOffset),
             y: rect.top + window.scrollY + Math.min(lineHeight, rect.height) / 2 - marker.offsetHeight / 2,
             activationY: 0,
             section: (element.dataset.scrollGuideSection ?? 'hero') as ScrollGuideSection,
@@ -385,7 +388,8 @@ function ProjectCard({ project }: { key?: React.Key; project: IndexedProject }) 
 
 function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <div className="footer-panel">
+      <footer className="site-footer">
       <div>
         <strong>{SITE.name}</strong>
         <span>{SITE.tagline}</span>
@@ -399,7 +403,8 @@ function SiteFooter() {
         <a href={`mailto:${SITE.email}`}>Email</a>
       </div>
       <a href="#top">Back to top <ArrowDown size={13} className="back-to-top-icon" /></a>
-    </footer>
+      </footer>
+    </div>
   );
 }
 
@@ -411,7 +416,8 @@ function AllProjectsPage({ projects, homeHref }: { projects: IndexedProject[]; h
       <a className="skip-link" href="#main-content">Skip to content</a>
       <ScrollGuide />
 
-      <main id="main-content" className="projects-page">
+      <div className="page-panel">
+        <main id="main-content" className="projects-page">
         <header id="top" className="projects-hero">
           <a className="projects-hero__back" href={`${homeHref}#experience`}>
             <ArrowLeft size={14} /> Back to portfolio
@@ -428,7 +434,8 @@ function AllProjectsPage({ projects, homeHref }: { projects: IndexedProject[]; h
             {sortedProjects.map((project) => <ProjectCard key={project.key} project={project} />)}
           </div>
         </section>
-      </main>
+        </main>
+      </div>
 
       <SiteFooter />
     </div>
@@ -504,7 +511,8 @@ function App() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <ScrollGuide />
 
-      <main id="main-content">
+      <div className="page-panel">
+        <main id="main-content">
         {/* ── Hero ──────────────────────────────────────────── */}
         <section id="top" className="hero" aria-labelledby="hero-title">
           <h1 id="hero-title" data-scroll-guide data-scroll-guide-section="hero">
@@ -664,7 +672,8 @@ function App() {
             <a href={`mailto:${SITE.email}`}>{SITE.cta.buttonLabel} — {SITE.email} <ArrowUpRight size={14} /></a>
           </div>
         </section>
-      </main>
+        </main>
+      </div>
 
       {/* ── Footer ──────────────────────────────────────────── */}
       <SiteFooter />
