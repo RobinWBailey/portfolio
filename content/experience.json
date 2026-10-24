@@ -29,6 +29,14 @@
         ],
         "isFeatured": true,
         "summary": "A modern Salesforce platform connecting student support, enquiry management and engagement insights for students and staff.",
+        "keyDeliverables": [
+          "Student chatbot",
+          "Knowledge base",
+          "Enquiry tracking",
+          "Staff referrals",
+          "Engagement insights",
+          "Dedicated user experiences"
+        ],
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=TBA"
         ],
@@ -110,6 +118,14 @@
         ],
         "isFeatured": true,
         "summary": "An integrated Salesforce assessment platform for medical and dental education.",
+        "keyDeliverables": [
+          "Clinical assessment",
+          "Offline assessment",
+          "Clinical logging",
+          "Knowledge-test feedback",
+          "Academic benchmarking",
+          "Configurable assessments"
+        ],
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=PULSE+Dashboard",
           "https://placehold.co/800x600/34495e/ffffff?text=Student+Profile",

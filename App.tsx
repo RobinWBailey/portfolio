@@ -252,6 +252,19 @@ interface IndexedProject extends ExperienceProject {
   roleTitle: string;
 }
 
+function KeyDeliverables({ items }: { items?: string[] }) {
+  if (!items?.length) return null;
+
+  return (
+    <div className="key-deliverables">
+      <p className="key-deliverables__label">Key deliverables</p>
+      <ul aria-label="Key deliverables">
+        {items.map((item) => <li key={item}>{item}</li>)}
+      </ul>
+    </div>
+  );
+}
+
 function ProjectDisclosure({
   project,
   open,
@@ -263,6 +276,7 @@ function ProjectDisclosure({
   onToggle: () => void;
 }) {
   const detailId = `project-detail-${project.key}`;
+  const hasDeliverables = Boolean(project.keyDeliverables?.length);
   const realImages = (project.images ?? []).filter((image) => !image.includes('placehold.co'));
   const hasBodyCopy = project.body.trim().toUpperCase() !== 'TBA';
   const displayAward = project.award?.trim().toUpperCase() !== 'TBA' ? project.award : undefined;
@@ -274,7 +288,7 @@ function ProjectDisclosure({
     : undefined;
 
   return (
-    <article id={`project-${project.key}`} className={`project-row${open ? ' is-open' : ''}`}>
+    <article id={`project-${project.key}`} className={`project-row${hasDeliverables ? ' has-deliverables' : ''}${open ? ' is-open' : ''}`}>
       <button type="button" className="project-row__trigger" onClick={onToggle} aria-expanded={open} aria-controls={detailId}>
         <span className="project-row__action" aria-hidden="true">
           <Plus size={16} />
@@ -295,6 +309,8 @@ function ProjectDisclosure({
           </span>
         )}
       </button>
+
+      <KeyDeliverables items={project.keyDeliverables} />
 
       <div id={detailId} className="project-detail" aria-hidden={!open}>
         <div className="project-detail__inner">
@@ -350,6 +366,8 @@ function ProjectCard({ project }: { key?: React.Key; project: IndexedProject }) 
       </div>
       <h2>{project.title}</h2>
       {displaySummary && <p className="project-card__summary">{displaySummary}</p>}
+
+      <KeyDeliverables items={project.keyDeliverables} />
 
       <div className="project-card__context">
         <p><span>Experience</span>{project.roleTitle}</p>

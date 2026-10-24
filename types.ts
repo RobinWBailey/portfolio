@@ -39,6 +39,7 @@ export interface ExperienceProject {
   images?: string[];
   link?: string;
   summary?: string;
+  keyDeliverables?: string[];
   isFeatured: boolean;
 }
 
