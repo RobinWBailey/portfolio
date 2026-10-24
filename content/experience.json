@@ -16,7 +16,7 @@
     "projects": [
       {
         "title": "MyPlymouth Platform for Students & Staff",
-        "body": "Led the product strategy, design, architecture, and end-to-end implementation of MyPlymouth: a comprehensive redesign and rebrand of the university's Salesforce platform. MyPlymouth brings legacy capabilities into a clearer, modern platform with dedicated experiences for students, academics, professional services, and support staff. It also provides the foundation for new integrated services, including referrals, a knowledge base, student enquiries, a student-facing chatbot, and insights that help staff and students understand patterns of engagement. The platform is currently being launched progressively across its user groups.<br /><br /><strong>Usage statistics — to be added:</strong> student users: TBA; staff users: TBA.",
+        "body": "Led the product strategy, design, architecture, and end-to-end implementation of MyPlymouth: a comprehensive redesign and rebrand of the university's Salesforce platform. MyPlymouth brings legacy capabilities into a clearer, modern platform with dedicated experiences for students, academics, professional services, and support staff. Student enquiry tracking, staff referrals, the knowledge base, and a student-facing chatbot are fully rolled out. Engagement insights are also fully rolled out, with the same insights available to students about their own engagement and to staff supporting those students. The platform is fully rolled out to students, professional services, and support staff, with rollout to academics currently underway.<br /><br /><strong>Usage statistics — to be added:</strong> student users: TBA; staff users: TBA.",
         "client": "Plymouth University",
         "role": "Product & Technical Lead",
         "category": "Digital Platform",
@@ -97,7 +97,7 @@
     "projects": [
       {
         "title": "PULSE Student Success Platform",
-        "body": "Led the design and implementation of a comprehensive student success platform for the Faculty of Medicine and Dentistry at Plymouth University, encompassing a wide range of modules to support the entire student journey from concept to launch. My role involved stakeholder engagement, requirements gathering, UX/UI design, and managing the agile development process.<br /><br /><strong>Student usage statistics — to be added:</strong> TBA.",
+        "body": "Led the design, technical architecture, and delivery of PULSE, a new integrated Salesforce platform covering student assessment across the university's medical and dental programmes. Built alongside a team of developers, the platform brings together on-clinic assessment and feedback, dental clinical experience, clinical logging, academic benchmarking, and knowledge testing with longitudinal analysis for students. Robust offline support enables on-clinic assessment and feedback, while analysis tools help students and staff review work and progress. The platform serves students, academics, and administrators. Its capabilities were developed progressively and the features described here were operational by 2023. PULSE remains the primary assessment system across all medical and dental programmes. Several related portfolio entries describe individual capabilities within this platform.<br /><br /><strong>Student usage statistics — to be added:</strong> TBA.",
         "client": "Plymouth University",
         "role": "Product Owner & Architect",
         "category": "Education",
@@ -109,7 +109,7 @@
           "Agile"
         ],
         "isFeatured": true,
-        "summary": "Transforming Medical Education at Plymouth University.",
+        "summary": "An integrated Salesforce assessment platform for medical and dental education.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=PULSE+Dashboard",
           "https://placehold.co/800x600/34495e/ffffff?text=Student+Profile",
@@ -120,18 +120,18 @@
       },
       {
         "title": "Content Adaptive Progress Testing",
-        "body": "Developed and implemented a new approach to content-adaptive progress testing for medical students, mapped to the newly introduced Medical Licensing Assessment (MLA) content map. The approach integrated adaptive assessment with personalised, longitudinal feedback, enabling students to understand their demonstrated strengths, areas for development, and the content of future assessments as they progressed through the programme. To our knowledge, this was the first implementation of this specific approach at any medical school worldwide.",
+        "body": "A separate development built on PULSE after the initial platform, developed during 2023–2024 and subsequently brought into use. Working alongside academics who led the adaptive-testing concept, I contributed to the associated research and led the design, technical architecture, and implementation of the student results, knowledge analysis, and personalised learning feedback within PULSE. The assessment delivery and question-selection mechanisms were developed separately by others. The approach maps knowledge-test questions to the newly released GMC Medical Licensing Assessment (MLA) content map. Subsequent tests select questions covering topics a student has yet to encounter and topics they have previously answered incorrectly. Students therefore follow different assessment paths through the programme, with the aim of giving each student opportunities to cover all topics and demonstrate correct answers before the final MLA examination. Personalised topic mapping and longitudinal feedback show students their coverage and performance, helping them plan their learning. These feedback capabilities also support standard knowledge testing independently of adaptive question selection.<br /><br /><strong>Research paper reference — to be added:</strong> TBA.",
         "client": "Peninsula Medical School",
-        "role": "Technical Lead",
+        "role": "Design & Technical Lead — Student Analysis & Feedback",
         "category": "Education",
-        "year": "2023",
+        "year": "2023–2024",
         "tags": [
           "Salesforce",
           "Assessment",
           "Education"
         ],
         "isFeatured": true,
-        "summary": "Content Adaptive Progress Testing.",
+        "summary": "Adaptive knowledge testing with personalised MLA topic mapping and longitudinal feedback.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=CAPT+Interface"
         ],
@@ -156,18 +156,18 @@
         "link": "#"
       },
       {
-        "title": "Competency Based Assessment",
-        "body": "System for tracking and verifying student competency across practical skills, enabling faculty to monitor progression and ensure students meet professional standards.",
+        "title": "Personalised Knowledge-Test Feedback",
+        "body": "Led the design, technical architecture, and implementation of student results analysis and personalised learning feedback within PULSE. Personalised feedback formed part of standard knowledge testing, providing graphical analysis, individual assessment blueprinting, and comparisons with the wider cohort. The later content-adaptive progress testing project extended this feedback with mapping to the newly released GMC Medical Licensing Assessment (MLA) content map. Students can see which topics they have encountered across their programme's knowledge tests, which they have yet to encounter, and where they have answered questions correctly or incorrectly. Topic coverage and performance differ between students, allowing each student to track their own progress and plan their learning. These feedback tools are also available for standard knowledge testing, independently of adaptive question selection.",
         "client": "Plymouth University",
-        "role": "Product Owner",
+        "role": "Design & Technical Lead — Student Analysis & Feedback",
         "category": "Education",
-        "year": "2024",
         "tags": [
-          "Education",
-          "Skills"
+          "Assessment",
+          "Personalised Learning",
+          "Longitudinal Feedback"
         ],
         "isFeatured": true,
-        "summary": "Tracking skills mastery.",
+        "summary": "Personalised topic coverage and performance feedback across medical knowledge tests.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Competency"
         ]
@@ -193,34 +193,36 @@
     "extraProjects": [
       {
         "title": "Dynamic Assessments",
-        "body": "Integration services connecting assessment platforms with student record systems, enabling real-time assessment data flow.",
+        "body": "A flexible assessment system within PULSE that academic and assessment teams can configure for a wide range of uses. Teams can create and modify assessments, update them, and roll them forward between academic years. Configurable structures support multiple submissions from different users contributing to a single assessment outcome, as well as multiple assessment types completed at one point contributing to different outcomes. Robust validation checks submissions for correctness and validity.",
         "client": "Plymouth University",
         "role": "Tech Lead",
         "category": "Education",
         "year": "2023",
         "tags": [
-          "API",
-          "Integration"
+          "Assessment",
+          "Configurable Workflows",
+          "Validation"
         ],
         "isFeatured": true,
-        "summary": "Real-time assessment integration.",
+        "summary": "Flexible assessment configuration for academic and assessment teams.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Assessments"
         ]
       },
       {
         "title": "Academic Benchmarking",
-        "body": "Developed a comparative analytics tool allowing faculty to benchmark cohort performance against national standards.",
+        "body": "A benchmarking tool within PULSE that enables groups of academics or professionals to independently review and mark anonymised benchmark work remotely. Submissions are automatically aggregated and compared, allowing participants to see how their marking relates to that of others without identifying individual markers. The comparisons support discussion and analysis to promote high-quality, consistent assessment standards.",
         "client": "Plymouth University",
         "role": "Data Lead",
         "category": "Data",
         "year": "2023",
         "tags": [
-          "Data",
-          "Analytics"
+          "Assessment",
+          "Benchmarking",
+          "Quality Assurance"
         ],
         "isFeatured": false,
-        "summary": "Comparative academic performance analysis.",
+        "summary": "Anonymous comparison of independent marking to support consistent assessment standards.",
         "images": [
           "https://placehold.co/1200x800/2d3748/ffffff?text=Benchmarking"
         ]
